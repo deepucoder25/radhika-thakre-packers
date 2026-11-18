@@ -1,4 +1,4 @@
-<div class="modal fade contact-custom-modal" id="qteModal" tabindex="-1" role="dialog" aria-labelledby="qteModal" aria-hidden="true">
+<div class="modal fade contact-custom-modal" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="quoteModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="contact-form-header">
@@ -56,12 +56,12 @@
                         <textarea name="message" cols="30" rows="4" class="form-control" placeholder="Describe your relocation needs..."></textarea>
                     </div>
                 </div>
-                <div class="d-flex justify-content-center mt-2 contact-quote-gap" style="gap:10px;">
+                <div class="d-flex justify-content-center mt-2 gap-2">
                     <button id="submitbquotemodal" type="submit" class="btn btn-primary">Get My Free Quote <i class="fa-solid fa-paper-plane"></i></button>
                     <button onclick="document.getElementById('resultquotemodal').innerHTML = '';" type="reset" class="btn btn-secondary">Clear Form</button>
                 </div>
  
-                <div id="resultquotemodal" style="margin-top: 15px;"></div>
+                <div id="resultquotemodal" class="mt-3"></div>
             </form>
         </div>
     </div>
