@@ -9,7 +9,7 @@ class ServiceModel extends Model
     protected array $services = [
         [
             'slug'     => 'household-moving',
-            'title'    => 'Home & Household Shifting',
+            'title'    => 'Home Shifting',
             'icon'     => 'fa-house-chimney',
             'b_icon'   => 'bi-house-check',
             'badge'    => 'Residential',
@@ -18,16 +18,16 @@ class ServiceModel extends Model
         ],
         [
             'slug'     => 'office-relocation',
-            'title'    => 'Office & Corporate Shifting',
+            'title'    => 'Office Shifting',
             'icon'     => 'fa-briefcase',
             'b_icon'   => 'bi-buildings',
-            'badge'    => 'Corporate',
-            'desc'     => 'Seamless workplace relocation designed for zero business downtime, safe IT equipment moving, server shifting, and document management.',
+            'badge'    => 'Commercial',
+            'desc'     => 'Fast commercial workplace shifting designed for minimal business disruption, safe IT equipment moving, and document management.',
             'features' => ['Weekend & night shifting options', 'Server & workstation protection', 'Organized cable & desk labelling', 'Dedicated relocation coordinator']
         ],
         [
             'slug'     => 'car-transportation',
-            'title'    => 'Car Carrier & Transportation',
+            'title'    => 'Car shifting',
             'icon'     => 'fa-car-side',
             'b_icon'   => 'bi-car-front',
             'badge'    => 'Vehicle Logistics',
@@ -36,7 +36,7 @@ class ServiceModel extends Model
         ],
         [
             'slug'     => 'bike-transportation',
-            'title'    => 'Bike & Two-Wheeler Shifting',
+            'title'    => 'Bike Shifting',
             'icon'     => 'fa-motorcycle',
             'b_icon'   => 'bi-bicycle',
             'badge'    => 'Two-Wheeler',
@@ -44,8 +44,17 @@ class ServiceModel extends Model
             'features' => ['Customized wooden frame crating', 'Mirror & indicator safe packing', 'Fast transit between major cities', 'Door-to-door delivery']
         ],
         [
+            'slug'     => 'corporate-relocation',
+            'title'    => 'Corporate Relocation',
+            'icon'     => 'fa-building-columns',
+            'b_icon'   => 'bi-buildings',
+            'badge'    => 'Corporate',
+            'desc'     => 'Comprehensive enterprise relocation solutions for corporate offices, IT infrastructure, servers, and multi-floor commercial setups.',
+            'features' => ['Complete IT server movement', 'Zero business downtime', 'Dedicated project manager', 'Multi-department coordination']
+        ],
+        [
             'slug'     => 'packing-moving',
-            'title'    => 'Packing & Unpacking Services',
+            'title'    => 'Packing & Unpacking',
             'icon'     => 'fa-boxes-packing',
             'b_icon'   => 'bi-box-seam',
             'badge'    => 'Packing Experts',
@@ -54,7 +63,7 @@ class ServiceModel extends Model
         ],
         [
             'slug'     => 'loading-unloading',
-            'title'    => 'Loading & Unloading Services',
+            'title'    => 'Loading & Unloading',
             'icon'     => 'fa-truck-ramp-box',
             'b_icon'   => 'bi-truck',
             'badge'    => 'Labor & Handling',
@@ -63,7 +72,7 @@ class ServiceModel extends Model
         ],
         [
             'slug'     => 'warehouse-storage',
-            'title'    => 'Warehousing & Safe Storage',
+            'title'    => 'Storage & Warehouse',
             'icon'     => 'fa-warehouse',
             'b_icon'   => 'bi-archive',
             'badge'    => 'Storage Facility',

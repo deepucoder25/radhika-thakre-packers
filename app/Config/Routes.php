@@ -42,6 +42,7 @@ $routes->get('bike-transportation', '\Modules\Services\Controllers\Services::det
 $routes->get('packing-and-moving', '\Modules\Services\Controllers\Services::detail/packing-moving');
 $routes->get('loading-unloading', '\Modules\Services\Controllers\Services::detail/loading-unloading');
 $routes->get('storage-services', '\Modules\Services\Controllers\Services::detail/warehouse-storage');
+$routes->get('corporate-relocation', '\Modules\Services\Controllers\Services::detail/corporate-relocation');
 $routes->get('transit-insurance', '\Modules\Services\Controllers\Services::detail/transit-insurance');
 
 // Branch / City Routes (Packers & Movers)

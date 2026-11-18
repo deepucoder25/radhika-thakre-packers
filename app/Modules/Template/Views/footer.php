@@ -18,7 +18,7 @@
                             <i class="bi bi-box-seam-fill"></i>
                         </div>
                         <div class="footer-pillar-content min-w-0">
-                            <h6 class="footer-pillar-title mb-0 text-truncate">Multi-Layer Packing</h6>
+                            <div class="footer-pillar-title h6 fw-bold mb-0 text-truncate">Multi-Layer Packing</div>
                             <span class="footer-pillar-sub text-truncate d-block">Bubble &amp; Foam Shield</span>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
                             <i class="bi bi-shield-fill-check"></i>
                         </div>
                         <div class="footer-pillar-content min-w-0">
-                            <h6 class="footer-pillar-title mb-0 text-truncate">100% Transit Safe</h6>
+                            <div class="footer-pillar-title h6 fw-bold mb-0 text-truncate">100% Transit Safe</div>
                             <span class="footer-pillar-sub text-truncate d-block">Verified Goods Insurance</span>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                             <i class="bi bi-stopwatch-fill"></i>
                         </div>
                         <div class="footer-pillar-content min-w-0">
-                            <h6 class="footer-pillar-title mb-0 text-truncate">On-Time Shifting</h6>
+                            <div class="footer-pillar-title h6 fw-bold mb-0 text-truncate">On-Time Shifting</div>
                             <span class="footer-pillar-sub text-truncate d-block">Guaranteed Schedule</span>
                         </div>
                     </div>
@@ -57,7 +57,7 @@
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
                         <div class="footer-pillar-content min-w-0">
-                            <h6 class="footer-pillar-title mb-0 text-truncate">All-India Reach</h6>
+                            <div class="footer-pillar-title h6 fw-bold mb-0 text-truncate">All-India Reach</div>
                             <span class="footer-pillar-sub text-truncate d-block">500+ Cities Covered</span>
                         </div>
                     </div>
@@ -70,9 +70,9 @@
             <!-- Brand & Trust Spotlight -->
             <div class="col-lg-3 col-md-6">
                 <div class="footer-brand mb-3">
-                    <a href="<?= site_url('/') ?>" class="d-inline-block text-decoration-none">
+                    <a href="<?= site_url('/') ?>" class="d-inline-block text-decoration-none" aria-label="<?= esc($company3) ?> Home">
                         <div class="footer-logo-card bg-white rounded-3 p-2 px-3 shadow-sm d-inline-block">
-                            <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="footer-main-logo">
+                            <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="footer-main-logo" loading="lazy">
                         </div>
                     </a>
                 </div>
@@ -92,12 +92,12 @@
                         </div>
                     </div>
                     <div class="d-flex align-items-center justify-content-between flex-wrap gap-1">
-                        <div class="footer-stars d-inline-flex align-items-center text-warning flex-shrink-0" aria-label="5 Star Rating">
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
-                            <i class="bi bi-star-fill"></i>
+                        <div class="footer-stars d-inline-flex align-items-center text-warning flex-shrink-0" role="img" aria-label="5 Star Rating">
+                            <i class="bi bi-star-fill" aria-hidden="true"></i>
+                            <i class="bi bi-star-fill" aria-hidden="true"></i>
+                            <i class="bi bi-star-fill" aria-hidden="true"></i>
+                            <i class="bi bi-star-fill" aria-hidden="true"></i>
+                            <i class="bi bi-star-fill" aria-hidden="true"></i>
                         </div>
                         <span class="footer-rating-count">
                             (1,850+ Verified Reviews)
@@ -133,7 +133,7 @@
 
             <!-- Quick Links / Services -->
             <div class="col-lg-3 col-md-6 col-6">
-                <h5 class="footer-heading mb-3">Quick Links</h5>
+                <div class="footer-heading h5 fw-bold mb-3">Quick Links</div>
                 <ul class="list-unstyled footer-nav-links mb-0">
                     <li><a href="<?= site_url('household-moving') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Home Shifting Services</a></li>
                     <li><a href="<?= site_url('office-relocation') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Office Shifting Services</a></li>
@@ -148,7 +148,7 @@
 
             <!-- Our Company -->
             <div class="col-lg-2 col-md-6 col-6">
-                <h5 class="footer-heading mb-3">Our Company</h5>
+                <div class="footer-heading h5 fw-bold mb-3">Our Company</div>
                 <ul class="list-unstyled footer-nav-links mb-0">
                     <li><a href="<?= site_url('about') ?>"><i class="bi bi-arrow-right-short text-danger"></i> About Us</a></li>
                     <li><a href="<?= site_url('city') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Our Branches</a></li>
@@ -165,7 +165,7 @@
             <div class="col-lg-4 col-md-6">
                 <div class="footer-office-card p-4 rounded-4 position-relative">
                     <div class="d-flex align-items-center justify-content-between mb-3">
-                        <h5 class="footer-card-heading mb-0 text-white">Get Contact</h5>
+                        <div class="footer-card-heading h5 fw-bold mb-0 text-white">Get Contact</div>
                         <span class="badge footer-live-badge d-inline-flex align-items-center gap-1">
                             <span class="live-dot"></span> Active
                         </span>
@@ -209,9 +209,9 @@
         <!-- Our Network Presence in Top Cities of India -->
         <div class="footer-routes-section pt-4 pb-3 border-top border-secondary border-opacity-25">
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
-                <h6 class="footer-subheading mb-0 text-white">
+                <div class="footer-subheading fw-bold mb-0 text-white">
                     <i class="bi bi-geo-fill text-danger me-1"></i> Our Network Presence in Top Cities of India :
-                </h6>
+                </div>
                 <small class="text-white-50">500+ Hubs Across India</small>
             </div>
             <div class="d-flex flex-wrap gap-2">

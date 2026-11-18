@@ -71,7 +71,7 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
     <div class="container-fluid px-2 px-sm-3 px-md-4 px-xl-5 d-flex align-items-center justify-content-between flex-nowrap site-navbar-inner">
         <!-- Brand Logo Image (Responsive Auto-Scaling) -->
         <a class="navbar-brand py-0 me-2 d-flex align-items-center flex-shrink-0" href="<?= site_url('/') ?>">
-            <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="site-main-logo">
+            <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="site-main-logo" loading="lazy">
         </a>
 
         <!-- Right Side: Call Helpline + Glowing Amber Quote Button + Animated Hamburger Button -->
@@ -106,7 +106,7 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
     <div class="fs-menu-header">
         <div class="d-flex align-items-center">
             <a href="<?= site_url('/') ?>" class="fs-logo-capsule" data-bs-dismiss="offcanvas">
-                <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="fs-logo-img">
+                <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="fs-logo-img" loading="lazy">
             </a>
             <span class="fs-tagline-badge d-none d-md-inline-flex ms-3">
                 <i class="bi bi-patch-check-fill text-danger"></i>
@@ -314,9 +314,9 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content rounded-4 border-0 shadow-lg">
             <div class="modal-header bg-danger text-white border-0 py-3">
-                <h5 class="modal-title fw-bold d-flex align-items-center gap-2" id="fraudAlertModalLabel">
+                <div class="modal-title h5 fw-bold d-flex align-items-center gap-2 mb-0" id="fraudAlertModalLabel">
                     <i class="bi bi-shield-exclamation"></i> Beware of Online Frauds &amp; Scams
-                </h5>
+                </div>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body p-4">
@@ -324,7 +324,7 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                     <i class="bi bi-exclamation-triangle-fill fs-4 flex-shrink-0"></i>
                     <div class="small">Always ensure you are communicating directly with <strong><?= esc($company3) ?></strong> through official channels.</div>
                 </div>
-                <h6 class="fw-bold text-dark mb-2">Official Verification Checklist:</h6>
+                <div class="fw-bold text-dark mb-2">Official Verification Checklist:</div>
                 <ul class="list-unstyled small mb-3">
                     <li class="py-1 d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Official Contact: <strong><?= esc($phone) ?></strong></li>
                     <li class="py-1 d-flex align-items-center gap-2"><i class="bi bi-check-circle-fill text-success"></i> Official Email: <strong><?= esc($mail) ?></strong></li>
