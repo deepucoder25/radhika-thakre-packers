@@ -1,12 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill"></i> Home</a> / <span>Video Gallery</span>
-        </div>
-        <h1>Video Gallery</h1>
-        <p>Explore our latest videos and highlights.</p>
-    </div>
-</div>
+<?php
+$title       = "Video Gallery";
+$description = "Explore our latest videos and highlights.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Video Gallery'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

@@ -1,12 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill"></i> Home</a> / <span>Tracking</span>
-        </div>
-        <h1>Track Your Shipment</h1>
-        <p>Enter your tracking number below to check current status and updates.</p>
-    </div>
-</div>
+<?php
+$title       = "Track Your Shipment";
+$description = "Enter your tracking number below to check current status and updates.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Tracking'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

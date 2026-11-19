@@ -3,22 +3,16 @@
  * Service Detail View - Radhika Thakre Packers and Movers
  * Fully responsive Bootstrap 5 layout with sidebar, features, and quote CTA
  */
+
+$title       = $service['title'] ?? 'Our Relocation Service';
+$description = $service['desc'] ?? '';
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Services', 'url' => site_url('services')],
+    ['label' => $title],
+];
 ?>
-<!-- Page Hero Banner -->
-<section class="services-hero-banner py-5 text-white">
-    <div class="container text-center">
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="d-inline-block mb-3">
-            <ol class="breadcrumb services-breadcrumb px-3 py-2 rounded-pill mb-0">
-                <li class="breadcrumb-item"><a href="<?= site_url('/') ?>" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i> Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= site_url('services') ?>" class="text-white text-decoration-none">Services</a></li>
-                <li class="breadcrumb-item active text-warning" aria-current="page"><?= esc($service['title']) ?></li>
-            </ol>
-        </nav>
-        <h1 class="services-hero-title fw-bold mb-3"><?= esc($service['title']) ?></h1>
-        <p class="services-hero-subtitle mx-auto mb-0"><?= esc($service['desc']) ?></p>
-    </div>
-</section>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <!-- Service Detail Main Content -->
 <section class="service-detail-section py-5">

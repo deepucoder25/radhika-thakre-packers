@@ -1,19 +1,17 @@
 <?php
 /**
  * 404 Page Not Found View
- * Template Module - Sanvi Packers & Movers
+ * Template Module - Radhika Thakre Packers and Movers
  */
-?>
 
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / <span>404 - Not Found</span>
-        </div>
-        <h1>Page Not Found</h1>
-        <p>The page you requested could not be found or has moved to a new route.</p>
-    </div>
-</div>
+$title       = "Page Not Found";
+$description = "The page you requested could not be found or has moved to a new route.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => '404 - Not Found'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="pm-404-section">
     <div class="container">

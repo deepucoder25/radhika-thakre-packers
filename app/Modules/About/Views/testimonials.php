@@ -1,12 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / <span>Testimonials</span>
-        </div>
-        <h1>Customer Testimonials & Reviews</h1>
-        <p>See why thousands of families and businesses trust <?= esc($comp['company3']) ?>.</p>
-    </div>
-</div>
+<?php
+$title       = "Customer Testimonials & Reviews";
+$description = "See why thousands of families and businesses trust " . esc($comp['company3']) . ".";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Testimonials'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

@@ -33,10 +33,10 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                     <span class="d-none d-lg-inline">Payment Details !</span>
                     <span class="d-inline d-lg-none">Payment</span>
                 </a>
-                <a href="<?= site_url('city') ?>" class="btn-tier1-branch" title="Select Nearest Branch">
-                    <i class="bi bi-building"></i>
-                    <span class="d-none d-lg-inline">Select Nearest Branch</span>
-                    <span class="d-inline d-lg-none">Branches</span>
+                <a href="<?= site_url('city') ?>" class="btn-tier1-branch" title="All States">
+                    <i class="bi bi-geo-alt-fill"></i>
+                    <span class="d-none d-lg-inline">All States</span>
+                    <span class="d-inline d-lg-none">All States</span>
                 </a>
                 <a <?= $phonehtml ?> class="btn-tier1-phone" title="<?= esc($phone) ?>">
                     <i class="bi bi-telephone-fill"></i>
@@ -105,7 +105,7 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
     <!-- Menu Header Bar -->
     <div class="menu-normal-header bg-white border-bottom py-3 px-3 px-md-5 d-flex align-items-center justify-content-between flex-wrap gap-3">
         <div class="d-flex align-items-center flex-wrap gap-2 gap-md-3">
-            <a href="<?= site_url('/') ?>" class="d-inline-flex align-items-center text-decoration-none" data-bs-dismiss="offcanvas" aria-label="<?= esc($company3) ?> Home">
+            <a href="<?= site_url('/') ?>" class="d-inline-flex align-items-center text-decoration-none" aria-label="<?= esc($company3) ?> Home">
                 <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="site-main-logo" loading="lazy">
             </a>
             <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold small d-none d-sm-inline-flex align-items-center gap-1">
@@ -133,52 +133,52 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                     </div>
                     <ul class="list-unstyled menu-nav-links mb-0">
                         <li>
-                            <a href="<?= site_url('/') ?>" class="menu-nav-item <?= ($page === 'home') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('/') ?>" class="menu-nav-item <?= ($page === 'home') ? 'active' : '' ?>">
                                 <i class="bi bi-house-door-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Home</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('about') ?>" class="menu-nav-item <?= $isAboutActive ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('about') ?>" class="menu-nav-item <?= $isAboutActive ? 'active' : '' ?>">
                                 <i class="bi bi-info-circle-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>About Us</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('reviews') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('reviews') ?>" class="menu-nav-item">
                                 <i class="bi bi-star-fill text-warning me-2" aria-hidden="true"></i>
                                 <span>Customer Reviews</span>
                                 <span class="badge bg-warning text-dark fw-bold ms-auto small">4.9 ★</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('photo-gallery') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('photo-gallery') ?>" class="menu-nav-item">
                                 <i class="bi bi-images text-danger me-2" aria-hidden="true"></i>
                                 <span>Photo Gallery</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('faqs') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('faqs') ?>" class="menu-nav-item">
                                 <i class="bi bi-question-circle-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>FAQs</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('city') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('city') ?>" class="menu-nav-item <?= ($page === 'city') ? 'active' : '' ?>">
                                 <i class="bi bi-geo-alt-fill text-danger me-2" aria-hidden="true"></i>
-                                <span>Branch Locator</span>
+                                <span>All States</span>
                                 <span class="badge bg-danger bg-opacity-10 text-danger ms-auto small">500+ Hubs</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('tracking') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('tracking') ?>" class="menu-nav-item">
                                 <i class="bi bi-truck-front-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Live GPS Tracking</span>
                                 <span class="badge bg-success-subtle text-success ms-auto small">Live</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('contact') ?>" class="menu-nav-item <?= ($page === 'contact') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('contact') ?>" class="menu-nav-item <?= ($page === 'contact') ? 'active' : '' ?>">
                                 <i class="bi bi-envelope-paper-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Contact Us</span>
                             </a>
@@ -194,55 +194,55 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                     </div>
                     <ul class="list-unstyled menu-nav-links mb-0">
                         <li>
-                            <a href="<?= site_url('household-moving') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('household-moving') ?>" class="menu-nav-item">
                                 <i class="bi bi-house-check-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Home Shifting</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('office-relocation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('office-relocation') ?>" class="menu-nav-item">
                                 <i class="bi bi-building-fill-gear text-danger me-2" aria-hidden="true"></i>
                                 <span>Office Shifting</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('car-transportation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('car-transportation') ?>" class="menu-nav-item">
                                 <i class="bi bi-car-front-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Car shifting</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('bike-transportation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('bike-transportation') ?>" class="menu-nav-item">
                                 <i class="bi bi-bicycle text-danger me-2" aria-hidden="true"></i>
                                 <span>Bike Shifting</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('corporate-relocation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('corporate-relocation') ?>" class="menu-nav-item">
                                 <i class="bi bi-briefcase-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Corporate Relocation</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('packing-moving') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('packing-moving') ?>" class="menu-nav-item">
                                 <i class="bi bi-boxes text-danger me-2" aria-hidden="true"></i>
                                 <span>Packing &amp; Unpacking</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('loading-unloading') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('loading-unloading') ?>" class="menu-nav-item">
                                 <i class="bi bi-truck text-danger me-2" aria-hidden="true"></i>
                                 <span>Loading &amp; Unloading</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('warehouse-storage') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('warehouse-storage') ?>" class="menu-nav-item">
                                 <i class="bi bi-archive-fill text-danger me-2" aria-hidden="true"></i>
                                 <span>Storage &amp; Warehouse</span>
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('transit-insurance') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                            <a href="<?= site_url('transit-insurance') ?>" class="menu-nav-item">
                                 <i class="bi bi-shield-fill-check text-danger me-2" aria-hidden="true"></i>
                                 <span>Goods Transit Insurance</span>
                             </a>
@@ -303,9 +303,9 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                 </div>
                 <div class="col-md-6 text-center text-md-end small">
                     <span class="badge bg-secondary me-2">GSTIN: <?= esc($gst ?? '23BMOPT6924P1Z4') ?></span>
-                    <a href="<?= site_url('about') ?>" class="text-muted text-decoration-none me-3" data-bs-dismiss="offcanvas">About</a>
-                    <a href="<?= site_url('faqs') ?>" class="text-muted text-decoration-none me-3" data-bs-dismiss="offcanvas">FAQs</a>
-                    <a href="<?= site_url('contact') ?>" class="text-muted text-decoration-none" data-bs-dismiss="offcanvas">Contact</a>
+                    <a href="<?= site_url('about') ?>" class="text-muted text-decoration-none me-3">About</a>
+                    <a href="<?= site_url('faqs') ?>" class="text-muted text-decoration-none me-3">FAQs</a>
+                    <a href="<?= site_url('contact') ?>" class="text-muted text-decoration-none">Contact</a>
                 </div>
             </div>
         </div>

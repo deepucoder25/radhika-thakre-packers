@@ -4,17 +4,16 @@ $dateStr = !empty($post->date) ? $post->date : (!empty($post->timestamp) ? date(
 $imgSrc = (!empty($post->image) && file_exists(FCPATH . 'uploads/blogs/' . $post->image))
     ? base_url('uploads/blogs/' . $post->image)
     : base_url('assets/images/about/packers_movers.jpg');
+
+$title       = $post->title ?? 'Blog Article';
+$description = !empty($dateStr) ? ("Published on " . $dateStr) : '';
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Blog', 'url' => site_url('blog')],
+    ['label' => $title],
+];
 ?>
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill"></i> Home</a> / 
-            <a href="<?= site_url('blog') ?>">Blog</a> / 
-            <span>Article Details</span>
-        </div>
-        <h1><?= esc($post->title ?? 'Blog Article') ?></h1>
-    </div>
-</div>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

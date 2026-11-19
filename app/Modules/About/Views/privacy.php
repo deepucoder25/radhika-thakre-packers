@@ -1,13 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / <span>Privacy Policy</span>
-        </div>
-        <h1>Privacy Policy</h1>
-        <p>How <?= esc($comp['company3'] ?? 'QuickRelocation') ?> protects, manages, and safeguards your personal
-            information.</p>
-    </div>
-</div>
+<?php
+$title       = "Privacy Policy";
+$description = "How " . ($comp['company3'] ?? 'Radhika Thakre Packers and Movers') . " protects, manages, and safeguards your personal information.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Privacy Policy'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
         <section class="section" style="background: #f8fafc; padding: 50px 0 80px 0;">
             <div class="container" style="max-width: 960px;">

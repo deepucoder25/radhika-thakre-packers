@@ -3,23 +3,15 @@
  * Services Index View - Radhika Thakre Packers and Movers
  * Fully responsive Bootstrap 5 layout matching radhikathakrepackersmovers.com
  */
+
+$title       = "Professional Relocation & Logistics Services";
+$description = "Trusted door-to-door household shifting, corporate office relocation, car & bike carrier transport, and safe warehouse storage with guaranteed safety and insurance.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Our Services'],
+];
 ?>
-<!-- Page Hero Banner -->
-<section class="services-hero-banner py-5 text-white">
-    <div class="container text-center">
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="d-inline-block mb-3">
-            <ol class="breadcrumb services-breadcrumb px-3 py-2 rounded-pill mb-0">
-                <li class="breadcrumb-item"><a href="<?= site_url('/') ?>" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i> Home</a></li>
-                <li class="breadcrumb-item active text-warning" aria-current="page">Our Services</li>
-            </ol>
-        </nav>
-        <h1 class="services-hero-title fw-bold mb-3">Professional Relocation &amp; Logistics Services</h1>
-        <p class="services-hero-subtitle mx-auto mb-0">
-            Trusted door-to-door household shifting, corporate office relocation, car &amp; bike carrier transport, and safe warehouse storage with guaranteed safety and insurance.
-        </p>
-    </div>
-</section>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <!-- Main Services Grid Section -->
 <section class="services-section py-5">

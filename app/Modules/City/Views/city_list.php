@@ -1,14 +1,13 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / 
-            <a href="<?= site_url('city') ?>">All States</a> / 
-            <span><?= esc($stateName) ?></span>
-        </div>
-        <h1>Packers & Movers in <?= esc($stateName) ?></h1>
-        <p>Verified, background-checked moving services connecting households and offices across <?= esc($stateName) ?>.</p>
-    </div>
-</div>
+<?php
+$title       = "Packers & Movers in " . $stateName;
+$description = "Verified, background-checked moving services connecting households and offices across " . $stateName . ".";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'All States', 'url' => site_url('city')],
+    ['label' => $stateName],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

@@ -151,7 +151,7 @@
                 <div class="footer-heading h5 fw-bold mb-3">Our Company</div>
                 <ul class="list-unstyled footer-nav-links mb-0">
                     <li><a href="<?= site_url('about') ?>"><i class="bi bi-arrow-right-short text-danger"></i> About Us</a></li>
-                    <li><a href="<?= site_url('city') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Our Branches</a></li>
+                    <li><a href="<?= site_url('city') ?>"><i class="bi bi-arrow-right-short text-danger"></i> All States</a></li>
                     <li><a href="<?= site_url('about') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Why Choose Us</a></li>
                     <li><a href="<?= site_url('services') ?>"><i class="bi bi-arrow-right-short text-danger"></i> IBA Approved Packers</a></li>
                     <li><a href="<?= site_url('reviews') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Testimonials</a></li>

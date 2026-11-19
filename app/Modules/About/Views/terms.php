@@ -1,13 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / <span>Terms & Conditions</span>
-        </div>
-        <h1>Terms & Conditions</h1>
-        <p>Operational terms, moving guidelines, and service agreements governing
-            <?= esc($comp['company3'] ?? 'QuickRelocation') ?>.</p>
-    </div>
-</div>
+<?php
+$title       = "Terms & Conditions";
+$description = "Operational terms, moving guidelines, and service agreements governing " . ($comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ".";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Terms & Conditions'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
         <section class="section" style="background: #f8fafc; padding: 50px 0 80px 0;">
             <div class="container" style="max-width: 960px;">

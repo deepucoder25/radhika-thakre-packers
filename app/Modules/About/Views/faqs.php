@@ -3,24 +3,16 @@
  * Frequently Asked Questions (FAQs) View
  * Radhika Thakre Packers and Movers
  */
+
+$title       = "Frequently Asked Questions (FAQs)";
+$description = "Have questions about relocation charges, transit safety, packaging standards, or booking procedures? Find clear answers below.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'About Us', 'url' => site_url('about')],
+    ['label' => 'FAQs'],
+];
 ?>
-<!-- Page Hero Banner -->
-<section class="services-hero-banner py-5 text-white">
-    <div class="container text-center">
-        <!-- Breadcrumb -->
-        <nav aria-label="breadcrumb" class="d-inline-block mb-3">
-            <ol class="breadcrumb services-breadcrumb px-3 py-2 rounded-pill mb-0">
-                <li class="breadcrumb-item"><a href="<?= site_url('/') ?>" class="text-white text-decoration-none"><i class="bi bi-house-door me-1"></i> Home</a></li>
-                <li class="breadcrumb-item"><a href="<?= site_url('about') ?>" class="text-white text-decoration-none">About Us</a></li>
-                <li class="breadcrumb-item active text-warning" aria-current="page">FAQs</li>
-            </ol>
-        </nav>
-        <h1 class="services-hero-title fw-bold mb-3">Frequently Asked Questions (FAQs)</h1>
-        <p class="services-hero-subtitle mx-auto mb-0">
-            Have questions about relocation charges, transit safety, packaging standards, or booking procedures? Find clear answers below.
-        </p>
-    </div>
-</section>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <!-- FAQs Content Section -->
 <section class="section py-5">

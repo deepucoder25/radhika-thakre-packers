@@ -3,17 +3,16 @@ $r = $review;
 $starsCount = (int) ($r->stars ?? 5);
 $pDate = !empty($r->posted_date) ? date('M d, Y', strtotime($r->posted_date)) : '';
 $photos = !empty($r->r_img) ? explode(',', $r->r_img) : [];
+
+$title       = "Customer Review";
+$description = !empty($r->name) ? ("Verified feedback from " . esc($r->name)) : "Customer Testimonial";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'Reviews', 'url' => site_url('reviews')],
+    ['label' => 'Customer Testimonial'],
+];
 ?>
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill"></i> Home</a> / 
-            <a href="<?= site_url('reviews') ?>">Reviews</a> / 
-            <span>Customer Testimonial</span>
-        </div>
-        <h1>Customer Review</h1>
-    </div>
-</div>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">

@@ -1,12 +1,12 @@
-<div class="page-banner">
-    <div class="container">
-        <div class="breadcrumbs">
-            <a href="<?= site_url('/') ?>"><i class="fa-solid fa-house"></i> Home</a> / <span>About Us</span>
-        </div>
-        <h1>About Our Company</h1>
-        <p>Learn about our journey, certified team, and commitment to delivering peace of mind on every move.</p>
-    </div>
-</div>
+<?php
+$title       = "About Our Company";
+$description = "Learn about our journey, certified team, and commitment to delivering peace of mind on every move.";
+$path        = [
+    ['label' => 'Home', 'url' => site_url('/')],
+    ['label' => 'About Us'],
+];
+?>
+<?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <section class="section">
     <div class="container">
