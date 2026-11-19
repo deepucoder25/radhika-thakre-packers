@@ -100,211 +100,214 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
     </div>
 </nav>
 
-<!-- Full-Screen Luxury Mega Menu Overlay (Opens on Hamburger Click) -->
-<div class="offcanvas offcanvas-top h-100 w-100 border-0 site-fullscreen-menu" tabindex="-1" id="siteFullscreenMenu" aria-labelledby="siteFullscreenMenuLabel">
-    <!-- Fullscreen Menu Header -->
-    <div class="fs-menu-header">
-        <div class="d-flex align-items-center">
-            <a href="<?= site_url('/') ?>" class="fs-logo-capsule" data-bs-dismiss="offcanvas">
-                <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="fs-logo-img" loading="lazy">
+<!-- Main Site Offcanvas Mega Menu (Clean, Normal, White Themed with Bootstrap Grid System) -->
+<div class="offcanvas offcanvas-top h-100 w-100 border-0 site-normal-menu" tabindex="-1" id="siteFullscreenMenu" aria-labelledby="siteFullscreenMenuLabel">
+    <!-- Menu Header Bar -->
+    <div class="menu-normal-header bg-white border-bottom py-3 px-3 px-md-5 d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div class="d-flex align-items-center flex-wrap gap-2 gap-md-3">
+            <a href="<?= site_url('/') ?>" class="d-inline-flex align-items-center text-decoration-none" data-bs-dismiss="offcanvas" aria-label="<?= esc($company3) ?> Home">
+                <img src="<?= base_url('assets/img/logo/logo.png') ?>" alt="<?= esc($company3) ?>" class="site-main-logo" loading="lazy">
             </a>
-            <span class="fs-tagline-badge d-none d-md-inline-flex ms-3">
-                <i class="bi bi-patch-check-fill text-danger"></i>
-                <span>Est. <?= esc($comp['established'] ?? '2018') ?> | Dewas Naka, Indore</span>
+            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold small d-none d-sm-inline-flex align-items-center gap-1">
+                <i class="bi bi-patch-check-fill text-danger" aria-hidden="true"></i>
+                <span>Govt. Regd • Est. <?= esc($comp['established'] ?? '2018') ?> | Indore</span>
             </span>
         </div>
 
-        <!-- Ultra-Modern Close Button -->
-        <button type="button" class="btn-fs-close" data-bs-dismiss="offcanvas" aria-label="Close fullscreen menu">
-            <span class="fs-close-text d-none d-sm-inline">CLOSE MENU</span>
-            <span class="fs-close-icon">
-                <i class="bi bi-x-lg"></i>
-            </span>
+        <!-- Clean Close Button -->
+        <button type="button" class="btn btn-outline-danger rounded-pill px-3 py-2 d-inline-flex align-items-center gap-2 fw-bold" data-bs-dismiss="offcanvas" aria-label="Close menu">
+            <span>Close Menu</span>
+            <i class="bi bi-x-lg" aria-hidden="true"></i>
         </button>
     </div>
 
-    <!-- Fullscreen Menu Body Grid -->
-    <div class="fs-menu-body">
-        <div class="container">
+    <!-- Menu Body with Standard Bootstrap Container, Row & Cols -->
+    <div class="menu-normal-body bg-white flex-grow-1 overflow-y-auto">
+        <div class="container py-4 py-lg-5">
             <div class="row g-4 g-xl-5">
-                <!-- Column 1: Main Editorial Nav Links -->
-                <div class="col-lg-4">
-                    <div class="fs-col-label">
-                        <span class="fs-dot"></span>
-                        <span>EXPLORE PAGES</span>
+                <!-- Col 1: Quick Navigation (col-12 col-md-6 col-lg-4) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="menu-col-header pb-2 mb-3 border-bottom d-flex align-items-center gap-2">
+                        <i class="bi bi-compass-fill text-danger fs-5" aria-hidden="true"></i>
+                        <div class="h5 fw-bold text-dark mb-0">Quick Links</div>
                     </div>
-                    <ul class="fs-nav-list">
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('/') ?>" class="fs-nav-link <?= ($page === 'home') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">01.</span>
-                                <span class="fs-nav-title">Home</span>
+                    <ul class="list-unstyled menu-nav-links mb-0">
+                        <li>
+                            <a href="<?= site_url('/') ?>" class="menu-nav-item <?= ($page === 'home') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-house-door-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Home</span>
                             </a>
                         </li>
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('about') ?>" class="fs-nav-link <?= $isAboutActive ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">02.</span>
-                                <span class="fs-nav-title">About Us</span>
-                            </a>
-                            <!-- Quick Subpills for About -->
-                            <div class="fs-subpills">
-                                <a href="<?= site_url('about') ?>" class="fs-subpill" data-bs-dismiss="offcanvas">Company Profile</a>
-                                <a href="<?= site_url('reviews') ?>" class="fs-subpill" data-bs-dismiss="offcanvas">Reviews</a>
-                                <a href="<?= site_url('photo-gallery') ?>" class="fs-subpill" data-bs-dismiss="offcanvas">Gallery</a>
-                                <a href="<?= site_url('faqs') ?>" class="fs-subpill" data-bs-dismiss="offcanvas">FAQs</a>
-                            </div>
-                        </li>
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('services') ?>" class="fs-nav-link <?= $isServicesActive ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">03.</span>
-                                <span class="fs-nav-title">Our Services</span>
+                        <li>
+                            <a href="<?= site_url('about') ?>" class="menu-nav-item <?= $isAboutActive ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-info-circle-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>About Us</span>
                             </a>
                         </li>
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('city') ?>" class="fs-nav-link <?= ($page === 'city') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">04.</span>
-                                <span class="fs-nav-title">Branch Locator</span>
+                        <li>
+                            <a href="<?= site_url('reviews') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-star-fill text-warning me-2" aria-hidden="true"></i>
+                                <span>Customer Reviews</span>
+                                <span class="badge bg-warning text-dark fw-bold ms-auto small">4.9 ★</span>
                             </a>
                         </li>
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('tracking') ?>" class="fs-nav-link <?= ($page === 'tracking') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">05.</span>
-                                <span class="fs-nav-title">Live Tracking</span>
+                        <li>
+                            <a href="<?= site_url('photo-gallery') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-images text-danger me-2" aria-hidden="true"></i>
+                                <span>Photo Gallery</span>
                             </a>
                         </li>
-                        <li class="fs-nav-item">
-                            <a href="<?= site_url('contact') ?>" class="fs-nav-link <?= ($page === 'contact') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
-                                <span class="fs-nav-num">06.</span>
-                                <span class="fs-nav-title">Contact Us</span>
+                        <li>
+                            <a href="<?= site_url('faqs') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-question-circle-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>FAQs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('city') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-geo-alt-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Branch Locator</span>
+                                <span class="badge bg-danger bg-opacity-10 text-danger ms-auto small">500+ Hubs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('tracking') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-truck-front-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Live GPS Tracking</span>
+                                <span class="badge bg-success-subtle text-success ms-auto small">Live</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('contact') ?>" class="menu-nav-item <?= ($page === 'contact') ? 'active' : '' ?>" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-envelope-paper-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Contact Us</span>
                             </a>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Column 2: Relocation Services Grid -->
-                <div class="col-lg-5">
-                    <div class="fs-col-label">
-                        <span class="fs-dot"></span>
-                        <span>RELOCATION SOLUTIONS</span>
+                <!-- Col 2: All Relocation Services in ONE Column (col-12 col-md-6 col-lg-4) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="menu-col-header pb-2 mb-3 border-bottom d-flex align-items-center gap-2">
+                        <i class="bi bi-truck text-danger fs-5" aria-hidden="true"></i>
+                        <div class="h5 fw-bold text-dark mb-0">Our Relocation Services</div>
                     </div>
-                    <div class="fs-services-grid">
-                        <a href="<?= site_url('services/household-moving') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-house-check"></i></span>
-                                <span class="fs-service-name">Household Moving</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/office-relocation') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-buildings"></i></span>
-                                <span class="fs-service-name">Office Relocation</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/car-transportation') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-car-front"></i></span>
-                                <span class="fs-service-name">Car Carrier</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/bike-transportation') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-bicycle"></i></span>
-                                <span class="fs-service-name">Bike Transport</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/packing-moving') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-boxes"></i></span>
-                                <span class="fs-service-name">Packing &amp; Moving</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/loading-unloading') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-truck"></i></span>
-                                <span class="fs-service-name">Loading &amp; Unloading</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/warehouse-storage') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-archive"></i></span>
-                                <span class="fs-service-name">Storage Warehouse</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                        <a href="<?= site_url('services/transit-insurance') ?>" class="fs-service-card" data-bs-dismiss="offcanvas">
-                            <div class="fs-service-card-left">
-                                <span class="fs-service-icon"><i class="bi bi-shield-check"></i></span>
-                                <span class="fs-service-name">Transit Insurance</span>
-                            </div>
-                            <i class="bi bi-arrow-right fs-service-arrow"></i>
-                        </a>
-                    </div>
-                    <a href="<?= site_url('services') ?>" class="fs-view-all-services" data-bs-dismiss="offcanvas">
-                        <span>Explore All Specialized Services</span>
-                        <i class="bi bi-arrow-right"></i>
-                    </a>
+                    <ul class="list-unstyled menu-nav-links mb-0">
+                        <li>
+                            <a href="<?= site_url('household-moving') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-house-check-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Home Shifting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('office-relocation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-building-fill-gear text-danger me-2" aria-hidden="true"></i>
+                                <span>Office Shifting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('car-transportation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-car-front-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Car shifting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('bike-transportation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-bicycle text-danger me-2" aria-hidden="true"></i>
+                                <span>Bike Shifting</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('corporate-relocation') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-briefcase-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Corporate Relocation</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('packing-moving') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-boxes text-danger me-2" aria-hidden="true"></i>
+                                <span>Packing &amp; Unpacking</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('loading-unloading') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-truck text-danger me-2" aria-hidden="true"></i>
+                                <span>Loading &amp; Unloading</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('warehouse-storage') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-archive-fill text-danger me-2" aria-hidden="true"></i>
+                                <span>Storage &amp; Warehouse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="<?= site_url('transit-insurance') ?>" class="menu-nav-item" data-bs-dismiss="offcanvas">
+                                <i class="bi bi-shield-fill-check text-danger me-2" aria-hidden="true"></i>
+                                <span>Goods Transit Insurance</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
 
-                <!-- Column 3: 24x7 Helpline, Booking & Trust Hub -->
-                <div class="col-lg-3">
-                    <div class="fs-col-label">
-                        <span class="fs-dot"></span>
-                        <span>DIRECT HELPLINE &amp; QUOTE</span>
+                <!-- Col 3: Helpline & Fast Estimate Hub (col-12 col-md-12 col-lg-4) -->
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="menu-col-header pb-2 mb-3 border-bottom d-flex align-items-center gap-2">
+                        <i class="bi bi-headset text-danger fs-5" aria-hidden="true"></i>
+                        <div class="h5 fw-bold text-dark mb-0">24x7 Direct Support</div>
                     </div>
-                    <div class="fs-hub-stack">
-                        <!-- Direct Call & Chat Card -->
-                        <div class="fs-contact-card">
-                            <div class="fs-card-title">24x7 Live Helpline</div>
-                            <div class="fs-card-subtitle">Connect directly with our Indore dispatch officer:</div>
-                            <a <?= $phonehtml ?> class="fs-call-big-btn">
-                                <i class="bi bi-telephone-fill call-icon-anim"></i>
-                                <span><?= esc($phone) ?></span>
-                            </a>
-                            <a href="<?= esc($whatsapphtml) ?>" target="_blank" class="fs-whatsapp-btn">
-                                <i class="bi bi-whatsapp"></i>
-                                <span>Instant WhatsApp Chat</span>
-                            </a>
-                            <div class="fs-contact-details">
-                                <div><i class="bi bi-envelope text-danger me-2"></i><?= esc($mail) ?></div>
-                                <div><i class="bi bi-geo-alt text-danger me-2"></i><?= esc($comp['address_short'] ?? 'Dewas Naka, Indore MP') ?></div>
+
+                    <!-- Clean Helpline Card -->
+                    <div class="card border rounded-3 p-3 mb-3 bg-light shadow-sm">
+                        <div class="small text-muted mb-2 fw-semibold">Connect with Indore Dispatch:</div>
+                        <a <?= $phonehtml ?> class="btn btn-danger w-100 fw-bold py-2 mb-2 d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-telephone-fill" aria-hidden="true"></i>
+                            <span><?= esc($phone) ?></span>
+                        </a>
+                        <a href="<?= esc($whatsapphtml) ?>" target="_blank" rel="noopener" class="btn btn-hero-whatsapp w-100 fw-bold py-2 mb-3 d-flex align-items-center justify-content-center gap-2">
+                            <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <div class="small text-muted border-top pt-2">
+                            <div class="d-flex align-items-start gap-2 mb-1">
+                                <i class="bi bi-geo-alt-fill text-danger flex-shrink-0 mt-1" aria-hidden="true"></i>
+                                <span class="lh-sm"><?= esc($comp['address_short'] ?? 'Dewas Naka, Indore MP') ?></span>
+                            </div>
+                            <div class="d-flex align-items-center gap-2">
+                                <i class="bi bi-envelope-fill text-danger flex-shrink-0" aria-hidden="true"></i>
+                                <span class="text-truncate"><?= esc($mail) ?></span>
                             </div>
                         </div>
+                    </div>
 
-                        <!-- Instant Quote CTA Card -->
-                        <div class="fs-quote-card">
-                            <div class="fs-card-title text-warning">Quick Moving Estimate</div>
-                            <div class="fs-card-subtitle text-white-50">Zero obligation customized price quote:</div>
-                            <a href="<?= site_url('contact') ?>" class="fs-quote-cta-btn" data-bs-toggle="modal" data-bs-target="#quoteModal" data-bs-dismiss="offcanvas">
-                                <i class="bi bi-calculator-fill"></i>
-                                <span>Get Instant Quote</span>
-                            </a>
-                        </div>
-
-                        <!-- Trust Credentials -->
-                        <div class="fs-trust-strip">
-                            <span><i class="bi bi-shield-fill-check text-success me-1"></i> Govt. Regd</span>
-                            <span class="badge bg-secondary">GST: <?= esc($gst ?? '23BMOPT6924P1Z4') ?></span>
-                        </div>
+                    <!-- Instant Quote Card -->
+                    <div class="card border border-warning rounded-3 p-3 bg-white shadow-sm text-center">
+                        <div class="fw-bold text-dark mb-1">Need Moving Cost Estimate?</div>
+                        <p class="small text-muted mb-2">Get free doorstep survey with zero hidden charges.</p>
+                        <a href="<?= site_url('contact') ?>" class="btn btn-warning w-100 fw-bold text-dark py-2" data-bs-toggle="modal" data-bs-target="#quoteModal" data-bs-dismiss="offcanvas">
+                            <i class="bi bi-calculator-fill me-1" aria-hidden="true"></i>
+                            <span>Get Free Quote</span>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Fullscreen Menu Bottom Footer -->
-    <div class="fs-menu-footer">
-        <div>© <?= date('Y') ?> <?= esc($company3) ?>. 100% Safe, Insured &amp; Reliable Packers and Movers in Indore.</div>
-        <div class="d-flex align-items-center gap-3">
-            <span><i class="bi bi-patch-check-fill text-warning me-1"></i> GSTIN: <?= esc($gst ?? '23BMOPT6924P1Z4') ?></span>
-            <span>•</span>
-            <a href="<?= site_url('city') ?>" class="text-white-50 text-decoration-none" data-bs-dismiss="offcanvas">All Branches</a>
-            <span>•</span>
-            <a href="<?= site_url('faqs') ?>" class="text-white-50 text-decoration-none" data-bs-dismiss="offcanvas">FAQs</a>
+    <!-- Menu Normal Footer Bar -->
+    <div class="menu-normal-footer bg-light border-top py-3 px-3 px-md-5">
+        <div class="container-fluid p-0">
+            <div class="row align-items-center gy-2">
+                <div class="col-md-6 text-center text-md-start small text-muted">
+                    © <?= date('Y') ?> <strong><?= esc($company3) ?></strong>. All Rights Reserved. Govt. Regd Movers.
+                </div>
+                <div class="col-md-6 text-center text-md-end small">
+                    <span class="badge bg-secondary me-2">GSTIN: <?= esc($gst ?? '23BMOPT6924P1Z4') ?></span>
+                    <a href="<?= site_url('about') ?>" class="text-muted text-decoration-none me-3" data-bs-dismiss="offcanvas">About</a>
+                    <a href="<?= site_url('faqs') ?>" class="text-muted text-decoration-none me-3" data-bs-dismiss="offcanvas">FAQs</a>
+                    <a href="<?= site_url('contact') ?>" class="text-muted text-decoration-none" data-bs-dismiss="offcanvas">Contact</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
