@@ -169,7 +169,7 @@ $reviews = [
             </div>
             <div class="col-md-4">
                 <div class="p-3 bg-white rounded-3 border d-flex align-items-center justify-content-center gap-2">
-                    <i class="bi bi-clock-check text-primary fs-5"></i>
+                    <i class="bi bi-clock-history text-primary fs-5"></i>
                     <span class="fw-semibold small text-dark">99.8% On-Time Delivery Track Record</span>
                 </div>
             </div>
