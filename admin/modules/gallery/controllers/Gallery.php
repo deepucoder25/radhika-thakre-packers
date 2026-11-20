@@ -15,128 +15,121 @@ class Gallery extends MX_Controller
 
     function image_upload()
     {
-        $this->load->library('form_validation');
-        $this->form_validation->set_rules('title', 'Title', 'trim');
+        $data = array();
+        $data['title'] = isset($_POST['title']) ? trim($_POST['title']) : '';
+        $data['album_id'] = 0;
+        $data['album_name'] = 'General';
         
-        if (empty($_FILES['image']['name']) && empty($_POST['auto_id'])) {
-            $this->form_validation->set_rules('image', 'Image', 'required');
-        }
-        if ($this->form_validation->run() == TRUE) 
-        {
-            $data = array();
-            $data['title'] = isset($_POST['title']) ? $_POST['title'] : '';
-            $data['album_id'] = 0;
-            $data['album_name'] = 'General';
-            
-            if (!empty($_FILES['image']['name'])) {
-                // upload coder starts here
-                $config['upload_path'] = './assets/temp';
-                $config['allowed_types'] = 'gif|jpg|png|jpeg|pdf';
-                $config['new_image'] = './assets/uploads/gallery/';
-                $config['min_width']=200;
-             
-                $rand_number = mt_rand(0, 85);
-                $timestamp = time();
-                $config['file_name'] =  $rand_number . $timestamp;
-                
-                $config['overwrite'] = false;
-                $config['remove_spaces'] = true;
-                
-                $this->load->library('upload', $config);
-                if (! $this->upload->do_upload('image')) 
-                {
-                    echo $this->upload->display_errors();
-                    die();
-                } 
-                else 
-                {   
-                    $image = $this->upload->data();
-                    // image manipulation resizing 1
-                    $config['source_image'] = './assets/temp/' . $image['file_name'];
-                    $config['maintain_ratio'] = TRUE;
-                    $this->load->library('image_lib', $config);
-                    $this->image_lib->initialize($config);
-                    
-                    if (! $this->image_lib->resize()) 
-                    {
-                        echo $this->image_lib->display_errors();die();
-                    }
-                    
-                    $this->image_lib->clear();
-                    // image manipulation resizing 2
-                    $config['source_image'] = './assets/temp/' . $image['file_name'];
-                    $config['new_image'] = './assets/uploads/gallery/thumb/';
-                    $config['file_name'] =  $rand_number . $timestamp;
-                    $config['maintain_ratio'] = TRUE;
-                    $config['overwrite'] = FALSE;
-                    $this->load->library('image_lib', $config);
-                    $this->image_lib->initialize($config);
-                    if (! $this->image_lib->resize())
-                    {
-                        echo $this->image_lib->display_errors();die();
-                    }
-                    else 
-                    {             
-                        unlink($config['source_image']);
-                        $data['image'] = $image['file_name'];
-                    }
-                }
+        if (!empty($_FILES['image']['name']) && !empty($_FILES['image']['tmp_name'])) {
+            $file = $_FILES['image'];
+            if ($file['error'] !== UPLOAD_ERR_OK) {
+                echo "File upload error code: " . $file['error'];
+                return;
             }
-            
-            if (!empty($_POST['auto_id'])) {
-                $where['auto_id'] = $_POST['auto_id'];
-                echo $this->gallery_mdl->update_data($where, $data);
+
+            $allowed = ['jpg', 'jpeg', 'png', 'gif', 'webp', 'pdf'];
+            $ext = strtolower(pathinfo($file['name'], PATHINFO_EXTENSION));
+            if (!in_array($ext, $allowed)) {
+                echo "Invalid image type. Allowed: JPG, PNG, WEBP, GIF";
+                return;
+            }
+
+            // Target directories in public/assets/uploads/gallery/
+            $uploadDir = FCPATH . 'assets/uploads/gallery/';
+            $thumbDir  = FCPATH . 'assets/uploads/gallery/thumb/';
+
+            if (!is_dir($uploadDir)) {
+                @mkdir($uploadDir, 0777, true);
+            }
+            if (!is_dir($thumbDir)) {
+                @mkdir($thumbDir, 0777, true);
+            }
+
+            $rand_number = mt_rand(10, 99);
+            $timestamp = time();
+            $newFileName = $rand_number . $timestamp . '.' . $ext;
+
+            $destFull  = $uploadDir . $newFileName;
+            $destThumb = $thumbDir . $newFileName;
+
+            if (move_uploaded_file($file['tmp_name'], $destFull)) {
+                @copy($destFull, $destThumb);
+                $data['image'] = $newFileName;
             } else {
-                $data['status'] = 1;
-                echo $this->gallery_mdl->add_data($data);
+                echo "Failed to save uploaded image. Check directory write permissions.";
+                return;
             }
         }
-        else echo validation_errors();
-        // Upload code end
+
+        if (!empty($_POST['auto_id'])) {
+            $where['auto_id'] = $_POST['auto_id'];
+            echo $this->gallery_mdl->update_data($where, $data);
+        } else {
+            if (empty($data['image'])) {
+                echo "Please select an image file to upload.";
+                return;
+            }
+            $data['status'] = 1;
+            echo $this->gallery_mdl->add_data($data);
+        }
     }
    
     function view_data()
     {
         if (isset($_GET['id']))
-	         $where['auto_id']=$_GET['id'];
-        else $where = null;
+            $where['auto_id'] = $_GET['id'];
+        else 
+            $where = null;
         
         if (isset($_GET['data']))
-	        $select=$_GET['data'];
-	    else $select="*";
+            $select = $_GET['data'];
+        else 
+            $select = "*";
 	    
-        $return=$this->gallery_mdl->view_data($where,$select);
+        $return = $this->gallery_mdl->view_data($where, $select);
         $this->output->set_content_type('application/json')->set_output(json_encode($return->result_array()));
     }
+
     function delete_data()
     {
         if (isset($_GET['id']) && $_GET['id'])
         {
-            
             $this->db->where('auto_id', $_GET['id']);
-            foreach ($this->db->get("gallery")->result() as $row)
-            {
-                $image_delete_path1="./assets/uploads/gallery/$row->image";
-                $image_delete_path2="./assets/uploads/gallery/thumb/$row->image";
+            $res = $this->db->get("gallery");
+            if ($res) {
+                foreach ($res->result() as $row)
+                {
+                    $img = $row->image ?? '';
+                    if ($img) {
+                        $p1 = FCPATH . "assets/uploads/gallery/$img";
+                        $p2 = FCPATH . "assets/uploads/gallery/thumb/$img";
+                        if (file_exists($p1)) @unlink($p1);
+                        if (file_exists($p2)) @unlink($p2);
+                    }
+                }
             }
-            if(file_exists($image_delete_path1)) unlink($image_delete_path1);
-            if(file_exists($image_delete_path2)) unlink($image_delete_path2);
-            $where['auto_id']=$_GET['id'];
+            $where['auto_id'] = $_GET['id'];
             echo $this->gallery_mdl->delete_data($where);
-        }else echo "Not Deleted";
+        } else {
+            echo "Not Deleted";
+        }
     }
+
     function update_status()
     {
         if (isset($_GET['id']) && $_GET['id'] && isset($_GET['status']))
         {
             $where['auto_id'] = $_GET['id'];
             $data['status'] = $_GET['status'];
-            echo $this->gallery_mdl->update_data($where,$data);
-        }else echo "invalid Request";
+            echo $this->gallery_mdl->update_data($where, $data);
+        } else {
+            echo "invalid Request";
+        }
     }
-    function update_album_names($where,$name)
+
+    function update_album_names($where, $name)
     {
-        $data['album_name']=$name;
-        return $this->gallery_mdl->update_data($where,$data);
+        $data['album_name'] = $name;
+        return $this->gallery_mdl->update_data($where, $data);
     }
 }

@@ -4446,3 +4446,705 @@ a {
 
 
 
+
+
+/* ==========================================================================
+   Inner Pages Modernization Styles: About, Reviews, Gallery, FAQs, Tracking, Contact
+   Zero inline styles | 100% Responsive | Theme Logo Colors
+   ========================================================================== */
+
+/* --- 1. About Us Page Styles --- */
+.about-stats-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 24px;
+}
+
+.about-stat-box {
+  background: #ffffff;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease;
+}
+
+.about-stat-box:hover {
+  transform: translateY(-3px);
+}
+
+.about-stat-num {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 4px;
+}
+
+.about-stat-lbl {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #475569;
+}
+
+.about-pillar-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 20px;
+}
+
+.about-pillar-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.about-pillar-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.about-pillar-icon.icon-mission {
+  background: #fee2e2;
+  color: #e51a1a;
+}
+
+.about-pillar-icon.icon-vision {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.about-pillar-icon.icon-values {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.about-step-card {
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border-radius: 20px;
+}
+
+.about-step-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.about-step-badge {
+  display: inline-block;
+  background: #e51a1a;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.82rem;
+  padding: 4px 14px;
+  border-radius: 50px;
+  letter-spacing: 0.5px;
+}
+
+.about-feature-bullet {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #e51a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+/* --- 2. Customer Reviews Page Styles --- */
+.review-scorecard-card {
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.review-bar-label {
+  min-width: 52px;
+  font-size: 0.85rem;
+}
+
+.review-bar-pct {
+  min-width: 40px;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.review-progress {
+  height: 8px;
+  border-radius: 50px;
+  background: #f1f5f9;
+}
+
+.review-bar-w92 {
+  width: 92%;
+}
+
+.review-bar-w6 {
+  width: 6%;
+}
+
+.review-bar-w1 {
+  width: 1%;
+}
+
+.review-bar-wmin {
+  width: 0.5%;
+}
+
+.review-display-card {
+  border-radius: 20px;
+  border: 1px solid #f1f5f9;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.review-display-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08) !important;
+}
+
+.review-avatar-bubble {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e51a1a, #b91c1c);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(229, 26, 26, 0.25);
+}
+
+.review-route-tag {
+  display: inline-flex;
+  align-items: center;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 50px;
+  padding: 3px 10px;
+  font-size: 0.78rem;
+  color: #475569;
+}
+
+.review-star-picker {
+  display: inline-flex;
+  gap: 6px;
+}
+
+.star-pick-icon {
+  font-size: 1.8rem;
+  color: #cbd5e1;
+  cursor: pointer;
+  transition: color 0.2s ease, transform 0.15s ease;
+}
+
+.star-pick-icon:hover,
+.star-pick-icon.active {
+  color: #f59e0b;
+  transform: scale(1.15);
+}
+
+.review-filter-btn.active {
+  background: #e51a1a;
+  color: #ffffff !important;
+  border-color: #e51a1a;
+}
+
+/* --- 3. Photo Gallery Page Styles --- */
+.gallery-toggle-btn.active {
+  background: #e51a1a;
+  color: #ffffff !important;
+  border-color: #e51a1a;
+}
+
+.gallery-card {
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+}
+
+.gallery-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.12) !important;
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 230px;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.08);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.45);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-zoom-badge {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #e51a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transform: scale(0.8);
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card:hover .gallery-zoom-badge {
+  transform: scale(1);
+}
+
+.gallery-cat-pill {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 2;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+
+.gallery-filter-btn.active {
+  background: #e51a1a;
+  color: #ffffff !important;
+  border-color: #e51a1a;
+}
+
+.gallery-cta-card {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  border-radius: 24px;
+}
+
+.video-frame-wrapper {
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  overflow: hidden;
+  background-color: #0f172a;
+}
+
+.video-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* --- 4. FAQs Page Styles --- */
+.faq-hero-search-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 24px;
+}
+
+.faq-lead-text {
+  max-width: 640px;
+  font-size: 1rem;
+}
+
+.faq-search-wrapper {
+  max-width: 680px;
+}
+
+.faq-category-btn.active {
+  background: #e51a1a;
+  color: #ffffff !important;
+  border-color: #e51a1a;
+}
+
+.faq-modern-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px !important;
+  margin-bottom: 14px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.faq-modern-item:hover {
+  border-color: #fca5a5;
+  box-shadow: 0 6px 18px rgba(229, 26, 26, 0.06) !important;
+}
+
+.faq-modern-button {
+  border-radius: 18px !important;
+  font-size: 1.02rem;
+  background-color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.faq-modern-button:not(.collapsed) {
+  background-color: #fef2f2;
+  color: #991b1b;
+  box-shadow: none;
+}
+
+.faq-modern-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+.faq-modern-body {
+  font-size: 0.94rem;
+  line-height: 1.7;
+  color: #475569;
+}
+
+.faq-helpdesk-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 24px;
+}
+
+/* --- 5. Live GPS Tracking Page Styles --- */
+.tracking-search-card {
+  background: linear-gradient(145deg, #ffffff 0%, #fef2f2 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 24px;
+}
+
+.tracking-subtext {
+  max-width: 560px;
+}
+
+.tracking-input-group {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+
+.tracking-sample-chip {
+  font-size: 0.78rem;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.tracking-sample-chip:hover {
+  background: #fee2e2;
+  color: #e51a1a;
+  border-color: #e51a1a;
+}
+
+.tracking-summary-card {
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.tracking-stepper-wrap {
+  position: relative;
+  padding: 15px 0 25px;
+}
+
+.tracking-step-line {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: #e2e8f0;
+  z-index: 1;
+}
+
+.tracking-step {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  flex: 1;
+}
+
+.tracking-step-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  border: 3px solid #ffffff;
+  color: #64748b;
+  margin: 0 auto 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.tracking-step.is-complete .tracking-step-circle {
+  background: #10b981;
+  color: #ffffff;
+}
+
+.tracking-step.is-active .tracking-step-circle {
+  background: #e51a1a;
+  color: #ffffff;
+  box-shadow: 0 0 0 5px rgba(229, 26, 26, 0.2);
+}
+
+.tracking-step-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #475569;
+}
+
+.tracking-step.is-active .tracking-step-label {
+  color: #e51a1a;
+}
+
+.tracking-info-cell {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s ease;
+}
+
+.tracking-info-cell:hover {
+  transform: translateY(-2px);
+}
+
+.tracking-timeline-card {
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.tracking-timeline-modern {
+  border-left: 2px dashed #cbd5e1;
+  margin-left: 14px;
+  padding-left: 24px;
+}
+
+.tracking-timeline-item {
+  position: relative;
+}
+
+.tracking-dot {
+  position: absolute;
+  left: -31px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+.tracking-dot.dot-done {
+  background: #10b981;
+}
+
+.tracking-dot.dot-active {
+  background: #e51a1a;
+  box-shadow: 0 0 0 4px rgba(229, 26, 26, 0.25);
+}
+
+.tracking-support-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  border: 2px solid #fee2e2;
+  border-radius: 24px;
+}
+
+/* --- 6. Contact Us Page Styles --- */
+.contact-quick-card {
+  background: #ffffff;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.contact-quick-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06) !important;
+}
+
+.contact-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.contact-card-icon.icon-phone {
+  background: #fee2e2;
+  color: #e51a1a;
+}
+
+.contact-card-icon.icon-whatsapp {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.contact-card-icon.icon-email {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.contact-form-card {
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.contact-info-card {
+  border-radius: 24px;
+  border: 1px solid #e2e8f0;
+}
+
+.contact-detail-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.contact-detail-icon.icon-address {
+  background: #fee2e2;
+  color: #e51a1a;
+}
+
+.contact-detail-icon.icon-phone-small {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.contact-detail-icon.icon-mail-small {
+  background: #e0e7ff;
+  color: #4f46e5;
+}
+
+.contact-detail-icon.icon-clock {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.contact-social-row {
+  gap: 8px;
+}
+
+.contact-social-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f1f5f9;
+  color: #334155;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.contact-social-btn:hover {
+  background: #e51a1a;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.contact-whatsapp-banner {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 24px;
+}
+
+.contact-wa-icon {
+  font-size: 2.2rem;
+}
+
+.contact-map-responsive {
+  position: relative;
+  width: 100%;
+  height: 380px;
+  overflow: hidden;
+}
+
+.contact-map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Media Queries for Mobile Responsiveness */
+@media (max-width: 767.98px) {
+  .tracking-step-line {
+    top: 18px;
+    left: 8%;
+    right: 8%;
+  }
+  .tracking-step-circle {
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+  }
+  .tracking-step-label {
+    font-size: 0.68rem;
+  }
+  .contact-map-responsive {
+    height: 300px;
+  }
+  .about-stat-num {
+    font-size: 1.7rem;
+  }
+}
+
+/* ==========================================================================
+   WCAG AAA / Lighthouse Accessibility Enhancements
+   ========================================================================== */
+.text-danger {
+  color: #991b1b !important; /* Rich Crimson: 7.44:1 on #fff, 7.20:1 on #f8fafc (WCAG AAA) */
+}
+
+.text-danger-emphasis {
+  color: #7f1d1d !important;
+}
+
+.badge.bg-danger.bg-opacity-10 {
+  background-color: rgba(153, 27, 27, 0.08) !important;
+  color: #991b1b !important;
+  border-color: rgba(153, 27, 27, 0.25) !important;
+}
+
+.table-danger {
+  --bs-table-color: #7f1d1d;
+  --bs-table-bg: #fee2e2;
+  --bs-table-border-color: #fecaca;
+  --bs-table-striped-bg: #fde8e8;
+  --bs-table-active-bg: #fcd4d4;
+  --bs-table-hover-bg: #fddcdc;
+  color: #7f1d1d;
+  border-color: #fecaca;
+}
+
+.table-danger td.text-danger {
+  color: #7f1d1d !important;
+}
+

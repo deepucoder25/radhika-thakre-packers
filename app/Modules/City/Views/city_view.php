@@ -383,32 +383,34 @@ $waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
                         Instant shifting cost estimation for <?= esc($cityName) ?> based on home size and transit distance:
                     </p>
 
-                    <div class="mb-3">
-                        <label for="rtCalcType" class="form-label small fw-bold text-dark mb-1">Select Shifting Type:</label>
-                        <select id="rtCalcType" name="calc_type" aria-label="Select Shifting Type" class="form-select city-quote-input">
-                            <option value="1BHK">1 BHK Home</option>
-                            <option value="2BHK">2 BHK Home</option>
-                            <option value="3BHK">3 BHK Home</option>
-                            <option value="4BHK">4 BHK / Villa</option>
-                            <option value="car">Car Transportation</option>
-                            <option value="bike">Bike Transportation</option>
-                        </select>
-                    </div>
+                    <form id="cityFareCalculator" onsubmit="runRtCalculator(); return false;">
+                        <div class="mb-3">
+                            <label id="lblCalcType" for="rtCalcType" class="form-label small fw-bold text-dark mb-1">Select Shifting Type:</label>
+                            <select id="rtCalcType" name="calc_type" aria-labelledby="lblCalcType" aria-label="Select Shifting Type" class="form-select city-quote-input">
+                                <option value="1BHK">1 BHK Home</option>
+                                <option value="2BHK">2 BHK Home</option>
+                                <option value="3BHK">3 BHK Home</option>
+                                <option value="4BHK">4 BHK / Villa</option>
+                                <option value="car">Car Transportation</option>
+                                <option value="bike">Bike Transportation</option>
+                            </select>
+                        </div>
 
-                    <div class="mb-3">
-                        <label for="rtCalcDist" class="form-label small fw-bold text-dark mb-1">Select Distance:</label>
-                        <select id="rtCalcDist" name="calc_dist" aria-label="Select Distance" class="form-select city-quote-input">
-                            <option value="50">Up to 50 km</option>
-                            <option value="500">Up to 500 km</option>
-                            <option value="1000">Up to 1000 km</option>
-                            <option value="1500">Up to 1500 km</option>
-                            <option value="2500">Within 2500 km</option>
-                        </select>
-                    </div>
+                        <div class="mb-3">
+                            <label id="lblCalcDist" for="rtCalcDist" class="form-label small fw-bold text-dark mb-1">Select Distance:</label>
+                            <select id="rtCalcDist" name="calc_dist" aria-labelledby="lblCalcDist" aria-label="Select Distance" class="form-select city-quote-input">
+                                <option value="50">Up to 50 km</option>
+                                <option value="500">Up to 500 km</option>
+                                <option value="1000">Up to 1000 km</option>
+                                <option value="1500">Up to 1500 km</option>
+                                <option value="2500">Within 2500 km</option>
+                            </select>
+                        </div>
 
-                    <button type="button" class="city-quote-btn mb-3" onclick="runRtCalculator()">
-                        <i class="bi bi-calculator me-2"></i>Calculate Estimated Cost
-                    </button>
+                        <button type="submit" class="city-quote-btn mb-3">
+                            <i class="bi bi-calculator me-2"></i>Calculate Estimated Cost
+                        </button>
+                    </form>
 
                     <div id="rtCalcResult" class="rt-calc-result-box">
                         <div class="small text-muted mb-1">Estimated Cost Range:</div>

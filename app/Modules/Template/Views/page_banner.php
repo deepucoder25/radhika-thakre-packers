@@ -13,7 +13,20 @@
  *                           ]
  */
 
-$bannerTitle = $title ?? $banner_title ?? $page_title ?? ($comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+$rawHeading = $heading ?? $banner_heading ?? $banner_title ?? $title ?? $page_title ?? 'Relocation Services';
+
+// Strip company name from heading if present (e.g. "About Us | Radhika Thakre Packers and Movers" -> "About Us")
+$compName = $comp['company3'] ?? ($company3 ?? 'Radhika Thakre Packers and Movers');
+if (!empty($compName)) {
+    $rawHeading = preg_replace('/\s*\|\s*' . preg_quote($compName, '/') . '.*$/iu', '', $rawHeading);
+    $rawHeading = preg_replace('/\s*-\s*' . preg_quote($compName, '/') . '.*$/iu', '', $rawHeading);
+}
+if (strpos($rawHeading, ' | ') !== false) {
+    $parts = explode(' | ', $rawHeading);
+    $rawHeading = trim($parts[0]);
+}
+
+$bannerTitle = trim($rawHeading);
 $bannerDesc  = $description ?? $desc ?? $banner_desc ?? '';
 $trail       = $path ?? $breadcrumb ?? $breadcrumbs ?? [];
 
@@ -44,6 +57,14 @@ if (empty($trail)) {
                 } else {
                     $label = (string)$item;
                     $url   = '';
+                }
+
+                if (!empty($compName)) {
+                    $label = preg_replace('/\s*\|\s*' . preg_quote($compName, '/') . '.*$/iu', '', $label);
+                }
+                if (strpos($label, ' | ') !== false) {
+                    $labelParts = explode(' | ', $label);
+                    $label = trim($labelParts[0]);
                 }
 
                 $isHome = (strtolower($label) === 'home' || $index === 1);

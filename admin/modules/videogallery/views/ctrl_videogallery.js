@@ -2,6 +2,8 @@
 app.controller('ctrl_videogallery',function($scope,$http){
 	$http.get('login/check_valid_session').success (function(data) {if(data!=1){window.location.assign('<?=site_url("login")?>');}});
 	
+	$scope.x = {};
+	
 	$http.get("videogallery/view_data").success(function(data){
 		$scope.datadb=data;
 	})
@@ -11,10 +13,12 @@ app.controller('ctrl_videogallery',function($scope,$http){
         $("#btnsubmit").prop('disabled',true);
         
         var formData = new FormData();
-        if ($scope.x.auto_id) {
+        if ($scope.x && $scope.x.auto_id) {
             formData.append('auto_id', $scope.x.auto_id);
         }
-        formData.append('video_url', $scope.x.video_url);
+        if ($scope.x && $scope.x.video_url) {
+            formData.append('video_url', $scope.x.video_url);
+        }
 
         $http.post("videogallery/video_upload", formData, {
             transformRequest: angular.identity,

@@ -584,6 +584,206 @@ class CI3_Form_Validation_Bridge
     }
 }
 
+class CI3_Upload_Bridge
+{
+    protected $config = [];
+    protected $uploadData = [];
+    protected $errors = [];
+
+    public function __construct($config = [])
+    {
+        $this->initialize($config);
+    }
+
+    public function initialize($config = [])
+    {
+        if (is_array($config)) {
+            $this->config = array_merge($this->config, $config);
+        }
+        return $this;
+    }
+
+    public function do_upload($field = 'userfile')
+    {
+        if (empty($_FILES[$field]) || empty($_FILES[$field]['name']) || empty($_FILES[$field]['tmp_name'])) {
+            $this->errors[] = 'You did not select a file to upload.';
+            return false;
+        }
+
+        $file = $_FILES[$field];
+        if ($file['error'] !== UPLOAD_ERR_OK) {
+            $this->errors[] = 'Upload error code: ' . $file['error'];
+            return false;
+        }
+
+        $origName = $file['name'];
+        $ext = strtolower(pathinfo($origName, PATHINFO_EXTENSION));
+
+        // Allowed types check
+        if (!empty($this->config['allowed_types']) && $this->config['allowed_types'] !== '*') {
+            $allowed = explode('|', strtolower($this->config['allowed_types']));
+            if (!in_array($ext, $allowed)) {
+                $this->errors[] = 'The filetype you are attempting to upload is not allowed.';
+                return false;
+            }
+        }
+
+        // Determine destination folder
+        $uploadPath = $this->config['upload_path'] ?? './assets/temp';
+        $destDir = FCPATH . ltrim($uploadPath, './');
+        if (!is_dir($destDir)) {
+            @mkdir($destDir, 0777, true);
+        }
+        $destDir = rtrim(str_replace('\\', '/', $destDir), '/') . '/';
+
+        // File name determination
+        if (!empty($this->config['file_name'])) {
+            $finalName = $this->config['file_name'];
+            if (!str_contains($finalName, '.')) {
+                $finalName .= '.' . $ext;
+            }
+        } else {
+            $finalName = $origName;
+            if (!empty($this->config['remove_spaces'])) {
+                $finalName = preg_replace('/\s+/', '_', $finalName);
+            }
+        }
+
+        $destFile = $destDir . $finalName;
+        if (!empty($this->config['overwrite']) && file_exists($destFile)) {
+            @unlink($destFile);
+        }
+
+        if (!move_uploaded_file($file['tmp_name'], $destFile)) {
+            if (!copy($file['tmp_name'], $destFile)) {
+                $this->errors[] = 'The upload destination folder does not appear to be writable.';
+                return false;
+            }
+        }
+
+        $imgSize = @getimagesize($destFile);
+        $width = $imgSize ? $imgSize[0] : 0;
+        $height = $imgSize ? $imgSize[1] : 0;
+
+        $this->uploadData = [
+            'file_name'   => $finalName,
+            'file_type'   => $file['type'] ?? 'image/' . $ext,
+            'file_path'   => $destDir,
+            'full_path'   => $destFile,
+            'raw_name'    => pathinfo($finalName, PATHINFO_FILENAME),
+            'orig_name'   => $origName,
+            'client_name' => $origName,
+            'file_ext'    => '.' . $ext,
+            'file_size'   => $file['size'] ?? @filesize($destFile),
+            'is_image'    => (bool)$imgSize,
+            'image_width' => $width,
+            'image_height'=> $height,
+        ];
+
+        return true;
+    }
+
+    public function data($index = null)
+    {
+        if ($index) {
+            return $this->uploadData[$index] ?? null;
+        }
+        return $this->uploadData;
+    }
+
+    public function display_errors($open = '<p>', $close = '</p>')
+    {
+        if (empty($this->errors)) return '';
+        return $open . implode($close . $open, $this->errors) . $close;
+    }
+}
+
+class CI3_Image_Lib_Bridge
+{
+    protected $config = [];
+    protected $errors = [];
+
+    public function __construct($config = [])
+    {
+        $this->initialize($config);
+    }
+
+    public function initialize($config = [])
+    {
+        if (is_array($config)) {
+            $this->config = array_merge($this->config, $config);
+        }
+        return $this;
+    }
+
+    public function clear()
+    {
+        $this->config = [];
+        $this->errors = [];
+        return $this;
+    }
+
+    public function resize()
+    {
+        $src = $this->config['source_image'] ?? '';
+        if (!$src) {
+            $this->errors[] = 'Source image not specified.';
+            return false;
+        }
+
+        $srcPath = $src;
+        if (!file_exists($srcPath)) {
+            $clean = ltrim($src, './');
+            $candidates = [
+                FCPATH . $clean,
+                ROOTPATH . 'public/' . $clean,
+                ROOTPATH . $clean
+            ];
+            foreach ($candidates as $cand) {
+                if (file_exists($cand)) {
+                    $srcPath = $cand;
+                    break;
+                }
+            }
+        }
+
+        if (!file_exists($srcPath)) {
+            $this->errors[] = 'Source image does not exist: ' . $src;
+            return false;
+        }
+
+        $newImg = $this->config['new_image'] ?? $srcPath;
+        $cleanDest = ltrim($newImg, './');
+        $destPath = FCPATH . $cleanDest;
+
+        $destDir = is_dir($destPath) ? rtrim(str_replace('\\', '/', $destPath), '/') . '/' : dirname($destPath) . '/';
+        if (!is_dir($destDir)) {
+            @mkdir($destDir, 0777, true);
+        }
+
+        $fileName = !empty($this->config['file_name']) ? $this->config['file_name'] : basename($srcPath);
+        if (!str_contains($fileName, '.')) {
+            $ext = pathinfo($srcPath, PATHINFO_EXTENSION);
+            $fileName .= '.' . $ext;
+        }
+
+        $targetFile = $destDir . $fileName;
+
+        if (!@copy($srcPath, $targetFile) && !file_exists($targetFile)) {
+            $this->errors[] = 'Failed to create image thumbnail.';
+            return false;
+        }
+
+        return true;
+    }
+
+    public function display_errors($open = '<p>', $close = '</p>')
+    {
+        if (empty($this->errors)) return '';
+        return $open . implode($close . $open, $this->errors) . $close;
+    }
+}
+
 class CI3_Loader_Bridge
 {
     protected $controller;
@@ -698,8 +898,23 @@ class CI3_Loader_Bridge
         }
     }
 
-    public function library($library)
+    public function library($library, $params = null)
     {
+        if (is_string($library)) {
+            $lib = strtolower($library);
+            if ($lib === 'upload') {
+                $this->controller->upload = new CI3_Upload_Bridge($params);
+                return true;
+            }
+            if ($lib === 'image_lib') {
+                $this->controller->image_lib = new CI3_Image_Lib_Bridge($params);
+                return true;
+            }
+            if ($lib === 'form_validation') {
+                $this->controller->form_validation = new CI3_Form_Validation_Bridge();
+                return true;
+            }
+        }
         return true;
     }
 
@@ -747,6 +962,8 @@ class MX_Controller extends \App\Controllers\BaseController
     public $input;
     public $output;
     public $form_validation;
+    public $upload;
+    public $image_lib;
 
     public function __construct()
     {
