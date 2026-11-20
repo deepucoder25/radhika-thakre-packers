@@ -31,19 +31,54 @@ $routes->get('contacts/quoteform', '\Modules\Contacts\Controllers\Contacts::quot
 $routes->get('contacts/quotemodal', '\Modules\Contacts\Controllers\Contacts::quotemodal');
 $routes->get('contacts/review_modal', '\Modules\Contacts\Controllers\Contacts::review_modal');
 
-// Services Routes
-$routes->get('our-services', '\Modules\Services\Controllers\Services::index');
-$routes->get('services', '\Modules\Services\Controllers\Services::index');
+// 1. Home Shifting Routes & Aliases
+$routes->get('household-moving', '\Modules\Services\Controllers\Services::homeShifting');
+$routes->get('home-relocation', '\Modules\Services\Controllers\Services::homeShifting');
+$routes->get('home-shifting', '\Modules\Services\Controllers\Services::homeShifting');
+$routes->get('home-shifting-in-indore', '\Modules\Services\Controllers\Services::homeShifting');
+
+// 2. Office Shifting Routes & Aliases
+$routes->get('office-relocation', '\Modules\Services\Controllers\Services::officeShifting');
+$routes->get('office-shifting', '\Modules\Services\Controllers\Services::officeShifting');
+$routes->get('office-shifting-in-indore', '\Modules\Services\Controllers\Services::officeShifting');
+
+// 3. Car Shifting Routes & Aliases
+$routes->get('car-transportation', '\Modules\Services\Controllers\Services::carShifting');
+$routes->get('car-shifting', '\Modules\Services\Controllers\Services::carShifting');
+$routes->get('car-shifting-in-indore', '\Modules\Services\Controllers\Services::carShifting');
+
+// 4. Bike Shifting Routes & Aliases
+$routes->get('bike-transportation', '\Modules\Services\Controllers\Services::bikeShifting');
+$routes->get('bike-shifting', '\Modules\Services\Controllers\Services::bikeShifting');
+$routes->get('bike-shifting-in-indore', '\Modules\Services\Controllers\Services::bikeShifting');
+
+// 5. Corporate Relocation Routes & Aliases
+$routes->get('corporate-relocation', '\Modules\Services\Controllers\Services::corporateRelocation');
+$routes->get('corporate-relocation-in-indore', '\Modules\Services\Controllers\Services::corporateRelocation');
+
+// 6. Packing & Unpacking Routes & Aliases
+$routes->get('packing-moving', '\Modules\Services\Controllers\Services::packingUnpacking');
+$routes->get('packing-and-moving', '\Modules\Services\Controllers\Services::packingUnpacking');
+$routes->get('packing-unpacking', '\Modules\Services\Controllers\Services::packingUnpacking');
+$routes->get('indore-packing-unpacking', '\Modules\Services\Controllers\Services::packingUnpacking');
+
+// 7. Loading & Unloading Routes & Aliases
+$routes->get('loading-unloading', '\Modules\Services\Controllers\Services::loadingUnloading');
+$routes->get('loading-and-unloading', '\Modules\Services\Controllers\Services::loadingUnloading');
+$routes->get('indore-loading-unloading', '\Modules\Services\Controllers\Services::loadingUnloading');
+
+// 8. Storage & Warehouse Routes & Aliases
+$routes->get('warehouse-storage', '\Modules\Services\Controllers\Services::storageWarehouse');
+$routes->get('storage-services', '\Modules\Services\Controllers\Services::storageWarehouse');
+$routes->get('storage-warehouse', '\Modules\Services\Controllers\Services::storageWarehouse');
+$routes->get('indore-warehouse', '\Modules\Services\Controllers\Services::storageWarehouse');
+
+// 9. Goods Transit Insurance Routes & Aliases
+$routes->get('transit-insurance', '\Modules\Services\Controllers\Services::transitInsurance');
+$routes->get('goods-insurance', '\Modules\Services\Controllers\Services::transitInsurance');
+
+// Dynamic /services/(:segment) routing
 $routes->get('services/(:segment)', '\Modules\Services\Controllers\Services::detail/$1');
-$routes->get('home-relocation', '\Modules\Services\Controllers\Services::detail/household-moving');
-$routes->get('office-relocation', '\Modules\Services\Controllers\Services::detail/office-relocation');
-$routes->get('car-transportation', '\Modules\Services\Controllers\Services::detail/car-transportation');
-$routes->get('bike-transportation', '\Modules\Services\Controllers\Services::detail/bike-transportation');
-$routes->get('packing-and-moving', '\Modules\Services\Controllers\Services::detail/packing-moving');
-$routes->get('loading-unloading', '\Modules\Services\Controllers\Services::detail/loading-unloading');
-$routes->get('storage-services', '\Modules\Services\Controllers\Services::detail/warehouse-storage');
-$routes->get('corporate-relocation', '\Modules\Services\Controllers\Services::detail/corporate-relocation');
-$routes->get('transit-insurance', '\Modules\Services\Controllers\Services::detail/transit-insurance');
 
 // Branch / City Routes (Packers & Movers)
 $routes->get('our-branches', '\Modules\City\Controllers\City::index');

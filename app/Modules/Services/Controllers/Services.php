@@ -8,79 +8,191 @@ use Modules\Services\Models\ServiceModel;
 
 class Services extends BaseController
 {
-    public function index(): string
+    protected ServiceModel $serviceModel;
+
+    public function __construct()
     {
-        $serviceModel = new ServiceModel();
-
-        $data['title']       = "Our Relocation Services | " . $this->comp['company3'];
-        $data['description'] = "Explore safe, reliable and affordable packing, moving, car transport, and warehouse services from " . $this->comp['company3'] . ".";
-        $data['page']        = 'services';
-        $data['module']      = 'services';
-        $data['view_file']   = 'Modules\Services\Views\services';
-        $data['services']    = $serviceModel->getAll();
-
-        return Template::layout2($data);
+        $this->serviceModel = new ServiceModel();
     }
 
-    public function detail(string $slug): string
+    public function index()
     {
-        $serviceModel = new ServiceModel();
-        $service = $serviceModel->getBySlug($slug);
-
-        if (!$service) {
-            // Check fallback by first available service
-            $all = $serviceModel->getAll();
-            $service = $all[0] ?? [
-                'title' => 'Relocation Services',
-                'desc' => 'Professional relocation solutions across India.',
-                'features' => ['Fast Moving', 'Insured Transit']
-            ];
-        }
-
-        $data['title']       = $service['title'] . " | " . $this->comp['company3'];
-        $data['description'] = $service['desc'] . " Reliable service provided by " . $this->comp['company3'] . ".";
-        $data['page']        = 'services';
-        $data['module']      = 'services';
-        $data['view_file']   = 'Modules\Services\Views\service_detail';
-        $data['service']     = $service;
-        $data['allServices'] = $serviceModel->getAll();
-
-        return Template::layout2($data);
+        return redirect()->to(site_url('household-moving'));
     }
 
-    // CI3 method shortcuts
     public function homeShifting(): string
     {
-        return $this->detail('household-moving');
+        $data['title']       = "Home Shifting | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Top-rated home shifting services by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". 100% IBA-approved household relocation with 5-layer bubble packing.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\home_shifting';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
-    public function office(): string
+    public function officeShifting(): string
     {
-        return $this->detail('office-relocation');
+        $data['title']       = "Office Shifting | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Professional office relocation services by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". IBA-approved corporate moving with zero business downtime.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\office_shifting';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
-    public function bike(): string
+    public function carShifting(): string
     {
-        return $this->detail('vehicle-transportation');
+        $data['title']       = "Car Shifting | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Reliable car carrier and vehicle transportation by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". Enclosed hydraulic car trailers, scratch-free transit.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\car_shifting';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
-    public function car(): string
+    public function bikeShifting(): string
     {
-        return $this->detail('vehicle-transportation');
+        $data['title']       = "Bike Shifting | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Safe and dependable two-wheeler & motorcycle transportation by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". Customized wooden crate packaging.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\bike_shifting';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
-    public function packingMoving(): string
+    public function corporateRelocation(): string
     {
-        return $this->detail('packing-moving');
+        $data['title']       = "Corporate Relocation | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Enterprise corporate relocation solutions by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". Full-scale office moving, data centers, branch transitions.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\corporate_relocation';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
+    }
+
+    public function packingUnpacking(): string
+    {
+        $data['title']       = "Packing and Unpacking | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Professional packing and unpacking services by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". 5-layer heavy-duty corrugated cartons and bubble wrap.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\packing_unpacking';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
     public function loadingUnloading(): string
     {
-        return $this->detail('loading-unloading');
+        $data['title']       = "Loading and Unloading | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Professional loading and unloading services by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". Trained handling crew, modern hydraulic ramps, dollies.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\loading_unloading';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
 
-    public function storage(): string
+    public function storageWarehouse(): string
     {
-        return $this->detail('warehouse-storage');
+        $data['title']       = "Storage & Warehouse | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "Secure household and commercial warehouse storage services by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". 24x7 CCTV surveillance, fire-safety.";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\storage_warehouse';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
     }
+
+    public function transitInsurance(): string
+    {
+        $data['title']       = "Goods Transit Insurance | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
+        $data['description'] = "100% comprehensive goods transit insurance for household shifting, vehicle transport, and corporate cargo by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ".";
+        $data['page']        = 'services';
+        $data['module']      = 'services';
+        $data['view_file']   = 'Modules\Services\Views\transit_insurance';
+        $data['services']    = $this->serviceModel->getAll();
+
+        return Template::layout2($data);
+    }
+
+    /**
+     * Slug Router mapping dynamic /services/(:segment) to the dedicated page
+     */
+    public function detail(string $slug): string
+    {
+        switch ($slug) {
+            case 'household-moving':
+            case 'home-relocation':
+            case 'home-shifting':
+            case 'home-shifting-in-indore':
+                return $this->homeShifting();
+
+            case 'office-relocation':
+            case 'office-shifting':
+            case 'office-shifting-in-indore':
+                return $this->officeShifting();
+
+            case 'car-transportation':
+            case 'car-shifting':
+            case 'car-shifting-in-indore':
+                return $this->carShifting();
+
+            case 'bike-transportation':
+            case 'bike-shifting':
+            case 'bike-shifting-in-indore':
+                return $this->bikeShifting();
+
+            case 'vehicle-transportation':
+                return $this->carShifting();
+
+            case 'corporate-relocation':
+            case 'corporate-relocation-in-indore':
+                return $this->corporateRelocation();
+
+            case 'packing-moving':
+            case 'packing-and-moving':
+            case 'packing-unpacking':
+            case 'indore-packing-unpacking':
+                return $this->packingUnpacking();
+
+            case 'loading-unloading':
+            case 'loading-and-unloading':
+            case 'indore-loading-unloading':
+                return $this->loadingUnloading();
+
+            case 'warehouse-storage':
+            case 'storage-services':
+            case 'storage-warehouse':
+            case 'warehouse':
+            case 'indore-warehouse':
+                return $this->storageWarehouse();
+
+            case 'transit-insurance':
+            case 'goods-insurance':
+                return $this->transitInsurance();
+
+            default:
+                return $this->homeShifting();
+        }
+    }
+
+    // CI3 method backward compatibility aliases
+    public function office(): string { return $this->officeShifting(); }
+    public function bike(): string { return $this->bikeShifting(); }
+    public function car(): string { return $this->carShifting(); }
+    public function packingMoving(): string { return $this->packingUnpacking(); }
+    public function storage(): string { return $this->storageWarehouse(); }
 }
