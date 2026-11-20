@@ -1,108 +1,77 @@
-  <div class="hero-quote-card-container" itemscope itemtype="https://schema.org/QuoteAction">
-    <!-- Card Header -->
-    <div class="hero-quote-header">
-      <h3 class="hero-quote-title" itemprop="name">Get Your Best Moving Quote</h3>
-      <p class="hero-quote-subtitle" itemprop="description">Quick, Fast & Free Estimates</p>
+<?php
+/**
+ * Interactive Quick Quote & Fare Estimate Component - Radhika Thakre Packers and Movers
+ * Identical to Home Slider Glassmorphic Estimate Card
+ */
+?>
+<div class="hero-estimate-card card border-0 rounded-4 shadow-lg overflow-hidden">
+    <div class="card-header hero-card-header text-white p-3 p-sm-4 border-0">
+        <div class="d-flex align-items-center justify-content-between mb-1">
+            <h2 class="h5 fw-bold mb-0">Get Instant Shifting Fare</h2>
+            <span class="badge bg-warning text-dark fw-bold">SAVE UP TO 20%</span>
+        </div>
+        <p class="small text-white-50 mb-0">Free doorstep survey • Guaranteed transparent pricing</p>
     </div>
-    
-    <div class="hero-quote-white-card">
-      <!-- Card Body / Form -->
-      <div class="card-body-form">
-        <form id="quoteform" class="ajax-form" data-url="<?php echo site_url('contacts/booking') ?>" data-result="quoteformresults" onsubmit="return false;">
-          
-          <div class="form-row-custom">
-            <!-- Name Input -->
-            <div class="input-wrap-custom">
-              <i class="fa-solid fa-user input-icon-custom"></i>
-              <input type="text" name="name" class="form-control-custom" placeholder="Your Name" required>
+    <div class="card-body hero-card-body p-3 p-sm-4">
+        <form id="heroEstimateForm" class="ajax-form" data-url="<?= site_url('contacts/booking') ?>" data-result="resultheroform" onsubmit="return false;">
+            <div id="resultheroform" class="mb-3"></div>
+            
+            <div class="mb-3">
+                <label class="form-label small fw-semibold mb-1">Your Full Name</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                    <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
+                </div>
             </div>
             
-            <!-- Phone Input -->
-            <div class="input-wrap-custom">
-              <i class="fa-solid fa-phone input-icon-custom"></i>
-              <input type="tel" name="phone" class="form-control-custom" placeholder="Phone Number (10 digits)" required>
+            <div class="mb-3">
+                <label class="form-label small fw-semibold mb-1">Mobile Number (10 Digits)</label>
+                <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
+                    <input type="tel" class="form-control" name="phone" placeholder="Enter 10-digit Mobile Number" required pattern="[0-9]{10}">
+                </div>
             </div>
             
-            <!-- Email Input -->
-            <div class="input-wrap-custom">
-              <i class="fa-solid fa-envelope input-icon-custom"></i>
-              <input type="email" name="email" class="form-control-custom" placeholder="Email Address">
+            <div class="row g-2 mb-3">
+                <div class="col-6">
+                    <label class="form-label small fw-semibold mb-1">Pickup City</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
+                        <input type="text" class="form-control" name="mfrom" placeholder="From City" value="<?= esc($city ?? 'Indore') ?>" required>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label class="form-label small fw-semibold mb-1">Destination City</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="bi bi-pin-map-fill"></i></span>
+                        <input type="text" class="form-control" name="mto" placeholder="To City" required>
+                    </div>
+                </div>
             </div>
             
-            <!-- Select Service -->
-            <div class="input-wrap-custom select-wrap-custom">
-              <span class="select-label-custom">Select Service</span>
-              <select name="mtype" class="form-select-custom">
-                <option value="" disabled selected>Select Service</option>
-                <option>Household Relocation</option>
-                <option>Office Relocation</option>
-                <option>Car/Bike Shifting</option>
-                <option>Warehousing</option>
-              </select>
+            <div class="mb-3">
+                <label class="form-label small fw-semibold mb-1">Relocation Service Type</label>
+                <select class="form-select" name="service" aria-label="Select Relocation Service">
+                    <option value="household-moving" selected>Home Shifting</option>
+                    <option value="office-relocation">Office Shifting</option>
+                    <option value="car-transportation">Car shifting</option>
+                    <option value="bike-transportation">Bike Shifting</option>
+                    <option value="corporate-relocation">Corporate Relocation</option>
+                    <option value="packing-moving">Packing &amp; Unpacking</option>
+                    <option value="loading-unloading">Loading &amp; Unloading</option>
+                    <option value="warehouse-storage">Storage &amp; Warehouse</option>
+                    <option value="transit-insurance">Goods Transit Insurance</option>
+                </select>
             </div>
             
-            <!-- Moving From -->
-            <div class="input-wrap-custom half-width-mobile">
-              <i class="fa-solid fa-location-dot input-icon-custom"></i>
-              <input type="text" name="mfrom" class="form-control-custom" value="<?= esc($city ?? '') ?>" placeholder="Moving From">
-            </div>
-            
-            <!-- Moving To -->
-            <div class="input-wrap-custom half-width-mobile">
-              <i class="fa-solid fa-map-pin input-icon-custom"></i>
-              <input type="text" name="mto" class="form-control-custom" placeholder="Moving To">
-            </div>
-            
-            <!-- Submit Button -->
-            <button type="submit" class="btn-submit-custom">
-              <i class="fa-solid fa-paper-plane submit-btn-icon-desktop"></i>
-              <span>Get Quote</span>
+            <button type="submit" class="btn btn-hero-submit w-100 rounded-pill py-3 fw-bold shadow">
+                <i class="bi bi-send-fill me-2"></i>Calculate Shifting Fare &rarr;
             </button>
-          </div>
-          
-          <div id="quoteformresults" style="margin-top: 15px;"></div>
+            
+            <div class="d-flex align-items-center justify-content-center gap-2 mt-3 text-white-50 small">
+                <i class="bi bi-shield-lock-fill text-success"></i>
+                <span>100% Privacy • No Spam • Instant Callback</span>
+            </div>
         </form>
-      </div>
-      
-      <!-- Card Footer / Trust Badge Bar -->
-      <div class="card-footer-trust d-none d-lg-flex justify-content-between align-items-center">
-        <div class="trust-item">
-          <i class="fa-solid fa-shield-halved trust-icon"></i>
-          <div class="trust-text">
-            <strong>100% Secure</strong>
-            <span>Your data is safe with us</span>
-          </div>
-        </div>
-        <div class="divider-vertical"></div>
-        <div class="trust-item">
-          <i class="fa-solid fa-clock trust-icon"></i>
-          <div class="trust-text">
-            <strong>Quick Response</strong>
-            <span>We respond within 15 mins</span>
-          </div>
-        </div>
-        <div class="divider-vertical"></div>
-        <div class="trust-item">
-          <i class="fa-solid fa-indian-rupee-sign trust-icon-circle"></i>
-          <div class="trust-text">
-            <strong>Best Price Guarantee</strong>
-            <span>Get the most competitive rates</span>
-          </div>
-        </div>
-        <div class="divider-vertical"></div>
-        <div class="trust-item">
-          <i class="fa-solid fa-headset trust-icon"></i>
-          <div class="trust-text">
-            <strong>24/7 Support</strong>
-            <span>We are here to help</span>
-          </div>
-        </div>
-      </div>
-      
-      <!-- Mobile Security Tag -->
-      <div class="mobile-security-tag d-flex d-lg-none justify-content-center align-items-center gap-2 py-3">
-        <i class="fa-solid fa-shield-halved text-primary"></i>
-        <span>100% Secure. We never share your data.</span>
-      </div>
     </div>
-  </div>
+</div>

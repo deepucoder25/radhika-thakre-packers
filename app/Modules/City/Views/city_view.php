@@ -4,241 +4,149 @@
  * Content: 100% matched to https://radhikathakrepackersmovers.com/ajaigarh-packers-movers-madhya-pradesh
  * Design: Completely redesigned with modern, responsive Bootstrap 5 cards & zero inline styles
  */
-
-$compName     = $company3 ?? 'Radhika Thakre Packers and Movers';
-$phoneNum     = $phone ?? '+91 98261 25421';
-$phoneLink    = $phonehtml ?? 'href="tel:+919826125421"';
-$secPhoneLink = $phonehtml1 ?? $phoneLink;
-$secPhoneNum  = $phone1 ?? '+91 99931 72221';
-$waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
 ?>
 
 <!-- =========================================================================
-     1. HERO SLIDER SECTION (EXACT SAME TO SAME LIKE HOME PAGE SLIDER)
+     1. HERO SECTION WITH LOGISTICS TRUCK HIGHWAY BACKGROUND (MOBILE & DESKTOP)
      ========================================================================= -->
-<section class="hero-slider-section position-relative overflow-hidden py-4">
-    <!-- Ambient Decorative SVG Vectors & Radiant Color Flare Mesh -->
-    <div class="hero-bg-decorations position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
-        <!-- Radiant Ambient Glow Orbs -->
-        <div class="hero-glow-orb hero-glow-red"></div>
-        <div class="hero-glow-orb hero-glow-amber"></div>
-        <div class="hero-glow-orb hero-glow-blue"></div>
-
-        <!-- Flowing Logistics Route & Coordinate Network SVG -->
-        <svg class="hero-svg-canvas position-absolute top-0 start-0 w-100 h-100" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" viewBox="0 0 1440 820" fill="none">
-            <defs>
-                <linearGradient id="heroGradLine1" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stop-color="#e51a1a" stop-opacity="0.7"/>
-                    <stop offset="50%" stop-color="#f59e0b" stop-opacity="0.5"/>
-                    <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.15"/>
-                </linearGradient>
-                <linearGradient id="heroGradLine2" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.6"/>
-                    <stop offset="60%" stop-color="#e51a1a" stop-opacity="0.35"/>
-                    <stop offset="100%" stop-color="#818cf8" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="heroGradWaveFill" x1="50%" y1="0%" x2="50%" y2="100%">
-                    <stop offset="0%" stop-color="#e51a1a" stop-opacity="0.08"/>
-                    <stop offset="100%" stop-color="#070b14" stop-opacity="0"/>
-                </linearGradient>
-                <pattern id="heroCoordGrid" width="48" height="48" patternUnits="userSpaceOnUse">
-                    <path d="M 48 0 L 0 0 0 48" fill="none" stroke="rgba(255, 255, 255, 0.035)" stroke-width="1"/>
-                    <circle cx="48" cy="0" r="1.5" fill="rgba(255, 255, 255, 0.06)"/>
-                </pattern>
-            </defs>
-
-            <!-- Coordinate Grid Pattern -->
-            <rect width="100%" height="100%" fill="url(#heroCoordGrid)"/>
-
-            <!-- Ambient Area Gradient Under Curves -->
-            <path d="M-100,540 C220,400 480,720 860,500 C1140,340 1320,420 1550,380 L1550,820 L-100,820 Z" fill="url(#heroGradWaveFill)"/>
-
-            <!-- Primary Route Line -->
-            <path d="M-80,500 C240,360 480,680 880,480 C1160,330 1340,400 1550,360" stroke="url(#heroGradLine1)" stroke-width="2.5" stroke-dasharray="10 8"/>
-
-            <!-- Secondary Express Logistics Wave -->
-            <path d="M-50,640 C300,560 580,260 980,430 C1220,530 1390,320 1550,470" stroke="url(#heroGradLine2)" stroke-width="2"/>
-
-            <!-- Background Flow Contour Curve -->
-            <path d="M-100,320 C280,180 620,440 1020,250 C1260,120 1400,260 1550,210" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1.5"/>
-
-            <!-- Connected Hub Node Markers -->
-            <circle cx="360" cy="430" r="4.5" fill="#f59e0b"/>
-            <circle cx="360" cy="430" r="12" stroke="#f59e0b" stroke-opacity="0.3" stroke-width="1.5"/>
-            <circle cx="880" cy="480" r="5" fill="#e51a1a"/>
-            <circle cx="880" cy="480" r="15" stroke="#e51a1a" stroke-opacity="0.35" stroke-width="1.5"/>
-            <circle cx="1160" cy="330" r="4.5" fill="#38bdf8"/>
-            <circle cx="1160" cy="330" r="12" stroke="#38bdf8" stroke-opacity="0.3" stroke-width="1.5"/>
-        </svg>
-    </div>
-
+<section class="city-hero-truck-section position-relative overflow-hidden py-4 py-lg-5">
     <div class="container py-2 py-lg-4 position-relative z-1">
         <div class="row align-items-center g-4 g-lg-5">
-            <!-- Left Column: Trust Badges, Hero Heading & Value Proposition -->
+            <!-- Left Column: Heading, Tagline, Care Badge & Trust Highlights -->
             <div class="col-lg-7 text-white">
-                <!-- Integrated Breadcrumb Trail -->
-                <nav aria-label="breadcrumb" class="hero-breadcrumb-nav mb-3">
-                    <ol class="breadcrumb hero-breadcrumb-pill">
-                        <li class="breadcrumb-item"><a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill me-1"></i>Home</a></li>
+                <!-- Integrated Breadcrumb Trail (Inside Left Div) -->
+                <nav aria-label="breadcrumb" class="mb-3">
+                    <ol class="breadcrumb city-breadcrumb-pill">
+                        <li class="breadcrumb-item"><a href="<?= site_url('/') ?>"><i class="bi bi-house-door-fill me-1 text-danger"></i>Home</a></li>
                         <li class="breadcrumb-item"><a href="<?= site_url('city') ?>">All States</a></li>
                         <li class="breadcrumb-item"><span><?= esc($stateName) ?></span></li>
                         <li class="breadcrumb-item active" aria-current="page"><span><?= esc($cityName) ?></span></li>
                     </ol>
                 </nav>
 
-                <!-- Trust Badge Pill -->
-                <div class="hero-trust-badge mb-3 d-inline-flex align-items-center gap-2">
-                    <i class="bi bi-patch-check-fill text-warning"></i>
-                    <span>Govt. Regd. &amp; ISO 9001:2015 Certified Movers</span>
-                </div>
-                
-                <!-- Main Headline -->
-                <h1 class="hero-title mb-3">
-                    Safe, Swift &amp; Stress-Free <span class="hero-title-highlight">Packers and Movers</span> in <?= esc($cityName) ?>
-                </h1>
-                
-                <!-- Subtitle (Direct from official URL) -->
-                <p class="hero-subtitle mb-4 text-white-50">
-                    We are the most trusted, safe and reliable packing and moving company in <?= esc($cityName) ?>. We provide top-notch relocation services at budget-friendly rates, ensuring safe and high-quality packing.
-                </p>
+                <div class="city-hero-content-wrap">
+                    <!-- Moving with Care Badge -->
+                    <div class="city-care-pill mb-2 mb-lg-3 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-patch-check-fill text-warning"></i>
+                        <span>Moving with care since <?= esc($startYear ?? '2018') ?></span>
+                    </div>
+                    
+                    <!-- Main Headline (Matching User Screenshot) -->
+                    <h1 class="city-main-heading mb-2">
+                        Packers and Movers in <span class="city-heading-highlight"><?= esc($cityName) ?></span>
+                    </h1>
+                    <div class="city-heading-underline mb-2 mb-lg-3"></div>
+                    
+                    <!-- Subtitle / Tagline -->
+                    <p class="city-subheading mb-3 text-white">
+                        Safe &amp; Reliable Home Shifting Across India
+                    </p>
 
-                <!-- Value Highlights Chips -->
-                <div class="row g-2 mb-4 text-white">
-                    <div class="col-6 col-sm-auto">
-                        <div class="hero-pill-badge d-flex align-items-center gap-2">
-                            <i class="bi bi-shield-fill-check text-warning"></i>
-                            <span>100% Transit Insured</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-auto">
-                        <div class="hero-pill-badge d-flex align-items-center gap-2">
-                            <i class="bi bi-box-seam-fill text-danger"></i>
-                            <span>5-Layer Packaging</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-auto">
-                        <div class="hero-pill-badge d-flex align-items-center gap-2">
-                            <i class="bi bi-geo-alt-fill text-info"></i>
-                            <span>Live GPS Tracking</span>
-                        </div>
-                    </div>
-                    <div class="col-6 col-sm-auto">
-                        <div class="hero-pill-badge d-flex align-items-center gap-2">
-                            <i class="bi bi-clock-history text-success"></i>
-                            <span>Zero Hidden Charges</span>
-                        </div>
-                    </div>
-                </div>
+                    <!-- Value Proposition Paragraph (Desktop View) -->
+                    <p class="hero-subtitle mb-4 text-white-50 d-none d-lg-block">
+                        Trusted by 28,000+ happy clients. We provide top-notch relocation services in <?= esc($cityName) ?> at transparent, budget-friendly rates with 5-layer safety packing and dedicated container trucks.
+                    </p>
 
-                <!-- CTA Action Group -->
-                <div class="d-flex flex-wrap gap-3 align-items-center mb-4">
-                    <a href="<?= site_url('contact') ?>" class="btn btn-hero-quote d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                        <i class="bi bi-calculator-fill"></i>
-                        <span>Get Free Quote</span>
-                    </a>
-                    <a <?= $phoneLink ?> class="btn btn-hero-call d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span>Call Now</span>
-                    </a>
-                    <a href="<?= esc($waLink) ?>" target="_blank" rel="noopener" class="btn btn-hero-whatsapp d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-whatsapp"></i>
-                        <span>WhatsApp</span>
-                    </a>
-                </div>
+                    <!-- Trust Trio Highlights (Desktop View) -->
+                    <div class="city-trust-trio p-3 rounded-4 mb-4 d-none d-sm-block">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-calendar2-check-fill text-warning fs-3"></i>
+                                    <div>
+                                        <div class="city-trust-head fw-bold text-white">Since <?= esc($startYear ?? '2018') ?></div>
+                                        <div class="city-trust-sub text-white-50 small"><?= esc($experience ?? '8+') ?> Years Care</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-white border-opacity-25">
+                                <div class="d-flex align-items-center gap-2 ps-2">
+                                    <i class="bi bi-map-fill text-danger fs-3"></i>
+                                    <div>
+                                        <div class="city-trust-head fw-bold text-white">All India</div>
+                                        <div class="city-trust-sub text-white-50 small">500+ Cities</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 border-start border-white border-opacity-25">
+                                <div class="d-flex align-items-center gap-2 ps-2">
+                                    <i class="bi bi-headset text-info fs-3"></i>
+                                    <div>
+                                        <div class="city-trust-head fw-bold text-white">Dedicated</div>
+                                        <div class="city-trust-sub text-white-50 small">24x7 Support</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                <!-- Live Social Proof & Stats Bar -->
-                <div class="hero-stats-row pt-3 border-top border-secondary border-opacity-25 d-flex flex-wrap gap-4 align-items-center">
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="hero-stat-number text-warning fw-bold fs-4">28,000+</div>
-                        <div class="hero-stat-label text-white-50 small lh-sm">Happy<br>Clients</div>
-                    </div>
-                    <div class="hero-stat-divider d-none d-sm-block"></div>
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="hero-stat-number text-white fw-bold fs-4">100+</div>
-                        <div class="hero-stat-label text-white-50 small lh-sm">Cities<br>Covered</div>
-                    </div>
-                    <div class="hero-stat-divider d-none d-sm-block"></div>
-                    <div class="d-flex align-items-center gap-2">
-                        <div class="hero-stat-number text-warning fw-bold fs-4">4.9 ★</div>
-                        <div class="hero-stat-label text-white-50 small lh-sm">1,850+ Google<br>Reviews</div>
+                    <!-- Google Rating Proof Bar (Desktop View) -->
+                    <div class="city-google-proof-bar p-2 px-3 rounded-pill d-none d-lg-inline-flex align-items-center gap-2 bg-white shadow-sm">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                        <div class="d-inline-flex align-items-center text-warning small">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="text-muted small">|</span>
+                        <span class="small fw-bold text-dark">Trusted by our customers (<?= esc($ratingValue ?? '4.9') ?>★)</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Column: Interactive Quick Quote & Fare Estimate Card (Glassmorphic Transparent) -->
+            <!-- Right Column: Loaded Quote Form Component (No duplicate form code) -->
             <div class="col-lg-5">
-                <div class="hero-estimate-card card border-0 rounded-4 shadow-lg overflow-hidden">
-                    <div class="card-header hero-card-header text-white p-3 p-sm-4 border-0">
-                        <div class="d-flex align-items-center justify-content-between mb-1">
-                            <h2 class="h5 fw-bold mb-0">Get Instant Shifting Fare</h2>
-                            <span class="badge bg-warning text-dark fw-bold">SAVE UP TO 20%</span>
+                <?= view('Modules\Contacts\Views\quoteform', array_merge(get_defined_vars(), ['city' => $cityName])) ?>
+
+                <!-- Trust Trio Highlights (Mobile View - Below Card) -->
+                <div class="city-trust-trio p-3 rounded-4 mt-3 d-block d-sm-none">
+                    <div class="row g-2 align-items-center text-center">
+                        <div class="col-4">
+                            <i class="bi bi-calendar2-check-fill text-warning fs-3 mb-1 d-block"></i>
+                            <div class="city-trust-head fw-bold text-white small">Since <?= esc($startYear ?? '2018') ?></div>
                         </div>
-                        <p class="small text-white-50 mb-0">Free doorstep survey in <?= esc($cityName) ?> • Guaranteed transparent pricing</p>
+                        <div class="col-4 border-start border-white border-opacity-25">
+                            <i class="bi bi-map-fill text-danger fs-3 mb-1 d-block"></i>
+                            <div class="city-trust-head fw-bold text-white small">All India</div>
+                        </div>
+                        <div class="col-4 border-start border-white border-opacity-25">
+                            <i class="bi bi-headset text-info fs-3 mb-1 d-block"></i>
+                            <div class="city-trust-head fw-bold text-white small">24x7 Help</div>
+                        </div>
                     </div>
-                    <div class="card-body hero-card-body p-3 p-sm-4">
-                        <form id="heroEstimateForm" class="ajax-form" data-url="<?= site_url('contacts/booking') ?>" data-result="resultheroform" onsubmit="return false;">
-                            <div id="resultheroform" class="mb-3"></div>
-                            
-                            <div class="mb-3">
-                                <label for="heroName" class="form-label small fw-semibold mb-1">Your Full Name</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
-                                    <input type="text" id="heroName" class="form-control" name="name" placeholder="Enter Your Name" aria-label="Enter Your Name" required>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="heroPhone" class="form-label small fw-semibold mb-1">Mobile Number (10 Digits)</label>
-                                <div class="input-group">
-                                    <span class="input-group-text"><i class="bi bi-telephone-fill"></i></span>
-                                    <input type="tel" id="heroPhone" class="form-control" name="phone" placeholder="Enter 10-digit Mobile Number" aria-label="Enter 10-digit Mobile Number" required pattern="[0-9]{10}">
-                                </div>
-                            </div>
-                            
-                            <div class="row g-2 mb-3">
-                                <div class="col-6">
-                                    <label for="heroMfrom" class="form-label small fw-semibold mb-1">Pickup City</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="bi bi-geo-alt-fill"></i></span>
-                                        <input type="text" id="heroMfrom" class="form-control" name="mfrom" placeholder="From City" value="<?= esc($cityName) ?>" aria-label="Pickup City" required>
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <label for="heroMto" class="form-label small fw-semibold mb-1">Destination City</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="bi bi-pin-map-fill"></i></span>
-                                        <input type="text" id="heroMto" class="form-control" name="mto" placeholder="To City" aria-label="Destination City" required>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="heroService" class="form-label small fw-semibold mb-1">Relocation Service Type</label>
-                                <select id="heroService" class="form-select" name="service" aria-label="Select Relocation Service">
-                                    <option value="household-moving" selected>Home Shifting in <?= esc($cityName) ?></option>
-                                    <option value="office-relocation">Office Shifting</option>
-                                    <option value="car-transportation">Car shifting</option>
-                                    <option value="bike-transportation">Bike Shifting</option>
-                                    <option value="corporate-relocation">Corporate Relocation</option>
-                                    <option value="packing-moving">Packing &amp; Unpacking</option>
-                                    <option value="loading-unloading">Loading &amp; Unloading</option>
-                                    <option value="warehouse-storage">Storage &amp; Warehouse</option>
-                                    <option value="transit-insurance">Goods Transit Insurance</option>
-                                </select>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-hero-submit w-100 rounded-pill py-3 fw-bold shadow">
-                                <i class="bi bi-send-fill me-2"></i>Calculate Shifting Fare &rarr;
-                            </button>
-                            
-                            <div class="d-flex align-items-center justify-content-center gap-2 mt-3 text-white-50 small">
-                                <i class="bi bi-shield-lock-fill text-success"></i>
-                                <span>100% Privacy • No Spam • Instant Callback</span>
-                            </div>
-                        </form>
+                </div>
+
+                <!-- Google Rating Proof Bar (Mobile View - Below Card & Trio) -->
+                <div class="text-center mt-3 d-block d-lg-none">
+                    <div class="city-google-proof-bar p-2 px-3 rounded-pill d-inline-flex align-items-center gap-2 bg-white shadow-sm">
+                        <svg width="20" height="20" viewBox="0 0 24 24">
+                            <path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/>
+                            <path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.33 24 12 24z"/>
+                            <path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/>
+                            <path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.33 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/>
+                        </svg>
+                        <div class="d-inline-flex align-items-center text-warning small">
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="text-muted small">|</span>
+                        <span class="small fw-bold text-dark">Trusted by our customers (<?= esc($ratingValue ?? '4.9') ?>★)</span>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
         </div>
     </div>
 </section>
@@ -639,7 +547,7 @@ $waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
                             </tr>
                             <tr>
                                 <td class="fw-bold">Enterprise Solutions (120+ Employees)</td>
-                                <td colspan="3" class="text-center fw-bold text-danger">Custom Quote (Call <?= esc($phoneNum) ?>)</td>
+                                <td colspan="3" class="text-center fw-bold text-danger">Custom Quote (Call <?= esc($phone) ?>)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -693,7 +601,7 @@ $waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
                             </tr>
                             <tr>
                                 <td class="fw-bold">Luxury Vehicle Transport</td>
-                                <td colspan="6" class="text-center fw-bold text-danger">Customized Quote (Contact <?= esc($phoneNum) ?>)</td>
+                                <td colspan="6" class="text-center fw-bold text-danger">Customized Quote (Contact <?= esc($phone) ?>)</td>
                             </tr>
                         </tbody>
                     </table>
@@ -930,8 +838,8 @@ $waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
                             Speak with our relocation officer directly or message us on WhatsApp for a zero-cost doorstep shifting survey in <?= esc($cityName) ?>.
                         </p>
                     </div>
-                    <a <?= $phoneLink ?> class="btn btn-sm btn-danger rounded-pill fw-bold text-white px-3 align-self-start">
-                        Call <?= esc($phoneNum) ?>
+                    <a <?= $phonehtml ?> class="btn btn-sm btn-danger rounded-pill fw-bold text-white px-3 align-self-start">
+                        Call <?= esc($phone) ?>
                     </a>
                 </div>
             </div>
@@ -1049,7 +957,7 @@ $waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
                         </h3>
                         <div id="cColFaq6" class="accordion-collapse collapse" aria-labelledby="hFaq6" data-bs-parent="#faqCol2">
                             <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                By accessing our website and filling out a contact form, calling us at <?= esc($phoneNum) ?>, or emailing, we provide you with a quote. Once we collect all details of your move, our expert team offers you a zero-cost estimate.
+                                By accessing our website and filling out a contact form, calling us at <?= esc($phone) ?>, or emailing, we provide you with a quote. Once we collect all details of your move, our expert team offers you a zero-cost estimate.
                             </div>
                         </div>
                     </div>
