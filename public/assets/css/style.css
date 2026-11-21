@@ -5739,221 +5739,113 @@ a {
 }
 
 /* ==========================================================================
-   Hero Quote Form Component Architecture (Glassmorphic Transparent)
+   City Hero Quote Form - Clean White Background Architecture
    ========================================================================== */
-.hero-quote-card-container {
-  position: relative;
-  width: 100%;
-  max-width: 480px;
-  margin: 0 auto;
-  border-radius: 20px;
-  overflow: hidden;
-  background: rgba(15, 23, 42, 0.58) !important;
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.18) !important;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
-  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+.city-hero-truck-section .hero-estimate-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(226, 232, 240, 0.95) !important;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-.hero-quote-card-container:hover {
-  border-color: rgba(248, 113, 113, 0.4) !important;
-  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6), 0 0 40px rgba(229, 26, 26, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+.city-hero-truck-section .hero-estimate-card:hover {
+  border-color: rgba(229, 26, 26, 0.45) !important;
+  box-shadow: 0 25px 55px rgba(0, 0, 0, 0.3) !important;
 }
 
-.hero-quote-header {
-  background: rgba(255, 255, 255, 0.06) !important;
-  padding: 18px 24px 16px;
-  text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+.city-hero-truck-section .hero-card-header {
+  background: #ffffff !important;
+  border-bottom: 2px solid #f1f5f9 !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
 }
 
-.hero-quote-title {
-  color: #ffffff;
-  font-size: 1.25rem;
+.city-hero-truck-section .hero-card-header h2,
+.city-hero-truck-section .hero-card-header .h5 {
+  color: #0f172a !important;
   font-weight: 800;
-  margin: 0 0 3px 0;
-  letter-spacing: -0.3px;
 }
 
-.hero-quote-subtitle {
-  color: rgba(255, 255, 255, 0.65);
-  font-size: 0.82rem;
+.city-hero-truck-section .hero-card-header p,
+.city-hero-truck-section .hero-card-header .text-white-50 {
+  color: #475569 !important;
   font-weight: 500;
-  margin: 0;
 }
 
-.hero-quote-white-card {
-  background: transparent !important;
-  position: relative;
+.city-hero-truck-section .hero-card-body {
+  background: #ffffff !important;
 }
 
-.card-body-form {
-  background: transparent !important;
-  padding: 20px 24px;
+.city-hero-truck-section .hero-estimate-card .form-label {
+  color: #1e293b !important;
+  font-weight: 600;
+  font-size: 0.82rem;
 }
 
-.form-row-custom {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+.city-hero-truck-section .hero-estimate-card .input-group {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
 }
 
-.input-wrap-custom {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.input-icon-custom {
-  position: absolute;
-  left: 15px;
-  color: #fca5a5;
+.city-hero-truck-section .hero-estimate-card .input-group-text {
+  background-color: #f8fafc !important;
+  border: 1.5px solid #cbd5e1 !important;
+  border-right: none !important;
+  color: #e51a1a !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
   font-size: 0.95rem;
-  pointer-events: none;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 20px;
 }
 
-.form-control-custom,
-.form-select-custom {
-  width: 100%;
-  height: 48px;
-  padding: 8px 14px 8px 44px;
+.city-hero-truck-section .hero-estimate-card .form-control,
+.city-hero-truck-section .hero-estimate-card .form-select {
+  background-color: #ffffff !important;
+  border: 1.5px solid #cbd5e1 !important;
+  color: #0f172a !important;
   font-size: 0.92rem;
   font-weight: 500;
-  color: #ffffff !important;
-  background-color: rgba(255, 255, 255, 0.08) !important;
-  border: 1px solid rgba(255, 255, 255, 0.16) !important;
-  border-radius: 12px;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: all 0.25s ease;
-  outline: none;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  transition: all 0.2s ease-in-out;
 }
 
-.form-control-custom:focus,
-.form-select-custom:focus {
-  background-color: rgba(255, 255, 255, 0.14) !important;
-  border-color: #f87171 !important;
-  color: #ffffff !important;
-  box-shadow: 0 0 0 3px rgba(229, 26, 26, 0.35) !important;
+.city-hero-truck-section .hero-estimate-card .input-group .form-control {
+  border-left: none !important;
 }
 
-.form-control-custom::placeholder {
-  color: rgba(255, 255, 255, 0.5) !important;
+.city-hero-truck-section .hero-estimate-card .form-control::placeholder {
+  color: #94a3b8 !important;
   font-weight: 400;
 }
 
-.form-select-custom {
-  color: #ffffff !important;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23fca5a5' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
-  background-repeat: no-repeat;
-  background-position: right 14px center;
-  background-size: 14px 10px;
+.city-hero-truck-section .hero-estimate-card .form-control:focus,
+.city-hero-truck-section .hero-estimate-card .form-select:focus {
+  background-color: #ffffff !important;
+  border-color: #e51a1a !important;
+  color: #0f172a !important;
+  box-shadow: 0 0 0 3px rgba(229, 26, 26, 0.15) !important;
 }
 
-.form-select-custom option {
-  background-color: #0f172a !important;
-  color: #ffffff !important;
+.city-hero-truck-section .hero-estimate-card .input-group:focus-within .input-group-text,
+.city-hero-truck-section .hero-estimate-card .input-group:focus-within .form-control {
+  border-color: #e51a1a !important;
+}
+
+.city-hero-truck-section .hero-estimate-card .form-select {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23e51a1a' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") !important;
+}
+
+.city-hero-truck-section .hero-estimate-card .form-select option {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
   padding: 10px;
 }
 
-.select-wrap-custom .select-label-custom {
-  display: none;
-}
-
-.btn-submit-custom {
-  width: 100%;
-  height: 50px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  color: #ffffff !important;
-  font-weight: 800;
-  font-size: 1rem;
-  border: none;
-  border-radius: 12px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  cursor: pointer;
-  transition: all 0.25s ease;
-  box-shadow: 0 6px 22px rgba(229, 26, 26, 0.5);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
-.btn-submit-custom:hover {
-  background: linear-gradient(135deg, #ef4444 0%, #b91c1c 100%);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 28px rgba(229, 26, 26, 0.65);
-  color: #ffffff !important;
-}
-
-.btn-submit-custom:active {
-  transform: translateY(0);
-}
-
-.submit-btn-icon-desktop {
-  font-size: 0.95rem;
-}
-
-.quoteform-results {
-  margin-top: 12px;
-}
-
-.card-footer-trust {
-  background: rgba(255, 255, 255, 0.05) !important;
-  padding: 12px 18px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-}
-
-.trust-item .trust-icon,
-.trust-item .trust-icon-circle {
-  color: #fca5a5;
-  font-size: 0.95rem;
-}
-
-.trust-text strong {
-  display: block;
-  color: #ffffff;
-  font-size: 0.72rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-
-.trust-text span {
-  display: block;
-  font-size: 0.65rem;
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.2;
-}
-
-.divider-vertical {
-  width: 1px;
-  height: 24px;
-  background: rgba(255, 255, 255, 0.15);
-}
-
-.mobile-security-tag {
-  background: rgba(255, 255, 255, 0.05);
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.75);
+.city-hero-truck-section .hero-estimate-card .text-white-50 {
+  color: #475569 !important;
+  font-weight: 500;
 }
 
 /* ==========================================================================
@@ -5965,28 +5857,39 @@ a {
 
 @media (max-width: 991.98px) {
   .city-hero-truck-section {
-    background-color: #071124;
-    background-image: linear-gradient(180deg, rgba(7, 17, 36, 0.52) 0%, rgba(7, 17, 36, 0.72) 220px, #071124 100%), url('../img/slider.jpg');
-    background-position: top center;
-    background-size: 100% auto;
+    background-color: #0b1526;
+    background-image: linear-gradient(180deg, rgba(7, 17, 36, 0.42) 0%, rgba(7, 17, 36, 0.12) 130px, rgba(7, 17, 36, 0.52) 320px, rgba(7, 17, 36, 0.88) 100%), url('../img/slider.jpg');
+    background-position: 72% top;
+    background-size: cover;
     background-repeat: no-repeat;
-    padding-top: 1rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .city-hero-truck-section .container {
+    padding-top: 0 !important;
+  }
+
+  .city-hero-truck-section .row {
+    --bs-gutter-y: 0.85rem !important;
   }
 
   .city-hero-content-wrap {
-    max-width: 58%;
+    max-width: 60%;
   }
 
   .city-main-heading {
-    font-size: clamp(1.4rem, 4.2vw, 1.85rem);
+    font-size: clamp(1.35rem, 4.2vw, 1.85rem);
     line-height: 1.15;
     margin-bottom: 4px !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
   }
 
   .city-subheading {
     font-size: 0.82rem;
     line-height: 1.25;
-    margin-bottom: 8px !important;
+    margin-bottom: 6px !important;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
   }
 
   .city-care-pill {
@@ -6014,31 +5917,57 @@ a {
     font-size: 0.7rem;
   }
 
-  .hero-quote-card-container {
-    max-width: 100%;
-    border-radius: 18px;
-    margin-top: 8px;
+  .city-hero-truck-section .hero-estimate-card {
+    max-width: 520px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 18px !important;
+    margin-top: 6px;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.35) !important;
   }
 
-  .card-body-form {
-    padding: 16px 18px;
+  .city-hero-truck-section .hero-card-header {
+    padding: 10px 16px !important;
   }
 
-  .form-control-custom,
-  .form-select-custom {
-    height: 46px;
-    font-size: 0.9rem;
+  .city-hero-truck-section .hero-card-body {
+    padding: 12px 16px !important;
   }
 
-  .btn-submit-custom {
-    height: 48px;
-    font-size: 0.95rem;
+  .city-hero-truck-section .hero-estimate-card .form-control,
+  .city-hero-truck-section .hero-estimate-card .form-select {
+    height: 40px;
+    font-size: 0.88rem;
+  }
+
+  .city-hero-truck-section .hero-estimate-card .input-group-text {
+    height: 40px;
+    font-size: 0.88rem;
+    padding: 0 12px;
+  }
+
+  .city-hero-truck-section .hero-estimate-card .mb-3 {
+    margin-bottom: 0.55rem !important;
+  }
+
+  .city-hero-truck-section .btn-hero-submit {
+    padding-top: 0.65rem !important;
+    padding-bottom: 0.65rem !important;
+    font-size: 0.92rem;
   }
 }
 
 @media (max-width: 480px) {
   .city-hero-content-wrap {
-    max-width: 56%;
+    max-width: 58%;
+  }
+
+  .city-hero-truck-section {
+    background-position: 76% top;
+  }
+
+  .city-hero-truck-section .hero-estimate-card {
+    max-width: 100%;
   }
 
   .city-breadcrumb-pill {

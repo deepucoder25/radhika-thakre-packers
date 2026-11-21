@@ -47,8 +47,8 @@
                         Trusted by 28,000+ happy clients. We provide top-notch relocation services in <?= esc($cityName) ?> at transparent, budget-friendly rates with 5-layer safety packing and dedicated container trucks.
                     </p>
 
-                    <!-- Trust Trio Highlights (Desktop View) -->
-                    <div class="city-trust-trio p-3 rounded-4 mb-4 d-none d-sm-block">
+                    <!-- Trust Trio Highlights (Desktop View - Side by Side with Form) -->
+                    <div class="city-trust-trio p-3 rounded-4 mb-4 d-none d-lg-block">
                         <div class="row g-2 align-items-center">
                             <div class="col-4">
                                 <div class="d-flex align-items-center gap-2">
@@ -105,20 +105,23 @@
             <div class="col-lg-5">
                 <?= view('Modules\Contacts\Views\quoteform', array_merge(get_defined_vars(), ['city' => $cityName])) ?>
 
-                <!-- Trust Trio Highlights (Mobile View - Below Card) -->
-                <div class="city-trust-trio p-3 rounded-4 mt-3 d-block d-sm-none">
+                <!-- Trust Trio Highlights (Mobile & Tablet View - Below Card) -->
+                <div class="city-trust-trio p-3 rounded-4 mt-3 d-block d-lg-none">
                     <div class="row g-2 align-items-center text-center">
                         <div class="col-4">
                             <i class="bi bi-calendar2-check-fill text-warning fs-3 mb-1 d-block"></i>
                             <div class="city-trust-head fw-bold text-white small">Since <?= esc($startYear ?? '2018') ?></div>
+                            <div class="city-trust-sub text-white-50 small"><?= esc($experience ?? '8+') ?> Years Care</div>
                         </div>
                         <div class="col-4 border-start border-white border-opacity-25">
                             <i class="bi bi-map-fill text-danger fs-3 mb-1 d-block"></i>
                             <div class="city-trust-head fw-bold text-white small">All India</div>
+                            <div class="city-trust-sub text-white-50 small">500+ Cities</div>
                         </div>
                         <div class="col-4 border-start border-white border-opacity-25">
                             <i class="bi bi-headset text-info fs-3 mb-1 d-block"></i>
-                            <div class="city-trust-head fw-bold text-white small">24x7 Help</div>
+                            <div class="city-trust-head fw-bold text-white small">Dedicated</div>
+                            <div class="city-trust-sub text-white-50 small">24x7 Support</div>
                         </div>
                     </div>
                 </div>
