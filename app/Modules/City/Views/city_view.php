@@ -25,12 +25,6 @@
                 </nav>
 
                 <div class="city-hero-content-wrap">
-                    <!-- Moving with Care Badge -->
-                    <div class="city-care-pill mb-2 mb-lg-3 d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-patch-check-fill text-warning"></i>
-                        <span>Moving with care since <?= esc($startYear ?? '2018') ?></span>
-                    </div>
-                    
                     <!-- Main Headline (Matching User Screenshot) -->
                     <h1 class="city-main-heading mb-2">
                         Packers and Movers in <span class="city-heading-highlight"><?= esc($cityName) ?></span>
@@ -38,9 +32,15 @@
                     <div class="city-heading-underline mb-2 mb-lg-3"></div>
                     
                     <!-- Subtitle / Tagline -->
-                    <p class="city-subheading mb-3 text-white">
+                    <p class="city-subheading mb-2 mb-lg-3 text-white">
                         Safe &amp; Reliable Home Shifting Across India
                     </p>
+
+                    <!-- Moving with Care Badge -->
+                    <div class="city-care-pill mb-3 mb-lg-4 d-inline-flex align-items-center gap-2">
+                        <i class="bi bi-patch-check-fill text-warning"></i>
+                        <span>Moving with care since <?= esc($startYear ?? '2018') ?></span>
+                    </div>
 
                     <!-- Value Proposition Paragraph (Desktop View) -->
                     <p class="hero-subtitle mb-4 text-white-50 d-none d-lg-block">
