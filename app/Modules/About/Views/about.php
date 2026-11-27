@@ -1,26 +1,11 @@
 <?php
 /**
- * Modern High-Conversion About Us View - Radhika Thakre Packers and Movers
- * Zero inline styles | 100% Responsive | Dynamic variables from Site.php
+ * About Us View - Radhika Thakre Packers and Movers
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
  */
 
-$compName     = $company3 ?? 'Radhika Thakre Packers and Movers';
-$phoneNum     = $phone ?? '+91 98261 25421';
-$phoneLink    = $phonehtml ?? 'href="tel:+919826125421"';
-$secPhoneLink = $phonehtml1 ?? $phoneLink;
-$secPhoneNum  = $phone1 ?? '+91 99931 72221';
-$waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
-$mailAddr     = $mail ?? 'radhikathakrepackersandmovers@gmail.com';
-$mailLink     = $mailhtml ?? 'mailto:radhikathakrepackersandmovers@gmail.com';
-$headOffice   = $address ?? 'Shop No. 100 first floor Katariya complex Dewas Naka Indore 452001';
-$gstNum       = $gst ?? '23BMOPT6924P1Z4';
-$expYears     = $experience ?? '8+';
-$estYear      = $startYear ?? '2018';
-$ratingVal    = $ratingValue ?? '4.9';
-$reviewsTotal = $ratingCount ?? '1850';
-
 $title       = "About Us";
-$description = "Learn more about " . $compName . ", our " . $expYears . " years of moving excellence, infrastructure, 28,000+ completed moves, and customer-first commitment.";
+$description = "Learn more about " . $company3 . ", our " . $experience . " years of moving excellence, infrastructure, 28,000+ completed moves, and customer-first commitment.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'About Us'],
@@ -29,341 +14,255 @@ $path        = [
 <?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <!-- =========================================================================
-     1. COMPANY STORY & OVERVIEW
+     ABOUT US - COMPANY STORY, CORE VALUES & METHODOLOGY (FULL WIDTH COL-12)
      ========================================================================= -->
-<section class="py-5 bg-white border-bottom">
+<section class="section-about-page py-5 bg-light position-relative">
     <div class="container py-2 py-lg-4">
-        <div class="row g-4 g-lg-5 align-items-center">
-            <!-- Left Column: Story & Narrative -->
-            <div class="col-lg-7">
-                <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
-                    Our Legacy &amp; Commitment
-                </span>
-                <h2 class="display-6 fw-bold text-dark mb-3">
-                    Redefining Moving Standards With <span class="text-danger">Care, Safety &amp; Trust</span>
-                </h2>
-                <p class="lead text-secondary mb-3">
-                    Founded in <?= esc($estYear) ?> in Indore, <strong><?= esc($compName) ?></strong> has grown into Central India's leading and most dependable packers and movers company.
-                </p>
-                <p class="text-muted mb-4">
-                    Over <?= esc($expYears) ?> years of uninterrupted service, we have successfully relocated more than <strong>28,000+ households, corporate offices, and luxury vehicles</strong> across 500+ destinations nationwide. Our certified ground staff, specialized 5-layer crating techniques, and dedicated GPS-equipped closed container trucks ensure every item reaches its new doorstep on time and without a single scratch.
-                </p>
+        <div class="row">
+            <div class="col-12">
 
-                <!-- 4 Value Checkpoints Grid -->
-                <div class="row g-3 mb-4">
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-shield-fill-check text-success fs-5 flex-shrink-0"></i>
-                            <span class="fw-semibold text-dark">100% Goods Transit Insurance</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-patch-check-fill text-warning fs-5 flex-shrink-0"></i>
-                            <span class="fw-semibold text-dark">Govt. Regd &amp; ISO 9001:2015</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-box-seam-fill text-danger fs-5 flex-shrink-0"></i>
-                            <span class="fw-semibold text-dark">Premium 5-Layer Packaging</span>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="d-flex align-items-center gap-2">
-                            <i class="bi bi-geo-alt-fill text-info fs-5 flex-shrink-0"></i>
-                            <span class="fw-semibold text-dark">Live GPS Container Fleet</span>
-                        </div>
-                    </div>
-                </div>
+                <!-- 1. Main Overview Card -->
+                <div class="card about-design-card about-card-hero p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        About Our Company
+                    </span>
+                    <h2 class="mb-3">A Mover in <?= esc($addressRegion) ?> Who Understands the Customer Needs</h2>
 
-                <!-- CTAs -->
-                <div class="d-flex flex-wrap gap-3">
-                    <a <?= $phoneLink ?> class="btn btn-danger btn-lg rounded-pill px-4 fw-bold shadow-sm d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-telephone-fill"></i>
-                        <span>Call <?= esc($phoneNum) ?></span>
-                    </a>
-                    <a href="<?= esc($waLink) ?>" target="_blank" rel="noopener" class="btn btn-success btn-lg rounded-pill px-4 fw-bold shadow-sm d-inline-flex align-items-center gap-2">
-                        <i class="bi bi-whatsapp"></i>
-                        <span>Chat on WhatsApp</span>
-                    </a>
-                    <a href="<?= site_url('contact') ?>" class="btn btn-outline-dark btn-lg rounded-pill px-4 fw-bold d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
-                        <i class="bi bi-calculator"></i>
-                        <span>Free Survey</span>
-                    </a>
-                </div>
-            </div>
+                    <p class="text-muted mb-3">
+                        <?= esc($company3) ?> is a government-registered and ISO 9001:2015 certified relocation service provider situated in <?= esc($addressRegion) ?>, <?= esc($companystate) ?>. The company assists the families, working professionals and corporate entities in relocating their valuable items.
+                    </p>
 
-            <!-- Right Column: Stats & Credentials Card -->
-            <div class="col-lg-5">
-                <div class="about-stats-card p-4 p-md-5 rounded-4 shadow-sm">
-                    <div class="text-center mb-4">
-                        <span class="badge bg-danger text-white px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
-                            Proven Track Record
-                        </span>
-                        <h3 class="h4 fw-bold text-dark mb-1">Our Numbers Speak</h3>
-                        <p class="small text-muted mb-0">Delivering satisfaction across every corner of India</p>
-                    </div>
+                    <p class="text-muted mb-3">
+                        It is more than just loading the goods on the truck. Packing and handling various goods such as everyday items, furniture, appliances and other items also comes under the scope of the services. The company understands the need of proper handling and takes care of every customer requirement.
+                    </p>
 
-                    <div class="row g-3 text-center">
-                        <div class="col-6">
-                            <div class="about-stat-box p-3 rounded-3">
-                                <div class="about-stat-num text-danger"><?= esc($expYears) ?></div>
-                                <div class="about-stat-lbl">Years Experience</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="about-stat-box p-3 rounded-3">
-                                <div class="about-stat-num text-primary">28k+</div>
-                                <div class="about-stat-lbl">Happy Moves</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="about-stat-box p-3 rounded-3">
-                                <div class="about-stat-num text-success">500+</div>
-                                <div class="about-stat-lbl">Cities Connected</div>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="about-stat-box p-3 rounded-3">
-                                <div class="about-stat-num text-warning"><?= esc($ratingVal) ?>★</div>
-                                <div class="about-stat-lbl"><?= esc($reviewsTotal) ?>+ Reviews</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Verified Registration Bar -->
-                    <div class="about-trust-footer mt-4 pt-3 border-top text-center">
-                        <div class="d-flex align-items-center justify-content-center gap-2 small text-muted mb-1">
-                            <i class="bi bi-file-earmark-check-fill text-success"></i>
-                            <span>GSTIN: <strong><?= esc($gstNum) ?></strong></span>
-                        </div>
-                        <div class="small text-muted">
-                            <i class="bi bi-award-fill text-warning me-1"></i> ISO 9001:2015 Certified Logistics Partner
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =========================================================================
-     2. MISSION, VISION & CORE VALUES (3 PILLARS)
-     ========================================================================= -->
-<section class="py-5 bg-light border-bottom">
-    <div class="container py-2 py-lg-4">
-        <div class="text-center mx-auto mb-5 section-header-wrap">
-            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
-                Guiding Principles
-            </span>
-            <h2 class="section-title fw-bolder mb-3">Mission, Vision &amp; Core Values</h2>
-            <p class="section-subtitle text-muted">
-                What drives our team every day to provide seamless, honest, and reliable shifting experiences:
-            </p>
-        </div>
-
-        <div class="row g-4">
-            <!-- Mission -->
-            <div class="col-md-4">
-                <div class="about-pillar-card h-100 p-4 rounded-4 bg-white shadow-sm border">
-                    <div class="about-pillar-icon icon-mission mb-3">
-                        <i class="bi bi-bullseye"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-2">Our Mission</h3>
-                    <p class="text-muted small mb-0">
-                        To remove the stress, fear, and fatigue from moving by offering standardized, transparent, and ultra-safe packing, shifting, and warehousing services that customers can book with total peace of mind.
+                    <p class="text-muted mb-0">
+                        The company has more than <?= esc($experience) ?> years of experience in relocation. We provide home shifting, office shifting, car and bike transportation, packing &amp; unpacking, loading &amp; unloading of the goods, insurance of the goods during transport and warehouse services. We can assist in any moving requirement of the customers whether in <?= esc($addressRegion) ?> or anywhere else in India.
                     </p>
                 </div>
-            </div>
 
-            <!-- Vision -->
-            <div class="col-md-4">
-                <div class="about-pillar-card h-100 p-4 rounded-4 bg-white shadow-sm border">
-                    <div class="about-pillar-icon icon-vision mb-3">
-                        <i class="bi bi-eye-fill"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-2">Our Vision</h3>
-                    <p class="text-muted small mb-0">
-                        To become India’s most trusted and technologically advanced relocation network, celebrated for punctual delivery, zero-damage records, and uncompromised customer satisfaction.
+                <!-- 2. Why People Choose Us Card -->
+                <div class="card about-design-card p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Customer Satisfaction
+                    </span>
+                    <h3 class="mb-3">Why People Choose <?= esc($company3) ?>?</h3>
+
+                    <p class="text-muted mb-3">
+                        It is obvious that the customer wants his/her belongings in the best condition at the destination without any hassle. This is why we pay attention to proper handling and clear communication.
+                    </p>
+
+                    <p class="text-muted mb-3">
+                        Our trained team provides 5 layers of bubble packing for appropriate goods and container trucks with a GPS Tracking facility. The transit insurance facility is also provided to the customers who wish to purchase.
+                    </p>
+
+                    <p class="text-muted mb-0">
+                        We provide quotations for the customer's shifting according to the requirements, distance and quantity of the goods. The charges for the shifting are discussed prior to starting the work so the customer may prepare his moving budget without any confusion.
                     </p>
                 </div>
-            </div>
 
-            <!-- Values -->
-            <div class="col-md-4">
-                <div class="about-pillar-card h-100 p-4 rounded-4 bg-white shadow-sm border">
-                    <div class="about-pillar-icon icon-values mb-3">
-                        <i class="bi bi-heart-pulse-fill"></i>
-                    </div>
-                    <h3 class="h5 fw-bold text-dark mb-2">Our Core Values</h3>
-                    <p class="text-muted small mb-0">
-                        Integrity in pricing, meticulous care for family belongings, continuous crew training, transparent communication, and 100% accountability on every single highway mile.
+                <!-- 3. History & Core Values Card -->
+                <div class="card about-design-card p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Our Journey
+                    </span>
+                    <h3 class="mb-3"><?= esc($company3) ?> History</h3>
+
+                    <p class="text-muted mb-3">
+                        Our company, <?= esc($company3) ?> has been working in the industry for over <?= esc($experience) ?> years. During this period, we have assisted more than 25,000 families and corporate offices in their shifting requirements.
                     </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- =========================================================================
-     3. 4-STEP RELOCATION WORKFLOW
-     ========================================================================= -->
-<section class="py-5 bg-white border-bottom">
-    <div class="container py-2 py-lg-4">
-        <div class="text-center mx-auto mb-5 section-header-wrap">
-            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
-                How We Operate
-            </span>
-            <h2 class="section-title fw-bolder mb-3">Our 4-Step Seamless Moving Process</h2>
-            <p class="section-subtitle text-muted">
-                From your initial quote to final doorstep assembly, here is how we guarantee a flawless move:
-            </p>
-        </div>
-
-        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-4">
-            <!-- Step 1 -->
-            <div class="col">
-                <div class="about-step-card p-4 rounded-4 bg-light border h-100 text-center">
-                    <div class="about-step-badge mb-3">01</div>
-                    <div class="about-step-icon mb-3 text-danger fs-2">
-                        <i class="bi bi-clipboard2-check-fill"></i>
-                    </div>
-                    <h4 class="h6 fw-bold text-dark mb-2">Pre-Move Survey</h4>
-                    <p class="small text-muted mb-0">
-                        Our surveyor evaluates your household items, delicate goods, and requirements to provide a fixed, zero-hidden-cost quotation.
+                    <p class="text-muted mb-4">
+                        Each and every shift has given us some lessons in terms of handling, proper timing and customer requirements. From small family shifts to office shifts; all the experiences have made us learn how to do better planning for the shifts.
                     </p>
-                </div>
-            </div>
 
-            <!-- Step 2 -->
-            <div class="col">
-                <div class="about-step-card p-4 rounded-4 bg-light border h-100 text-center">
-                    <div class="about-step-badge mb-3">02</div>
-                    <div class="about-step-icon mb-3 text-primary fs-2">
-                        <i class="bi bi-box-seam-fill"></i>
-                    </div>
-                    <h4 class="h6 fw-bold text-dark mb-2">5-Layer Packaging</h4>
-                    <p class="small text-muted mb-0">
-                        Trained packers arrive with multi-layer bubble wrap, foam, corrugated cartons, and custom wooden crates for safe packaging.
+                    <hr class="my-4 text-muted opacity-25">
+
+                    <!-- 4. Our Core Values Grid -->
+                    <h4 class="mb-2">Our Core Values</h4>
+                    <p class="text-muted mb-4">
+                        We follow few core values in the course of our work:
                     </p>
-                </div>
-            </div>
 
-            <!-- Step 3 -->
-            <div class="col">
-                <div class="about-step-card p-4 rounded-4 bg-light border h-100 text-center">
-                    <div class="about-step-badge mb-3">03</div>
-                    <div class="about-step-icon mb-3 text-info fs-2">
-                        <i class="bi bi-truck-front-fill"></i>
-                    </div>
-                    <h4 class="h6 fw-bold text-dark mb-2">GPS-Tracked Transit</h4>
-                    <p class="small text-muted mb-0">
-                        Goods are loaded securely into weatherproof, sealed container trucks equipped with live GPS tracking for real-time updates.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Step 4 -->
-            <div class="col">
-                <div class="about-step-card p-4 rounded-4 bg-light border h-100 text-center">
-                    <div class="about-step-badge mb-3">04</div>
-                    <div class="about-step-icon mb-3 text-success fs-2">
-                        <i class="bi bi-house-door-fill"></i>
-                    </div>
-                    <h4 class="h6 fw-bold text-dark mb-2">Delivery &amp; Placement</h4>
-                    <p class="small text-muted mb-0">
-                        Careful unloading, unpacking, furniture re-assembly, and room placement at your destination home with full satisfaction signoff.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- =========================================================================
-     4. COMPREHENSIVE INFRASTRUCTURE & FLEET
-     ========================================================================= -->
-<section class="py-5 bg-light border-bottom">
-    <div class="container py-2 py-lg-4">
-        <div class="row g-4 align-items-center">
-            <div class="col-lg-6">
-                <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3">
-                    Infrastructure &amp; Technology
-                </span>
-                <h2 class="display-6 fw-bold text-dark mb-3">
-                    Built for Speed, Safety and Complete Peace of Mind
-                </h2>
-                <p class="text-muted mb-4">
-                    Our robust physical and technical logistics infrastructure sets us apart from ordinary unorganized transporters:
-                </p>
-
-                <div class="vstack gap-3 mb-4">
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="about-feature-bullet flex-shrink-0">
-                            <i class="bi bi-truck"></i>
-                        </div>
-                        <div>
-                            <h5 class="h6 fw-bold text-dark mb-1">Company-Owned Container Fleet</h5>
-                            <p class="small text-muted mb-0">Fully covered, weather-sealed hydraulic container vehicles prevent rain, sun, or dust damage.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="about-feature-bullet flex-shrink-0">
-                            <i class="bi bi-building-lock"></i>
-                        </div>
-                        <div>
-                            <h5 class="h6 fw-bold text-dark mb-1">24x7 Guarded Warehouse Hubs</h5>
-                            <p class="small text-muted mb-0">CCTV-monitored, fire-protected, moisture-free storage facilities with flexible weekly/monthly tenure.</p>
-                        </div>
-                    </div>
-
-                    <div class="d-flex align-items-start gap-3">
-                        <div class="about-feature-bullet flex-shrink-0">
-                            <i class="bi bi-people-fill"></i>
-                        </div>
-                        <div>
-                            <h5 class="h6 fw-bold text-dark mb-1">Background-Verified Ground Crew</h5>
-                            <p class="small text-muted mb-0">Every driver, supervisor, and handyman is professionally trained, police-verified, and insured.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-6">
-                <div class="card border-0 rounded-4 shadow-sm p-4 p-md-5 bg-white">
-                    <h4 class="h5 fw-bold text-dark mb-3">Need to Speak With Our Move Specialist?</h4>
-                    <p class="small text-muted mb-4">
-                        Whether you are planning an immediate local shifting or scheduling an upcoming interstate move, our coordinators are ready to help.
-                    </p>
-                    <div class="vstack gap-3">
-                        <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light">
-                            <i class="bi bi-geo-alt-fill text-danger fs-4"></i>
-                            <div>
-                                <div class="small fw-bold text-dark">Central Office</div>
-                                <div class="small text-muted"><?= esc($headOffice) ?></div>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light">
-                            <i class="bi bi-telephone-fill text-success fs-4"></i>
-                            <div>
-                                <div class="small fw-bold text-dark">Helplines</div>
-                                <div class="small">
-                                    <a <?= $phoneLink ?> class="text-decoration-none fw-bold text-dark"><?= esc($phoneNum) ?></a> / 
-                                    <a <?= $secPhoneLink ?> class="text-decoration-none text-muted"><?= esc($secPhoneNum) ?></a>
+                    <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
+                        <!-- Care -->
+                        <div class="col">
+                            <div class="about-value-box p-3 rounded-4 h-100 text-center">
+                                <div class="about-value-icon mx-auto mb-2">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
                                 </div>
+                                <h5 class="h6 fw-bold text-dark mb-1">Care</h5>
+                                <p class="small text-muted mb-0">Proper handling of the goods of the customers.</p>
                             </div>
                         </div>
-                        <div class="d-flex align-items-center gap-3 p-3 rounded-3 bg-light">
-                            <i class="bi bi-envelope-fill text-primary fs-4"></i>
-                            <div>
-                                <div class="small fw-bold text-dark">Official Email</div>
-                                <a <?= $mailLink ?> class="small text-decoration-none text-muted"><?= esc($mailAddr) ?></a>
+
+                        <!-- Honesty -->
+                        <div class="col">
+                            <div class="about-value-box p-3 rounded-4 h-100 text-center">
+                                <div class="about-value-icon mx-auto mb-2">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                                </div>
+                                <h5 class="h6 fw-bold text-dark mb-1">Honesty</h5>
+                                <p class="small text-muted mb-0">Providing all details about services and their charges.</p>
+                            </div>
+                        </div>
+
+                        <!-- Responsibility -->
+                        <div class="col">
+                            <div class="about-value-box p-3 rounded-4 h-100 text-center">
+                                <div class="about-value-icon mx-auto mb-2">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                                </div>
+                                <h5 class="h6 fw-bold text-dark mb-1">Responsibility</h5>
+                                <p class="small text-muted mb-0">Proper handling of goods from packing till delivering.</p>
+                            </div>
+                        </div>
+
+                        <!-- Respect -->
+                        <div class="col">
+                            <div class="about-value-box p-3 rounded-4 h-100 text-center">
+                                <div class="about-value-icon mx-auto mb-2">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                                </div>
+                                <h5 class="h6 fw-bold text-dark mb-1">Respect</h5>
+                                <p class="small text-muted mb-0">Paying proper respect to our customers.</p>
+                            </div>
+                        </div>
+
+                        <!-- Commitment -->
+                        <div class="col">
+                            <div class="about-value-box p-3 rounded-4 h-100 text-center">
+                                <div class="about-value-icon mx-auto mb-2">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+                                </div>
+                                <h5 class="h6 fw-bold text-dark mb-1">Commitment</h5>
+                                <p class="small text-muted mb-0">Performing the agreed tasks in proper manner.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- 5. Advantages & Achievements Card -->
+                <div class="card about-design-card p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Why Us
+                    </span>
+                    <h4 class="mb-3">Advantages of Our Company</h4>
+
+                    <p class="text-muted mb-3">
+                        When you choose us, you get help in various segments of the shift under one roof. We pack and load the goods as per the requirements and provide suitable means of transportation of the goods.
+                    </p>
+
+                    <p class="text-muted mb-4">
+                        You can also enjoy the GPS Tracking facility, transit insurance facility, affordable quotations and appropriate packing material as per the goods. We serve both the household and commercial customers making the relocation process easy.
+                    </p>
+
+                    <hr class="my-4 text-muted opacity-25">
+
+                    <!-- 6. Our Achievements Grid -->
+                    <h4 class="mb-2">Our Achievements</h4>
+                    <p class="text-muted mb-4">
+                        Our experience has been built over the years due to the confidence and trust of our customers.
+                    </p>
+
+                    <div class="row g-3 row-cols-2 row-cols-sm-3 row-cols-lg-5 text-center mb-3">
+                        <div class="col">
+                            <div class="about-stat-item h-100">
+                                <div class="h3 fw-bolder text-danger mb-1">25,000+</div>
+                                <p class="small text-muted mb-0">Families and Corporate offices served.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-stat-item h-100">
+                                <div class="h3 fw-bolder text-danger mb-1"><?= esc($experience) ?> Years</div>
+                                <p class="small text-muted mb-0">Years of experience in the shifting industry.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-stat-item h-100">
+                                <div class="h3 fw-bolder text-danger mb-1">Govt. Regd</div>
+                                <p class="small text-muted mb-0">Government registered.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-stat-item h-100">
+                                <div class="h3 fw-bolder text-danger mb-1">ISO Certified</div>
+                                <p class="small text-muted mb-0">ISO 9001:2015 Certified.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="about-stat-item h-100">
+                                <div class="h3 fw-bolder text-danger mb-1"><?= esc($ratingCount) ?>+</div>
+                                <p class="small text-muted mb-0">Verified reviews.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-muted mb-0 small">
+                        These above are a few achievements which are due to our efforts and customers.
+                    </p>
+                </div>
+
+                <!-- 7. Mission and Vision Card -->
+                <div class="card about-design-card p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Future Outlook
+                    </span>
+                    <h3 class="mb-3">Our Mission and Vision</h3>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 bg-light border h-100">
+                                <div class="d-flex align-items-center gap-2 mb-2 text-danger">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+                                    <h5 class="fw-bold text-dark mb-0">Our Mission</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Our mission is to provide safe, affordable and dependable moving services to the customers which makes the relocation easy for them.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 bg-light border h-100">
+                                <div class="d-flex align-items-center gap-2 mb-2 text-danger">
+                                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+                                    <h5 class="fw-bold text-dark mb-0">Our Vision</h5>
+                                </div>
+                                <p class="text-muted mb-0">
+                                    Our vision is to be a well-known name in the Indian moving industry with better services, better trained crew and reach up to many cities of the country.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 8. How We Work Card -->
+                <div class="card about-design-card p-4 p-md-5 mb-2">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Execution Process
+                    </span>
+                    <h5 class="mb-3">How We Work</h5>
+
+                    <div class="row g-4 mt-1">
+                        <div class="col-md-6">
+                            <div class="about-step-box h-100">
+                                <span class="badge bg-danger text-white rounded-pill mb-3 px-3 py-1 fw-bold">Step 01</span>
+                                <p class="text-muted mb-0">
+                                    We first understand the shifting requirements of the customer including pickup location, delivery location, quantity of the goods and desired shifting date. Then we prepare the quotation and make arrangements for the packing and transportation.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="about-step-box h-100">
+                                <span class="badge bg-danger text-white rounded-pill mb-3 px-3 py-1 fw-bold">Step 02</span>
+                                <p class="text-muted mb-0">
+                                    After the confirmation of the booking, we start packing and loading the goods appropriately and arrange the transportation for the same. During the whole transportation journey, GPS Tracking helps in monitoring the vehicles. At the destination, we unload the goods and deliver them to the customer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

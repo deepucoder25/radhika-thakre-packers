@@ -23,8 +23,8 @@ class About extends BaseController
         $data['title']       = "Why Choose Us | " . $this->comp['company3'];
         $data['description'] = "Discover why customers trust " . $this->comp['company3'] . " for safe, reliable, and transparently priced shifting, vehicle transport, and corporate relocation services.";
         $data['page']        = 'why-choose-us';
-        $data['module']      = 'whychooseus';
-        $data['view_file']   = 'Modules\WhyChooseUs\Views\why_choose_us';
+        $data['module']      = 'about';
+        $data['view_file']   = 'Modules\About\Views\choose';
 
         return Template::layout2($data);
     }

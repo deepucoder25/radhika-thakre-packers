@@ -15,7 +15,7 @@
                                 Plan Your Move with <?= esc($company3) ?>
                             </h2>
                             <p class="lead text-secondary fw-semibold mb-3">
-                                Whether it is shifting within Indore or to other cities, <?= esc($company3) ?> is there to help you.
+                                Whether it is shifting within <?= esc($addressRegion ?? 'Indore') ?> or to other cities, <?= esc($company3) ?> is there to help you.
                             </p>
                             <p class="text-muted mb-0">
                                 Just tell us what you want to move and where you want to shift the stuff. We will provide you with a suitable quotation according to your moving requirements. Get a moving quote from us now, and contact us at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a>.

@@ -6,7 +6,7 @@
  * fully responsive with Bootstrap 5 utilities, Offcanvas drawer and Quote modal.
  */
 
-$isAboutActive = in_array($page ?? '', ['about', 'faqs', 'reviews']) || (strpos($page ?? '', 'gallery') !== false);
+$isAboutActive = in_array($page ?? '', ['about', 'faqs', 'reviews', 'why-choose-us']) || (strpos($page ?? '', 'gallery') !== false);
 $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module === 'services');
 ?>
 <!-- Top Utility Bar (Desktop / Tablet) -->

@@ -152,7 +152,7 @@
                 <ul class="list-unstyled footer-nav-links mb-0">
                     <li><a href="<?= site_url('about') ?>"><i class="bi bi-arrow-right-short text-danger"></i> About Us</a></li>
                     <li><a href="<?= site_url('city') ?>"><i class="bi bi-arrow-right-short text-danger"></i> All States</a></li>
-                    <li><a href="<?= site_url('about') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Why Choose Us</a></li>
+                    <li><a href="<?= site_url('why-choose-us') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Why Choose Us</a></li>
                     <li><a href="<?= site_url('household-moving') ?>"><i class="bi bi-arrow-right-short text-danger"></i> IBA Approved Packers</a></li>
                     <li><a href="<?= site_url('reviews') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Testimonials</a></li>
                     <li><a href="<?= site_url('photo-gallery') ?>"><i class="bi bi-arrow-right-short text-danger"></i> Photo Gallery</a></li>

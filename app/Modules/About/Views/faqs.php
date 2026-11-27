@@ -1,25 +1,12 @@
 <?php
 /**
- * Modern High-Impact Frequently Asked Questions (FAQs) View
- * Radhika Thakre Packers and Movers
- * Zero inline styles | 100% Responsive | Dynamic variables from Site.php
+ * Frequently Asked Questions (FAQs) View - Radhika Thakre Packers and Movers
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Full width col-12 card structure with SEO-optimized headings and Schema.org FAQPage JSON-LD
  */
 
-$compName     = $company3 ?? 'Radhika Thakre Packers and Movers';
-$phoneNum     = $phone ?? '+91 98261 25421';
-$phoneLink    = $phonehtml ?? 'href="tel:+919826125421"';
-$secPhoneLink = $phonehtml1 ?? $phoneLink;
-$secPhoneNum  = $phone1 ?? '+91 99931 72221';
-$waLink       = $whatsapphtml ?? 'https://wa.me/919826125421';
-$mailAddr     = $mail ?? 'radhikathakrepackersandmovers@gmail.com';
-$mailLink     = $mailhtml ?? 'mailto:radhikathakrepackersandmovers@gmail.com';
-$gstNum       = $gst ?? '23BMOPT6924P1Z4';
-$expYears     = $experience ?? '8+';
-$ratingVal    = $ratingValue ?? '4.9';
-$reviewsTotal = $ratingCount ?? '1850';
-
 $title       = "Frequently Asked Questions (FAQs)";
-$description = "Find clear, honest answers regarding moving costs, transit insurance, 5-layer packing, tracking, and booking policies with " . $compName . ".";
+$description = "Find clear, honest answers regarding moving costs, transit insurance, 5-layer packing, tracking, and booking policies with " . $company3 . ".";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'About Us', 'url' => site_url('about')],
@@ -28,142 +15,110 @@ $path        = [
 
 $faqList = [
     [
-        'id'       => 'faq1',
-        'category' => 'pricing',
-        'q'        => 'How are household shifting charges calculated?',
-        'a'        => 'Relocation charges depend on four primary factors: (1) Total volume and weight of goods (inventory of furniture, appliances, cartons); (2) Exact transit distance between origin and destination; (3) Floor level and presence of service elevator at both locations; and (4) Special packaging requirements like customized wooden crating for delicate items. We provide a transparent, all-inclusive quotation with zero hidden fees.',
-        'badge'    => 'Pricing & Cost'
+        'q' => 'In which city are ' . $company3 . ' located?',
+        'a' => $company3 . ' is based at ' . $addressRegion . ', ' . $companystate . '. We provide shifting services for customers living in ' . $addressRegion . ' and for customers residing in other cities in India.'
     ],
     [
-        'id'       => 'faq2',
-        'category' => 'insurance',
-        'q'        => 'Is transit insurance provided for goods during relocation?',
-        'a'        => 'Yes, 100% comprehensive goods transit insurance is provided for all intercity and domestic moves. It protects your household goods, electronics, and vehicles against unforeseen transit hazards, accidents, fire, or transit damage. We handle all policy documentation and quick claim settlements directly.',
-        'badge'    => 'Transit Insurance'
+        'q' => 'Are ' . $company3 . ' registered?',
+        'a' => 'Yes. ' . $company3 . ' is a registered and ISO 9001:2015 certified firm.'
     ],
     [
-        'id'       => 'faq3',
-        'category' => 'packing',
-        'q'        => 'What multi-layer packing materials do you use for safety?',
-        'a'        => 'We utilize premium 5-layer protective materials: heavy-duty corrugated cartons, multilayer air bubble cushioning, moisture-proof stretch film, high-density edge foam protectors, and customized wooden crates for fragile glassware, luxury marble tables, and LED TVs.',
-        'badge'    => 'Packing Safety'
+        'q' => 'What is the experience of your firm?',
+        'a' => 'Our company has over ' . $experience . ' years’ experience offering moving solutions.'
     ],
     [
-        'id'       => 'faq4',
-        'category' => 'transit',
-        'q'        => 'How many days in advance should I book my move?',
-        'a'        => 'For local shifting within the same city, 24 to 48 hours advance notice is recommended. For domestic interstate relocation, booking 3 to 7 days in advance ensures slot reservation for dedicated closed container trucks, route permits, and preferred loading timings.',
-        'badge'    => 'Transit & Shifting'
+        'q' => 'What kind of services do you offer?',
+        'a' => 'We provide home shifting, office shifting, packing, de-packing, loading and unloading, insurance, conveyance and storage solutions.'
     ],
     [
-        'id'       => 'faq5',
-        'category' => 'storage',
-        'q'        => 'How do you safely transport cars and two-wheelers without damage?',
-        'a'        => 'Cars are shifted in specialized closed hydraulic car carrier trailers equipped with wheel stoppers and safety tie-down belts to prevent road vibration or stone chips. Two-wheelers are wrapped in multi-layer bubble wrap, secured with handlebar guards, and clamped securely.',
-        'badge'    => 'Vehicle & Storage'
+        'q' => 'Can I use home shifting services provided by your company in ' . $addressRegion . '?',
+        'a' => 'Yes. ' . $company3 . ' offers home shifting for flats, standalone homes and other kinds of dwellings located in ' . $addressRegion . '.'
     ],
     [
-        'id'       => 'faq6',
-        'category' => 'transit',
-        'q'        => 'Can I track my moving consignment live during transit?',
-        'a'        => 'Yes! You can track your consignment in real-time through our Live GPS Tracking page using your Consignment Note (LR) number or Reference ID. Additionally, our 24x7 customer support desk and dedicated move coordinator keep you updated via WhatsApp and phone calls.',
-        'badge'    => 'Transit & Shifting'
+        'q' => 'Do you offer shifting of household goods to other states?',
+        'a' => 'Yes, our firm arranges intercity and interstate household shifting services. We can help you shift your household belongings from ' . $addressRegion . ' to any other city in India.'
     ],
     [
-        'id'       => 'faq7',
-        'category' => 'pricing',
-        'q'        => 'Are there any hidden or surprise charges on moving day?',
-        'a'        => 'Never. Our quotation is completely transparent and binding based on the agreed inventory survey. The quote includes packing material, labor charges, loading, transit transport, unloading, and basic unpacking. Any optional services (like storage or crane service) are clearly discussed upfront.',
-        'badge'    => 'Pricing & Cost'
+        'q' => 'How do you pack the household goods for transportation?',
+        'a' => 'We use appropriate packing materials according to the kind of goods. We provide certified 5-layer bubble packing for the goods which require additional care during handling and transportation.'
     ],
     [
-        'id'       => 'faq8',
-        'category' => 'storage',
-        'q'        => 'Do you provide safe household storage and warehousing facilities?',
-        'a'        => 'Yes, we provide clean, moisture-controlled, 24x7 CCTV-monitored warehouse storage hubs. You can store your household furniture, appliances, or commercial goods on flexible short-term (weekly) or long-term (monthly) tenure with pest-free palletized stacking and dedicated inventory logging.',
-        'badge'    => 'Vehicle & Storage'
+        'q' => 'Do you offer car and bike transportation services?',
+        'a' => 'Yes. We offer car and bike shifting solutions. Appropriate conveyance is arranged by us for cars, bikes and motorbikes based on the vehicle type and destination.'
     ],
     [
-        'id'       => 'faq9',
-        'category' => 'packing',
-        'q'        => 'Which items are restricted from being loaded in moving trucks?',
-        'a'        => 'For safety and statutory compliance, we do not transport hazardous materials, flammable liquids (petrol/diesel, LPG cylinders, acids, firecrackers), perishable food items, contraband, and personal valuables like jewelry, currency, or original property deeds (which customers are advised to carry personally).',
-        'badge'    => 'Packing Safety'
+        'q' => 'Is transit insurance offered by your firm?',
+        'a' => 'Yes, transit insurance is available for the customers. You can talk to our team regarding the coverage, terms and charges for the transit insurance.'
     ],
     [
-        'id'       => 'faq10',
-        'category' => 'transit',
-        'q'        => 'Does your crew disassemble and reassemble furniture at the new destination?',
-        'a'        => 'Yes, our trained carpenters and handymen dismantle modular beds, wardrobes, study tables, and dining sets before packing, and expertly reassemble them in their designated rooms at your new home as part of our full-service relocation package.',
-        'badge'    => 'Transit & Shifting'
+        'q' => 'Can I track my goods during transportation?',
+        'a' => 'We use dedicated container trucks with GPS facility for tracking the goods during transportation. You can talk to our team regarding information about your goods and transportation route.'
     ],
     [
-        'id'       => 'faq11',
-        'category' => 'packing',
-        'q'        => 'How do you pack fragile items like LED TVs, glass tabletops, and crockeries?',
-        'a'        => 'Delicate items receive special crating treatment: LED TVs are packed in specialized hard-shell TV carton boxes with corner foam guards. Crockeries are individually wrapped in bubble wrap and placed vertically in partitioned dish packs. Glass tops receive wooden crate protection.',
-        'badge'    => 'Packing Safety'
+        'q' => 'What is the rate charged by packers and movers in ' . $addressRegion . '?',
+        'a' => 'It varies according to the quantity of goods, distance, packing material, type of vehicle and other requirements. Contact us for quotation.'
     ],
     [
-        'id'       => 'faq12',
-        'category' => 'insurance',
-        'q'        => 'What is the claim settlement process if goods suffer transit damage?',
-        'a'        => 'In the rare event of transit damage, simply note the condition on the delivery receipt and notify your move coordinator with photos within 24-48 hours. Our insurance claim desk coordinates the surveyor assessment and facilitates prompt compensation according to your policy.',
-        'badge'    => 'Transit Insurance'
-    ]
+        'q' => 'Can you provide me packing and unpacking services?',
+        'a' => 'Yes, we provide packing and unpacking. Our team can pack the household belongings before transportation and assist in unpacking of the goods according to the selected service.'
+    ],
+    [
+        'q' => 'Can you shift office furniture and equipment?',
+        'a' => 'Yes, we offer office shifting services for business organizations. We can shift office furniture, computers, documents and other kinds of office equipment with proper transportation and packing.'
+    ],
+    [
+        'q' => 'Can I get warehousing or storage facilities?',
+        'a' => 'Yes, warehousing services are available for clients who need storage during the relocation process. You can contact us for discussion about the storage facility requirements.'
+    ],
+    [
+        'q' => 'How can I book ' . $company3 . '?',
+        'a' => 'You can contact our team with your pickup location, delivery address, moving date and details about the goods you want to shift. We will discuss your requirements and provide quotations accordingly.'
+    ],
 ];
 ?>
 <?= view('Modules\Template\Views\page_banner', compact('title', 'description', 'path')) ?>
 
 <!-- =========================================================================
-     MAIN FAQ SECTION WITH SEARCH & CATEGORY FILTERS
+     FAQ SECTION - FULL WIDTH COL-12 CARDS & ACCORDION
      ========================================================================= -->
-<section class="py-5 bg-white border-bottom" id="faqMainSection">
+<section class="section-faq-page py-5 bg-light position-relative">
     <div class="container py-2 py-lg-4">
+        <div class="row">
+            <div class="col-12">
 
-        <!-- Section Header -->
-        <div class="text-center mb-5">
-            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
-                Knowledge Base &amp; Help Center
-            </span>
-            <h2 class="display-6 fw-bold text-dark mb-2">
-                Everything You Need to Know <span class="text-danger">Before Shifting</span>
-            </h2>
-            <p class="text-muted mx-auto faq-lead-text mb-0">
-                Transparent answers to help you plan your domestic, office, or vehicle relocation seamlessly with <?= esc($compName) ?>.
-            </p>
-        </div>
+                <!-- 1. Main Overview Card -->
+                <div class="card about-design-card about-card-hero p-4 p-md-5 mb-4">
+                    <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                        Frequently Asked Questions
+                    </span>
+                    <h2 class="mb-3">FAQs Regarding <?= esc($company3) ?></h2>
+                    <p class="text-muted mb-0">
+                        Find transparent and helpful answers to common questions regarding our relocation services, 5-layer packing, container transportation, transit insurance, and booking process in <?= esc($addressRegion) ?> and across India.
+                    </p>
+                </div>
 
-        <!-- FAQs Accordion -->
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="accordion faq-modern-accordion" id="faqAccordionGroup">
+                <!-- 2. FAQ Accordion Group -->
+                <div class="accordion faq-modern-accordion mb-4" id="faqAccordionGroup">
                     <?php foreach ($faqList as $idx => $faq): ?>
-                        <div class="accordion-item faq-modern-item mb-3 rounded-4 shadow-sm border overflow-hidden" 
-                             data-faq-category="<?= esc($faq['category']) ?>" 
-                             data-faq-title="<?= esc(strtolower($faq['q'])) ?>" 
-                             data-faq-body="<?= esc(strtolower($faq['a'])) ?>">
-                            <h3 class="accordion-header" id="heading_<?= esc($faq['id']) ?>">
+                        <div class="accordion-item faq-modern-item mb-3 rounded-4 shadow-sm border overflow-hidden">
+                            <h3 class="accordion-header" id="heading_faq_<?= $idx ?>">
                                 <button class="accordion-button faq-modern-button <?= $idx === 0 ? '' : 'collapsed' ?> fw-bold py-3 px-4" 
                                         type="button" 
                                         data-bs-toggle="collapse" 
-                                        data-bs-target="#collapse_<?= esc($faq['id']) ?>" 
+                                        data-bs-target="#collapse_faq_<?= $idx ?>" 
                                         aria-expanded="<?= $idx === 0 ? 'true' : 'false' ?>" 
-                                        aria-controls="collapse_<?= esc($faq['id']) ?>">
+                                        aria-controls="collapse_faq_<?= $idx ?>">
                                     <span class="faq-item-icon me-3 flex-shrink-0">
                                         <i class="bi bi-question-circle-fill text-danger"></i>
                                     </span>
                                     <span class="faq-item-title flex-grow-1 me-2 text-dark">
                                         <?= esc($faq['q']) ?>
                                     </span>
-                                    <span class="badge bg-light text-secondary border rounded-pill px-2 py-1 small me-2 d-none d-md-inline-block">
-                                        <?= esc($faq['badge']) ?>
-                                    </span>
                                 </button>
                             </h3>
-                            <div id="collapse_<?= esc($faq['id']) ?>" 
+                            <div id="collapse_faq_<?= $idx ?>" 
                                  class="accordion-collapse collapse <?= $idx === 0 ? 'show' : '' ?>" 
-                                 aria-labelledby="heading_<?= esc($faq['id']) ?>" 
+                                 aria-labelledby="heading_faq_<?= $idx ?>" 
                                  data-bs-parent="#faqAccordionGroup">
                                 <div class="accordion-body faq-modern-body p-4 pt-2 text-secondary">
                                     <p class="mb-0 leading-relaxed"><?= esc($faq['a']) ?></p>
@@ -173,31 +128,31 @@ $faqList = [
                     <?php endforeach; ?>
                 </div>
 
-                <!-- Still Have Questions / Help Desk Card -->
-                <div class="faq-helpdesk-card p-4 p-md-5 rounded-4 shadow-sm border mt-5 text-center">
-                    <div class="row align-items-center g-4">
-                        <div class="col-lg-7 text-center text-lg-start">
-                            <span class="badge bg-danger text-white px-3 py-1 rounded-pill fw-bold text-uppercase mb-2">
-                                24x7 Customer Support
+                <!-- 3. Closing Call To Action Card -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="row align-items-center">
+                        <div class="col-lg-8">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block" style="width: fit-content;">
+                                Plan Your Move
                             </span>
-                            <h3 class="h4 fw-bold text-dark mb-2">Still Need Clarification or Custom Moving Guidance?</h3>
-                            <p class="small text-muted mb-0">
-                                Our relocation specialists are available around the clock to provide free pre-move surveys and accurate quotes.
+                            <h3 class="mb-3">Need to move from <?= esc($addressRegion) ?> or some other place?</h3>
+                            <p class="text-muted mb-lg-0">
+                                Contact <?= esc($company3) ?> for the quotation considering your shifting requirements.
                             </p>
                         </div>
-                        <div class="col-lg-5 text-center text-lg-end">
-                            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-end">
-                                <a <?= $phoneLink ?> class="btn btn-danger rounded-pill px-3 py-2 fw-bold text-white d-inline-flex align-items-center gap-2">
-                                    <i class="bi bi-telephone-fill"></i>
-                                    <span><?= esc($phoneNum) ?></span>
-                                </a>
-                                <a href="<?= esc($waLink) ?>" target="_blank" rel="noopener" class="btn btn-success rounded-pill px-3 py-2 fw-bold text-white d-inline-flex align-items-center gap-2">
-                                    <i class="bi bi-whatsapp"></i>
-                                    <span>WhatsApp</span>
-                                </a>
-                                <a href="<?= site_url('contact') ?>" class="btn btn-outline-dark rounded-pill px-3 py-2 fw-bold d-inline-flex align-items-center gap-2" data-bs-toggle="modal" data-bs-target="#quoteModal">
+                        <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                            <div class="d-flex flex-column flex-sm-row flex-lg-column gap-3 justify-content-lg-end">
+                                <a href="<?= site_url('contacts/quoteform') ?>" class="plan-btn-quote text-center">
                                     <i class="bi bi-calculator"></i>
-                                    <span>Instant Quote</span>
+                                    <span>Get a Moving Quote</span>
+                                    <i class="bi bi-arrow-right-short"></i>
+                                </a>
+                                <a <?= $phonehtml ?> class="plan-btn-call">
+                                    <span class="plan-call-icon"><i class="bi bi-telephone"></i></span>
+                                    <span class="plan-call-details">
+                                        <span class="plan-call-tag">Quick Call</span>
+                                        <span class="plan-call-number"><?= esc($phone) ?></span>
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -208,3 +163,25 @@ $faqList = [
         </div>
     </div>
 </section>
+
+<!-- =========================================================================
+     SCHEMA.ORG FAQPAGE STRUCTURED DATA FOR GOOGLE RICH RESULTS
+     ========================================================================= -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    <?php foreach ($faqList as $i => $item): ?>
+    {
+      "@type": "Question",
+      "name": <?= json_encode($item['q'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": <?= json_encode($item['a'], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE) ?>
+      }
+    }<?= ($i < count($faqList) - 1) ? ',' : '' ?>
+    <?php endforeach; ?>
+  ]
+}
+</script>

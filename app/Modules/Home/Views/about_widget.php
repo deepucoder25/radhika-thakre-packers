@@ -12,18 +12,18 @@
             <!-- Full Width Top Column (col-12) -->
             <div class="col-12">
                 <h2 class="section-title fw-bolder mb-2">
-                    Radhika Thakre Packers and Movers
+                    <?= esc($company3) ?>
                 </h2>
                 <h3 class="h5 fw-bold text-danger mb-3">
                     Our Valuables are Important. We Move Them with Great Care.
                 </h3>
                 
                 <p class="text-muted mb-3">
-                    Moving to a new place is always exciting but packing and moving everything is a challenging job and requires lots of time. Furniture, kitchen articles, appliances and personal belongings require special care. Radhika Thakre Packers and Movers makes this job easy for families and corporate clients in Indore.
+                    Moving to a new place is always exciting but packing and moving everything is a challenging job and requires lots of time. Furniture, kitchen articles, appliances and personal belongings require special care. <?= esc($company3) ?> makes this job easy for families and corporate clients in <?= esc($addressRegion ?? 'Indore') ?>.
                 </p>
 
                 <p class="text-muted mb-3">
-                    We are operating in the business of movers and packers for over 8 years and have catered to more than 25,000 families and corporate offices. From a local home shift to long distance shifting, we manage packing, loading, transportation and delivery of the goods.
+                    We are operating in the business of movers and packers for over <?= esc($experience ?? '8+') ?> years and have catered to more than 25,000 families and corporate offices. From a local home shift to long distance shifting, we manage packing, loading, transportation and delivery of the goods.
                 </p>
 
                 <p class="text-muted mb-0">
@@ -38,11 +38,11 @@
                         About Our Brand
                     </span>
                     <h2 class="section-title fw-bolder mb-3">
-                        About Radhika Packers and Movers
+                        About <?= esc($company3) ?>
                     </h2>
                     
                     <p class="text-muted mb-3">
-                        <strong>Radhika Thakre Packers and Movers</strong> is a government-registered company with ISO 9001:2015 certification in the field of movers and packers services in Indore, Madhya Pradesh.
+                        <strong><?= esc($company3) ?></strong> is a government-registered company with ISO 9001:2015 certification in the field of movers and packers services in <?= esc($addressRegion ?? 'Indore') ?>, <?= esc($companystate ?? 'Madhya Pradesh') ?>.
                     </p>
 
                     <p class="text-muted mb-3">

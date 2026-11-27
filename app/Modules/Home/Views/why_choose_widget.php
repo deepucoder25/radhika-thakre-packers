@@ -6,7 +6,7 @@
 $features = [
     [
         'icon'  => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>',
-        'text'  => '8+ years of experience in moving services',
+        'text'  => ($experience ?? '8+') . ' years of experience in moving services',
     ],
     [
         'icon'  => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>',
@@ -42,7 +42,7 @@ $features = [
             <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
                 Why Choose Us
             </span>
-            <h2 class="section-title fw-bolder mb-3">Why You Should Choose Radhika Thakre Packers and Movers</h2>
+            <h2 class="section-title fw-bolder mb-3">Why You Should Choose <?= esc($company3) ?></h2>
             <p class="section-subtitle text-muted">
                 We think that a reliable and good packers and movers service requires communication and dedication. We are sure that our customers will appreciate the following services:
             </p>
