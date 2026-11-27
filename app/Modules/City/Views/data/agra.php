@@ -8,7 +8,7 @@ $cities = array(
     // array('nm' => 'DAYALBAGH', 'lat' => '27.2218', 'lon' => '78.0158', 'sc' => 'up'),
     // array('nm' => 'DHANOLI', 'lat' => '27.1904', 'lon' => '78.0129', 'sc' => 'up'),
     // array('nm' => 'FATEHABAD ROAD', 'lat' => '27.1586', 'lon' => '78.0255', 'sc' => 'up'),
-    array('nm' => 'IBB', 'lat' => '27.1767', 'lon' => '78.0081', 'sc' => 'up'),
+    // array('nm' => 'IBB', 'lat' => '27.1767', 'lon' => '78.0081', 'sc' => 'up'),
     // array('nm' => 'KAMLA NAGAR', 'lat' => '27.1960', 'lon' => '77.9828', 'sc' => 'up'),
     // array('nm' => 'KAMLA NAGAR', 'lat' => '27.1962', 'lon' => '77.9829', 'sc' => 'up'),
     // array('nm' => 'KUMS, FIROZABAD RD.', 'lat' => '27.1594', 'lon' => '78.0779', 'sc' => 'up'),

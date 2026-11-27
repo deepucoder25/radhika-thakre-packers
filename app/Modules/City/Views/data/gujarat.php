@@ -1,8 +1,8 @@
 <?php
 //SELECT name as nm,latitude as lat,longitude as lon,state_code as sc FROM `cities` WHERE state_code='GJ'
 $cities = array(
-		array('nm' => 'Abrama','lat' => '20.85865000','lon' => '72.90648000','sc' => 'GJ'),
-		array('nm' => 'Adalaj','lat' => '23.16453000','lon' => '72.58107000','sc' => 'GJ'),
+		// array('nm' => 'Abrama','lat' => '20.85865000','lon' => '72.90648000','sc' => 'GJ'),
+		// array('nm' => 'Adalaj','lat' => '23.16453000','lon' => '72.58107000','sc' => 'GJ'),
 		array('nm' => 'Ahmedabad','lat' => '23.02579000','lon' => '72.58727000','sc' => 'GJ'),
 		// array('nm' => 'Ahwa','lat' => '20.75718000','lon' => '73.68626000','sc' => 'GJ'),
 		// array('nm' => 'Amod','lat' => '21.99317000','lon' => '72.87047000','sc' => 'GJ'),
@@ -141,7 +141,7 @@ $cities = array(
 		// array('nm' => 'Pardi','lat' => '20.50870000','lon' => '72.94569000','sc' => 'GJ'),
 		// array('nm' => 'Roha','lat' => '23.19646000','lon' => '69.27076000','sc' => 'GJ'),
 		// array('nm' => 'Radhanpur','lat' => '23.83238000','lon' => '71.60470000','sc' => 'GJ'),
-		// array('nm' => 'Rajkot','lat' => '22.33333000','lon' => '70.83333000','sc' => 'GJ'),
+		array('nm' => 'Rajkot','lat' => '22.33333000','lon' => '70.83333000','sc' => 'GJ'),
 		// array('nm' => 'Rajpipla','lat' => '21.86667000','lon' => '73.50000000','sc' => 'GJ'),
 		// array('nm' => 'Rajula','lat' => '21.03854000','lon' => '71.44345000','sc' => 'GJ'),
 		// array('nm' => 'Ranavav','lat' => '21.68734000','lon' => '69.74485000','sc' => 'GJ'),
@@ -162,7 +162,7 @@ $cities = array(
 		// array('nm' => 'Surendranagar','lat' => '22.72706000','lon' => '71.64856000','sc' => 'GJ'),
 		// array('nm' => 'Sanand','lat' => '22.99227000','lon' => '72.38177000','sc' => 'GJ'),
 		// array('nm' => 'Sayla','lat' => '22.54925000','lon' => '71.48324000','sc' => 'GJ'),
-		// array('nm' => 'Surat','lat' => '21.17801000','lon' => '72.81189000','sc' => 'GJ'),
+		array('nm' => 'Surat','lat' => '21.17801000','lon' => '72.81189000','sc' => 'GJ'),
 		// array('nm' => 'Talaja','lat' => '21.35270000','lon' => '72.03524000','sc' => 'GJ'),
 		// array('nm' => 'Tankara','lat' => '22.65622000','lon' => '70.74945000','sc' => 'GJ'),
 		// array('nm' => 'Tapi','lat' => '21.12000000','lon' => '73.40000000','sc' => 'GJ'),
@@ -178,7 +178,7 @@ $cities = array(
 		// array('nm' => 'Upleta','lat' => '21.74015000','lon' => '70.28256000','sc' => 'GJ'),
 		// array('nm' => 'Utran','lat' => '21.23333000','lon' => '72.86667000','sc' => 'GJ'),
 		// array('nm' => 'Vadnagar','lat' => '23.78593000','lon' => '72.63893000','sc' => 'GJ'),
-		// array('nm' => 'Vadodara','lat' => '22.29941000','lon' => '73.20812000','sc' => 'GJ'),
+		array('nm' => 'Vadodara','lat' => '22.29941000','lon' => '73.20812000','sc' => 'GJ'),
 		// array('nm' => 'Vallabh Vidyanagar','lat' => '22.53333000','lon' => '72.90000000','sc' => 'GJ'),
 		// array('nm' => 'Valsad','lat' => '20.50000000','lon' => '73.08333000','sc' => 'GJ'),
 		// array('nm' => 'Vapi','lat' => '20.37175000','lon' => '72.90493000','sc' => 'GJ'),
