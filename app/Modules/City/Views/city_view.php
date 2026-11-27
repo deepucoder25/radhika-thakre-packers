@@ -4,6 +4,8 @@
  * Content: 100% matched to https://radhikathakrepackersmovers.com/ajaigarh-packers-movers-madhya-pradesh
  * Design: Completely redesigned with modern, responsive Bootstrap 5 cards & zero inline styles
  */
+
+require_once __DIR__ . '/city_content.php';
 ?>
 
 <!-- =========================================================================
@@ -245,38 +247,7 @@
                     <?= esc($cityName) ?> Relocation Overview
                 </span>
                 
-                <h2 class="section-title fw-bolder mb-3">
-                    Affordable Rates for Packers and Movers in <?= esc($cityName) ?>
-                </h2>
-
-                <p class="text-muted mb-3">
-                    Looking for the <strong>Best Packers and Movers in <?= esc($cityName) ?></strong>? We offer reliable and affordable relocation services tailored to your needs. Whether you need packers and movers in <?= esc($cityName) ?> near me or want the cheapest packers and movers in <?= esc($cityName) ?>, we've got you covered. Our expert team ensures a hassle-free move at competitive movers and packers <?= esc($cityName) ?> prices.
-                </p>
-
-                <p class="text-muted mb-4">
-                    Being the <?= esc($cityName) ?> Cheap Packers and Movers, <strong>Radhika Thakre Packers</strong> offers affordable shifting services in <?= esc($cityName) ?> without cutting on quality. As the cheapest and best packers and movers, we are committed to reliability with top-quality services.
-                </p>
-
-                <!-- Top Packing & Moving Services in City (9-Point Grid) -->
-                <div class="card border-0 rounded-4 shadow-sm p-4 bg-white mb-4">
-                    <h3 class="h5 fw-bold text-dark mb-3">Our Top Packing and Moving Services in <?= esc($cityName) ?></h3>
-                    <div class="row g-2">
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Home Shifting in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Office Shifting in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Car Shifting in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Bike Shifting in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>IBA Approved Packers in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Packing &amp; Unpacking in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Loading &amp; Unloading in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Warehousing Services in <?= esc($cityName) ?></div>
-                        <div class="col-sm-6"><i class="bi bi-check2-circle text-danger me-2"></i>Insurance to Good Transit in <?= esc($cityName) ?></div>
-                    </div>
-                </div>
-
-                <div class="p-3 bg-white rounded-3 border small text-muted">
-                    <i class="bi bi-info-circle-fill text-danger me-2"></i>
-                    <strong><?= esc($cityName) ?> Market &amp; Move Transition:</strong> <?= esc($cityName) ?> is known for well-established marketplaces, modern infrastructure, and educated residents. Radhika Thakre Movers Packers in <?= esc($cityName) ?> tops the list of Best Packers and Movers in <?= esc($cityName) ?> with 6+ years of specialized experience and 28,000+ happy clients.
-                </div>
+                <?= $htmlcontent ?? '' ?>
             </div>
 
             <!-- Right: Interactive Cost Calculator (FROM LIVE SITE) -->
@@ -783,86 +754,91 @@
 </section>
 
 <!-- =========================================================================
-     6. LOCAL AUTHORITY & SEARCH INTENT MATRIX (OFFICIAL PAGE TEXT)
+     6. WHY DO PEOPLE CHOOSE US IN CITY
      ========================================================================= -->
 <section class="py-5 bg-white border-bottom">
     <div class="container py-2 py-lg-4">
-        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+        <!-- Section Header -->
+        <div class="text-center mx-auto mb-4 mb-lg-5 section-header-wrap">
+            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
+                Why Choose Us
+            </span>
+            <h2 class="fw-bolder mb-0">Why Do People Choose Us in <?= esc($cityName) ?>?</h2>
+        </div>
+
+        <div class="row g-3 g-md-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+            <!-- 1. Government Registered & ISO Certified -->
             <div class="col">
-                <div class="rt-matrix-card">
-                    <h3 class="rt-matrix-title"><i class="bi bi-award me-2"></i>Professional Packers and Movers <?= esc($cityName) ?></h3>
-                    <p class="rt-matrix-desc">
-                        If you are searching for Professional Moving services in <?= esc($cityName) ?>, trust Radhika Thakre Packers. We move with efficient, dedicated handymen and background-checked ground crews to guarantee safety.
-                    </p>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-patch-check-fill fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">Government Registered and ISO 9001:2015 Certified</h3>
                 </div>
             </div>
 
+            <!-- 2. Shifting Experience -->
             <div class="col">
-                <div class="rt-matrix-card">
-                    <h3 class="rt-matrix-title"><i class="bi bi-geo-alt me-2"></i>Local Packers and Movers <?= esc($cityName) ?></h3>
-                    <p class="rt-matrix-desc">
-                        Familiar with the local <?= esc($cityName) ?> environment, road routes, and society regulations to provide you with seamless local city shifting and local city-to-city relocation with unmatched expertise.
-                    </p>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-award-fill fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">8+ Years of Shifting Experience</h3>
                 </div>
             </div>
 
+            <!-- 3. 5 Layers Bubble Packing -->
             <div class="col">
-                <div class="rt-matrix-card">
-                    <h3 class="rt-matrix-title"><i class="bi bi-search me-2"></i><?= esc($cityName) ?> Packers and Movers Near Me</h3>
-                    <p class="rt-matrix-desc">
-                        We are here to answer your query for Packers and Movers near me in <?= esc($cityName) ?>. Radhika Thakre Packers offers smooth, reliable doorstep moving experiences across all neighborhoods.
-                    </p>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-box-seam-fill fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">5 Layers Bubble Packing</h3>
                 </div>
             </div>
 
+            <!-- 4. GPS Tracking in Container Trucks -->
             <div class="col">
-                <div class="rt-matrix-card">
-                    <h3 class="rt-matrix-title"><i class="bi bi-box2-heart me-2"></i><?= esc($cityName) ?> Packers for Fragile Items</h3>
-                    <p class="rt-matrix-desc">
-                        Specialized glass moving and fragile care in <?= esc($cityName) ?>. We handle electronics, antique arts, crockery, delicate chandeliers, and smart TVs with customized wooden crating.
-                    </p>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-truck fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">GPS Tracking in Container Trucks</h3>
                 </div>
             </div>
 
+            <!-- 5. Transit Insurance Available -->
             <div class="col">
-                <div class="rt-matrix-card">
-                    <h3 class="rt-matrix-title"><i class="bi bi-tags me-2"></i><?= esc($cityName) ?> Price Comparison</h3>
-                    <p class="rt-matrix-desc">
-                        Distance, volume, and service tier are vital factors affecting moving costs. Radhika Thakre Packers offers affordable rates to make relocation stress-free. Call us now for a Free Quote!
-                    </p>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-shield-fill-check fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">Transit Insurance Available</h3>
                 </div>
             </div>
 
+            <!-- 6. Competitive Rate & Trained Team -->
             <div class="col">
-                <div class="rt-matrix-contact-card">
-                    <div>
-                        <h3 class="rt-matrix-contact-title"><i class="bi bi-telephone-outbound me-2"></i>Instant Contact in <?= esc($cityName) ?></h3>
-                        <p class="rt-matrix-contact-desc">
-                            Speak with our relocation officer directly or message us on WhatsApp for a zero-cost doorstep shifting survey in <?= esc($cityName) ?>.
-                        </p>
-                    </div>
-                    <a <?= $phonehtml ?> class="btn btn-sm btn-danger rounded-pill fw-bold text-white px-3 align-self-start">
-                        Call <?= esc($phone) ?>
-                    </a>
+                <div class="rt-matrix-card d-flex align-items-center gap-3 py-3 px-4">
+                    <i class="bi bi-people-fill fs-4 text-danger flex-shrink-0"></i>
+                    <h3 class="rt-matrix-title mb-0">Competitive Rate and Professionally Trained Team</h3>
                 </div>
             </div>
+        </div>
+
+        <!-- Moving Experience -->
+        <div class="card border-0 bg-light rounded-4 p-4 p-md-4 mt-4">
+            <h3 class="fw-bold mb-2 text-dark">Moving Experience</h3>
+            <p class="text-muted lh-base mb-0">
+                For example, when a family plans to move from a two-bedroom house, they need to shift furniture, appliances, kitchenware and cartons. Such a situation requires our movers to plan each task starting from packaging, selection of a vehicle and coordination in loading and delivering goods.
+            </p>
         </div>
     </div>
 </section>
 
 <!-- =========================================================================
-     7. MOST SEARCHED FAQS FOR CITY (EXACT 8 FAQS FROM OFFICIAL SITE)
+     7. FREQUENTLY ASKED QUESTIONS (FAQS) FOR CITY
      ========================================================================= -->
 <section class="section-faqs py-5 bg-light position-relative border-bottom">
     <div class="container py-2 py-lg-4">
         <!-- Section Header -->
-        <div class="text-center mx-auto mb-5 section-header-wrap">
+        <div class="text-center mx-auto mb-4 mb-lg-5 section-header-wrap">
             <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
                 Help &amp; Queries
             </span>
-            <h2 class="section-title fw-bolder mb-3">Most Searched FAQs for <?= esc($cityName) ?></h2>
+            <h2 class="fw-bolder mb-3">Frequently Asked Questions</h2>
             <p class="section-subtitle text-muted">
-                Frequently asked questions regarding packing materials, insurance, last-minute booking, and vehicle shifting in <?= esc($cityName) ?>.
+                Frequently asked questions regarding home shifting, moving vehicles, interstate relocation, and pricing in <?= esc($cityName) ?>.
             </p>
         </div>
 
@@ -875,12 +851,12 @@
                         <h3 class="accordion-header" id="hFaq1">
                             <button class="accordion-button fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq1" aria-expanded="true" aria-controls="cColFaq1">
                                 <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>What services does Radhika Thakre Packers and Movers provide?</span>
+                                <span>Do you offer home shifting in <?= esc($cityName) ?>?</span>
                             </button>
                         </h3>
                         <div id="cColFaq1" class="accordion-collapse collapse show" aria-labelledby="hFaq1" data-bs-parent="#faqCol1">
                             <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                Our services include household shifting services, office moving services, car transportation and shifting services, bike moving services as well as storage services. We offer all types of moving services serving <?= esc($cityName) ?> as well as other parts of India.
+                                Yes, we offer home shifting services based on your relocation requirements.
                             </div>
                         </div>
                     </div>
@@ -890,42 +866,12 @@
                         <h3 class="accordion-header" id="hFaq2">
                             <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq2" aria-expanded="false" aria-controls="cColFaq2">
                                 <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>Is the security of my property guaranteed during the moving process?</span>
+                                <span>Which vehicles do you use for household shifting?</span>
                             </button>
                         </h3>
                         <div id="cColFaq2" class="accordion-collapse collapse" aria-labelledby="hFaq2" data-bs-parent="#faqCol1">
                             <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                We provide free quality packing substances and hire only well-trained personnel to handle your belongings carefully. Our team is professionally trained to pack your goods to ensure they are safely loaded and unloaded to reach the destination.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 3 -->
-                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq3">
-                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq3" aria-expanded="false" aria-controls="cColFaq3">
-                                <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>Are you able to manage the last-minute movements?</span>
-                            </button>
-                        </h3>
-                        <div id="cColFaq3" class="accordion-collapse collapse" aria-labelledby="hFaq3" data-bs-parent="#faqCol1">
-                            <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                Well, of course, we understand that sometimes things have to be rushed and actions should be taken immediately. We ensure to meet the needs of customers who book at the last minute and the moving is done in the most efficient manner.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 4 -->
-                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq4">
-                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq4" aria-expanded="false" aria-controls="cColFaq4">
-                                <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>In which cities or state does it offer?</span>
-                            </button>
-                        </h3>
-                        <div id="cColFaq4" class="accordion-collapse collapse" aria-labelledby="hFaq4" data-bs-parent="#faqCol1">
-                            <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                We offer Interstate moving services within <?= esc($cityName) ?> and in all major cities across India. We have everything and everyone that we need to easily assist with local and interstate moving services.
+                                We arrange for goods carriers, trucks or container vehicles as per the volume of the goods.
                             </div>
                         </div>
                     </div>
@@ -935,62 +881,32 @@
             <!-- Column 2 -->
             <div class="col-lg-6">
                 <div class="accordion faq-accordion-v2" id="faqCol2">
-                    <!-- FAQ 5 -->
+                    <!-- FAQ 3 -->
                     <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq5">
-                            <button class="accordion-button fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq5" aria-expanded="true" aria-controls="cColFaq5">
+                        <h3 class="accordion-header" id="hFaq3">
+                            <button class="accordion-button fw-bold py-3 px-4" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq3" aria-expanded="true" aria-controls="cColFaq3">
                                 <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>Is there any insurance for my things during the transportation?</span>
+                                <span>Is it possible to move my goods to another state?</span>
                             </button>
                         </h3>
-                        <div id="cColFaq5" class="accordion-collapse collapse show" aria-labelledby="hFaq5" data-bs-parent="#faqCol2">
+                        <div id="cColFaq3" class="accordion-collapse collapse show" aria-labelledby="hFaq3" data-bs-parent="#faqCol2">
                             <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                Yes, we provide an insurance cover that enhances the security of your property during transport. Our team will help you decide on the insurance plan that meets your needs and requirements.
+                                Yes, we offer interstate shifting to different cities across India.
                             </div>
                         </div>
                     </div>
 
-                    <!-- FAQ 6 -->
+                    <!-- FAQ 4 -->
                     <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq6">
-                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq6" aria-expanded="false" aria-controls="cColFaq6">
+                        <h3 class="accordion-header" id="hFaq4">
+                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq4" aria-expanded="false" aria-controls="cColFaq4">
                                 <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>How can I book a moving service?</span>
+                                <span>How do you calculate the moving cost?</span>
                             </button>
                         </h3>
-                        <div id="cColFaq6" class="accordion-collapse collapse" aria-labelledby="hFaq6" data-bs-parent="#faqCol2">
+                        <div id="cColFaq4" class="accordion-collapse collapse" aria-labelledby="hFaq4" data-bs-parent="#faqCol2">
                             <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                By accessing our website and filling out a contact form, calling us at <?= esc($phone) ?>, or emailing, we provide you with a quote. Once we collect all details of your move, our expert team offers you a zero-cost estimate.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 7 -->
-                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq7">
-                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq7" aria-expanded="false" aria-controls="cColFaq7">
-                                <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>How do I prepare for the move?</span>
-                            </button>
-                        </h3>
-                        <div id="cColFaq7" class="accordion-collapse collapse" aria-labelledby="hFaq7" data-bs-parent="#faqCol2">
-                            <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                Before moving, it is advisable to rearrange your belongings and eliminate unnecessary items. Be sure to mark your boxes to avoid confusion, and let us know if you have placed fragile items. Our team assists throughout the process.
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ 8 -->
-                    <div class="accordion-item border rounded-3 mb-3 overflow-hidden shadow-sm">
-                        <h3 class="accordion-header" id="hFaq8">
-                            <button class="accordion-button fw-bold py-3 px-4 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cColFaq8" aria-expanded="false" aria-controls="cColFaq8">
-                                <span class="faq-icon-pill me-3 d-inline-flex align-items-center justify-content-center rounded-circle flex-shrink-0"><i class="bi bi-question-lg"></i></span>
-                                <span>Can you explain how you manage the movement of cars and bikes?</span>
-                            </button>
-                        </h3>
-                        <div id="cColFaq8" class="accordion-collapse collapse" aria-labelledby="hFaq8" data-bs-parent="#faqCol2">
-                            <div class="accordion-body px-4 pb-4 pt-2 text-muted lh-base small">
-                                Your vehicles are transported using specialized carriers and hydraulic equipment to minimize cases of damage. We ensure your car or bike is loaded and delivered to the destination in the exact condition it was handed over.
+                                Cost varies according to the distance, volume of goods, packaging requirements and vehicle chosen.
                             </div>
                         </div>
                     </div>
@@ -999,6 +915,48 @@
         </div>
     </div>
 </section>
+
+<!-- Schema.org FAQPage Microdata for City Relocation SEO -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do you offer home shifting in <?= esc($cityName) ?>?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer home shifting services based on your relocation requirements."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which vehicles do you use for household shifting?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We arrange for goods carriers, trucks or container vehicles as per the volume of the goods."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it possible to move my goods to another state?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer interstate shifting to different cities across India."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do you calculate the moving cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cost varies according to the distance, volume of goods, packaging requirements and vehicle chosen."
+      }
+    }
+  ]
+}
+</script>
 
 <!-- =========================================================================
      8. RELEVANT KEYWORDS IN CITY (OFFICIAL SEARCH KEYWORDS CLOUD)
