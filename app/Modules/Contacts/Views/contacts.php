@@ -169,7 +169,7 @@ $path        = [
                                         <span class="input-group-text bg-light border-end-0 text-muted"><i class="bi bi-box-seam-fill"></i></span>
                                         <select id="contactService" name="service" class="form-select border-start-0">
                                             <option value="Household Moving">Household Moving (Home Shifting)</option>
-                                            <option value="Office Relocation">Office &amp; Corporate Relocation</option>
+                                            <option value="Office Relocation">Office Relocation (Office Shifting)</option>
                                             <option value="Vehicle Transport">Car &amp; Bike Transportation</option>
                                             <option value="Warehouse Storage">Secure Warehouse Storage</option>
                                             <option value="Packing & Unpacking">Premium Packing &amp; Unpacking</option>

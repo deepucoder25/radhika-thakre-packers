@@ -68,16 +68,9 @@ class Services extends BaseController
         return Template::layout2($data);
     }
 
-    public function corporateRelocation(): string
+    public function corporateRelocation()
     {
-        $data['title']       = "Corporate Relocation | " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers');
-        $data['description'] = "Enterprise corporate relocation solutions by " . ($this->comp['company3'] ?? 'Radhika Thakre Packers and Movers') . ". Full-scale office moving, data centers, branch transitions.";
-        $data['page']        = 'services';
-        $data['module']      = 'services';
-        $data['view_file']   = 'Modules\Services\Views\corporate_relocation';
-        $data['services']    = $this->serviceModel->getAll();
-
-        return Template::layout2($data);
+        return redirect()->to(site_url('office-relocation'), 301);
     }
 
     public function packingUnpacking(): string

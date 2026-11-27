@@ -1,12 +1,12 @@
 <?php
 /**
  * Office Shifting Services Page - Radhika Thakre Packers and Movers
- * Content: 100% matched to https://radhikathakrepackersmovers.com/office-shifting-in-indore
- * Layout: Modern, fully responsive, zero inline styles, unified .service-* CSS
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Clean SEO architecture matching home_shifting.php | Natural semantic headings
  */
 
 $title       = "Office Shifting";
-$description = "Professional office relocation services by " . $company3 . ". IBA-approved corporate moving with zero business downtime, IT server moving, and modular workstation setup.";
+$description = "Professional, trusted office shifting and workplace moving services by " . $company3 . ". Secure packing of IT equipment, office furniture, and minimal business downtime.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'Office Shifting'],
@@ -27,314 +27,153 @@ $path        = [
   },
   "areaServed": {
     "@type": "City",
-    "name": "Indore"
+    "name": "<?= esc($addressRegion) ?>"
   },
   "description": "<?= esc($description) ?>"
 }
 </script>
 
-<section class="service-page-section">
-    <div class="container">
+<!-- =========================================================================
+     MAIN SERVICE CONTENT SECTION
+     ========================================================================= -->
+<section class="service-page-section py-5 bg-light position-relative">
+    <div class="container py-2 py-lg-4">
         <div class="row g-4 g-lg-5">
-            <!-- Left Column: Main Narrative & Content -->
+
+            <!-- Left Column: Main Service Narrative & Content -->
             <div class="col-lg-8">
-                <!-- 1. Overview & Authentic Text -->
-                <div class="service-overview-card">
-                    <span class="service-badge-pill">
-                        <i class="bi bi-building-fill-gear text-danger"></i> Corporate &amp; Commercial Shifting
+
+                <!-- 1. Trusted Office Shifting & What Is Included -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-building-fill text-danger"></i> Workplace Shifting
                     </span>
-                    <h1 class="service-main-heading">
-                        Best Office Shifting Services in Indore &amp; Pan India
-                    </h1>
-                    <p class="service-lead-text">
-                        <strong><?= esc($company3) ?></strong> are the best packers and movers for Office Shifting Services in India. Being one of the most preferred service-offering organizations in the nation, our packers and movers handle Office Shifting Services near me comprehensively and meticulously.
-                    </p>
-                    <p class="service-body-text">
-                        Backed with <strong>IBA approval</strong>, we provide excellent Office Shifting Services in India for every kind of commercial shifting requirement. So, if you are planning for Office Shifting Services, then surely hire the best and recommended Radhika Thakre Packers and Movers and get remarkable corporate moving services at the most affordable prices.
-                    </p>
-                    <p class="service-body-text">
-                        Aware of our aim to be a scam-free moving company, we are the most wanted service provider in India with economical packers and movers packaging without sacrificing the quality of the services. Packers and Movers Radhika Thakre deals in the transportation of office goods, IT setups, and furniture through our professional IBA-approved office shifting services in India.
+                    <h2 class="mb-3">
+                        Trusted Office Shifting Services with <?= esc($company3) ?>
+                    </h2>
+                    <h3 class="mb-3">
+                        What Is Included in Our Office Relocation Service?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        <?= esc($company3) ?> offer office relocation and transfer solutions. Packing, loading and delivery can also be arranged for office furniture and business assets.
                     </p>
                     <p class="service-body-text mb-0">
-                        Our excellent office shifting service guarantees the move's smooth execution, making us the preferred Office Shifting Services in India. Office shifting is also one of our flagship capabilities and we are recognized among the 5 Best Office Shifting Services Packers &amp; Movers in India. For the most reliable and efficient shifting services, approach Radhika Thakre Packers and Movers.
-                    </p>
-
-                    <!-- Quick Metrics Grid -->
-                    <div class="service-stats-grid">
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">0 Hrs</div>
-                            <div class="service-stat-label">Downtime Target</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">IBA</div>
-                            <div class="service-stat-label">Approved Firm</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">100%</div>
-                            <div class="service-stat-label">IT Server Care</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Night/Wknd</div>
-                            <div class="service-stat-label">Shift Schedules</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Key Capabilities / Features -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-stars text-danger"></i>
-                        Key Office Relocation Capabilities
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        We minimize business interruption and safeguard intellectual property and IT hardware with specialized corporate moving protocols:
-                    </p>
-
-                    <div class="service-features-grid">
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-server"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Data Center &amp; Server Moving</h3>
-                                <p class="service-feature-desc">
-                                    Anti-static bubble wrap, foam enclosures, and temperature-conscious transit for blade servers, network switches, and critical IT assets.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-calendar-check"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Weekend &amp; Night Relocation</h3>
-                                <p class="service-feature-desc">
-                                    We move after office hours or on weekends so your team leaves on Friday evening and resumes normal work at the new facility on Monday morning.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-tags"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Color-Coded Desk Labeling</h3>
-                                <p class="service-feature-desc">
-                                    Every employee desk, system, chair, and file box receives color-coded floor tags, ensuring 100% accurate placement at designated workstations.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-shield-lock"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Confidential File Archives</h3>
-                                <p class="service-feature-desc">
-                                    Numbered security seals and tamper-evident cartons for HR documents, legal records, and financial accounting archives during transit.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-grid-3x3-gap"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Modular Workstation Setup</h3>
-                                <p class="service-feature-desc">
-                                    Skilled modular furniture technicians dismantle cubicles, glass partitions, and conference desks, then reconfigure them perfectly.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-person-badge"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Dedicated Corporate Move Manager</h3>
-                                <p class="service-feature-desc">
-                                    A single point of contact oversees site logistics, coordinating directly with your facility managers, building security, and IT leadership.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Workflow -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-diagram-3-fill text-danger"></i>
-                        Our 5-Step Office Shifting Workflow
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Structured methodology designed for zero loss of business productivity:
-                    </p>
-
-                    <div class="service-process-list">
-                        <div class="service-process-step">
-                            <div class="service-step-badge">1</div>
-                            <div>
-                                <h3 class="service-step-title">Site Reconnaissance &amp; Floor Plan Mapping</h3>
-                                <p class="service-step-desc">
-                                    We survey origin and destination premises, establish elevator reservation timings, check loading bays, and design a phased floor layout blueprint.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">2</div>
-                            <div>
-                                <h3 class="service-step-title">Employee Crate Distribution &amp; Department Tagging</h3>
-                                <p class="service-step-desc">
-                                    We distribute personal packing bins to employees with pre-printed labels for easy packing of personal desk accessories and stationary.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">3</div>
-                            <div>
-                                <h3 class="service-step-title">IT De-Installation &amp; Anti-Static Packaging</h3>
-                                <p class="service-step-desc">
-                                    Trained tech handlers de-cable PCs, pack monitors in padded sleeves, and wrap server towers with anti-static bubble packaging.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">4</div>
-                            <div>
-                                <h3 class="service-step-title">Secured Closed Container Express Transit</h3>
-                                <p class="service-step-desc">
-                                    Locked container trucks transport office assets under GPS monitoring, accompanied by authorized supervisor escort.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">5</div>
-                            <div>
-                                <h3 class="service-step-title">Reassembly, Department Handover &amp; Sign-off</h3>
-                                <p class="service-step-desc">
-                                    Desks, chairs, and systems are positioned according to the floor blueprint, enabling staff to resume operations instantly on business day one.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Pricing / Rate Table -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-tag-fill text-danger"></i>
-                        Office Relocation Estimated Rates
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Transparent commercial moving rate indicators based on office capacity:
-                    </p>
-
-                    <div class="service-table-card">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Office Scale</th>
-                                        <th>Local Shifting (Indore City)</th>
-                                        <th>Interstate Commercial Moving</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Small Office (1 to 10 Desks)</strong></td>
-                                        <td class="text-danger fw-bold">₹8,000 – ₹15,000</td>
-                                        <td class="text-dark fw-bold">₹25,000 – ₹45,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Medium Office (10 to 35 Desks)</strong></td>
-                                        <td class="text-danger fw-bold">₹16,000 – ₹32,000</td>
-                                        <td class="text-dark fw-bold">₹50,000 – ₹95,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Large Office (35 to 80 Desks)</strong></td>
-                                        <td class="text-danger fw-bold">₹35,000 – ₹65,000</td>
-                                        <td class="text-dark fw-bold">₹1,10,000 – ₹2,20,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Corporate Floor (80+ Workstations)</strong></td>
-                                        <td class="text-danger fw-bold">Custom Corporate Quote</td>
-                                        <td class="text-dark fw-bold">Project Contract Pricing</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <p class="small text-muted mb-0">
-                        <em>*Note: Includes GST invoicing, elevator protections, transit insurance endorsements, and dedicated corporate manager oversight.</em>
+                        Typically, furniture (such as desks, chairs and filing cabinets), conference facilities, computers, printers and stationery are all transferred. Whole offices can be relocated or just individual items may need to be moved.
                     </p>
                 </div>
 
-                <!-- 5. FAQs -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-question-circle-fill text-danger"></i>
-                        Frequently Asked Questions: Office Shifting
-                    </h2>
+                <!-- 2. Why Do Businesses Need Professional Office Movers? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-shield-check text-danger"></i> Business Advantage
+                    </span>
+                    <h3 class="mb-3">
+                        Why Do Businesses Need Professional Office Movers?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Alongside physical items, computers, paperwork and business assets all need to be appropriately prepared for transfer. Without efficient management, a business can experience disruption and there may also be added time needed to set up within new office space.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Expert office movers facilitate the logistics of a transfer and manage business asset movement. They also free up time for members of staff so that they can continue to perform their usual roles.
+                    </p>
+                </div>
 
-                    <div class="accordion" id="officeFaqAccordion">
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="oFaq1">
-                                <button class="accordion-button service-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#oFaqCol1" aria-expanded="true" aria-controls="oFaqCol1">
-                                    How do you ensure zero downtime for our company operations?
-                                </button>
+                <!-- 3. When Is Office Shifting Required? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-calendar-event text-danger"></i> Relocation Timing
+                    </span>
+                    <h3 class="mb-3">
+                        When Is Office Shifting Required?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        As well as growing, businesses will often require office relocations when they relocate to different rented office space. In addition, businesses can need to transfer offices to establish new branches or to a more appropriate site.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        As soon as a business knows its new office and the planned moving date, it is advisable to speak to the chosen moving company. Matters such as entry to the new office, volume of assets and specific management requirements can then be discussed.
+                    </p>
+                </div>
+
+                <!-- 4. How Do We Arrange an Office Move? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-gear-fill text-danger"></i> Moving Process
+                    </span>
+                    <h3 class="mb-3">
+                        How Do We Arrange an Office Move?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Our company gathers details regarding the office dimensions, together with the source and destination addresses. The moving date and required services are also analysed. These details enable us to effectively determine the packing, manpower and transport requirements.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Computers and electronic assets should be disconnected by a company’s IT department. Sensitive information should be packed by approved members of staff in a distinct manner.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Our packers then prepare business assets for transfer. Larger objects can be disassembled where necessary and as permitted. Assets are then loaded onto appropriate transport and taken to the new office.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Our personnel remove the assets from the transport and position them within the correct sections of the new office as detailed in the booking.
+                    </p>
+                </div>
+
+                <!-- 5. Closing Call-To-Action Banner -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="position-relative z-1">
+                        <div class="mb-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block">
+                                Plan Your Office Move
+                            </span>
+                            <h3 class="fw-bolder mb-3 text-dark">
+                                Please get in touch with us to explore further how we can assist with your office transfer.
                             </h3>
-                            <div id="oFaqCol1" class="accordion-collapse collapse show" aria-labelledby="oFaq1" data-bs-parent="#officeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    We schedule moves outside your standard operational hours — during overnight shifts, weekends, or public holidays. Workstations, network cabling, and desktop PCs are positioned ahead of your workforce arriving for work.
-                                </div>
-                            </div>
+                            <p class="text-muted mb-0">
+                                Contact <?= esc($company3) ?> today or call our relocation desk directly at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a>.
+                            </p>
                         </div>
 
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="oFaq2">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#oFaqCol2" aria-expanded="false" aria-controls="oFaqCol2">
-                                    How are confidential company files and servers transported?
-                                </button>
-                            </h3>
-                            <div id="oFaqCol2" class="accordion-collapse collapse" aria-labelledby="oFaq2" data-bs-parent="#officeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    We provide numbered security plastic crates with zip-tie serial seals for confidential documents. Critical IT servers and hardware travel in dedicated padded containers accompanied by your authorized representative if requested.
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Action Buttons Placed Below Content (Side-by-Side) -->
+                        <div class="d-flex flex-wrap gap-3 align-items-center pt-2">
+                            <!-- Button 1: Get a Moving Quote (Styled Red Gradient Pill Button) -->
+                            <a href="<?= site_url('contact') ?>" class="btn btn-about-primary rounded-pill d-inline-flex align-items-center justify-content-between gap-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#quoteModal" aria-label="Get a Free Moving Quote">
+                                <span class="fw-bold d-inline-flex align-items-center gap-2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>
+                                    </svg>
+                                    <span>Get a Moving Quote</span>
+                                </span>
+                                <span class="btn-arrow-circle d-flex align-items-center justify-content-center" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
 
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="oFaq3">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#oFaqCol3" aria-expanded="false" aria-controls="oFaqCol3">
-                                    Do you provide official GST invoices and corporate moving agreements?
-                                </button>
-                            </h3>
-                            <div id="oFaqCol3" class="accordion-collapse collapse" aria-labelledby="oFaq3" data-bs-parent="#officeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    Yes, <?= esc($company3) ?> is a registered logistics enterprise with GSTIN <?= esc($gst) ?>. We issue comprehensive tax invoices, consignment notes (LR/GR), and vendor onboarding documentation.
-                                </div>
-                            </div>
+                            <!-- Button 2: Quick Call (Styled White Card-Pill Button) -->
+                            <a <?= $phonehtml ?> class="btn btn-about-call rounded-pill d-inline-flex align-items-center gap-2 gap-sm-3 shadow-sm" aria-label="Call <?= esc($phone) ?>">
+                                <span class="btn-call-icon-wrap d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-start d-flex flex-column lh-sm pe-2">
+                                    <span class="btn-call-label text-muted text-uppercase fw-semibold">Quick Call</span>
+                                    <span class="btn-call-number fw-bold text-dark"><?= esc($phone) ?></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Right Column: Sidebar -->
+            <!-- Right Column: Interactive Sidebar -->
             <div class="col-lg-4">
                 <?= view('Modules\Services\Views\service_sidebar', array_merge(get_defined_vars(), [
                     'activeService' => 'office-relocation',
                     'activeTitle'   => 'Office Shifting'
                 ])) ?>
             </div>
+
         </div>
     </div>
 </section>

@@ -56,7 +56,6 @@
                     <option value="office-relocation">Office Shifting</option>
                     <option value="car-transportation">Car shifting</option>
                     <option value="bike-transportation">Bike Shifting</option>
-                    <option value="corporate-relocation">Corporate Relocation</option>
                     <option value="packing-moving">Packing &amp; Unpacking</option>
                     <option value="loading-unloading">Loading &amp; Unloading</option>
                     <option value="warehouse-storage">Storage &amp; Warehouse</option>

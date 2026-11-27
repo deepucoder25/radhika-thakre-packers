@@ -1,12 +1,12 @@
 <?php
 /**
  * Car Shifting Services Page - Radhika Thakre Packers and Movers
- * Content: 100% matched to https://radhikathakrepackersmovers.com/car-shifting-in-indore
- * Layout: Modern, fully responsive, zero inline styles, unified .service-* CSS
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Clean SEO architecture matching home_shifting.php | Natural semantic headings
  */
 
 $title       = "Car Shifting";
-$description = "Reliable car carrier and vehicle transportation by " . $company3 . ". Enclosed hydraulic car trailers, scratch-free transit, live GPS tracking, and 100% vehicle transit insurance.";
+$description = "Professional, reliable car transport and vehicle carrier services by " . $company3 . ". Enclosed hydraulic car trailers, door-to-door delivery, and full transit insurance.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'Car Shifting'],
@@ -27,316 +27,150 @@ $path        = [
   },
   "areaServed": {
     "@type": "City",
-    "name": "Indore"
+    "name": "<?= esc($addressRegion) ?>"
   },
   "description": "<?= esc($description) ?>"
 }
 </script>
 
-<section class="service-page-section">
-    <div class="container">
+<!-- =========================================================================
+     MAIN SERVICE CONTENT SECTION
+     ========================================================================= -->
+<section class="service-page-section py-5 bg-light position-relative">
+    <div class="container py-2 py-lg-4">
         <div class="row g-4 g-lg-5">
+
+            <!-- Left Column: Main Service Narrative & Content -->
             <div class="col-lg-8">
-                <!-- 1. Overview & Authentic Text -->
-                <div class="service-overview-card">
-                    <span class="service-badge-pill">
-                        <i class="bi bi-car-front-fill text-danger"></i> Dedicated Car Carrier Logistics
+
+                <!-- 1. Professional Car Shifting Services -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-car-front-fill text-danger"></i> Automobile Logistics
                     </span>
-                    <h1 class="service-main-heading">
-                        Best Car Shifting Services in Indore &amp; Across India
-                    </h1>
-                    <p class="service-lead-text">
-                        For the best Car Moving Services in India choose <strong><?= esc($company3) ?></strong>, which offers safe and secure packing and moving services for your valuable automobiles and passenger vehicles.
-                    </p>
-                    <p class="service-body-text">
-                        Being one of the topmost Car Relocation Services providers, we are also proficient in managing Car Relocation Services near me with superior competence. Solutions approved by <strong>IBA</strong> are offered by us and thus any type of Car Relocation Services requirements can be met by us without friction.
-                    </p>
-                    <p class="service-body-text">
-                        Call us for the best and most economically favorable Car Relocation Services to live your life with the best removalists in the market. Our local moving companies and packers services simplify the moving process, thus making us a reputable company.
-                    </p>
-                    <p class="service-body-text">
-                        Looking for genuine Car Relocation Services in India, then Radhika Thakre Packers and Movers is here — you can trust Car Relocation Services that are not fake. We are the most wanted Car Relocation Services that offer economical packers and movers service with superior quality and dedicated closed hydraulic car trailers.
+                    <h2 class="mb-3">
+                        Professional Car Shifting Services with <?= esc($company3) ?>
+                    </h2>
+                    <p class="service-body-text mb-3">
+                        <?= esc($company3) ?> offer a car transport service. Clients can advise us on the transport of cars including hatchbacks, sedans and SUVS, as well as many more popular car types.
                     </p>
                     <p class="service-body-text mb-0">
-                        Our IBA-approved Car Relocation Services mean that your move will be as smooth as it can be. If you require hassle-free Car Relocation Services or superior Car Relocation Services, then our specialized position makes us one of the leading 5 Best Car Relocation Services for Packers &amp; Movers in India.
-                    </p>
-
-                    <!-- Quick Metrics Grid -->
-                    <div class="service-stats-grid">
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Closed</div>
-                            <div class="service-stat-label">Hydraulic Carrier</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">0 Scratch</div>
-                            <div class="service-stat-label">Safety Guarantee</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">100%</div>
-                            <div class="service-stat-label">Marine Insured</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Door-Door</div>
-                            <div class="service-stat-label">Pickup &amp; Drop</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2. Capabilities -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-stars text-danger"></i>
-                        Why Transport Your Car with <?= esc($company3) ?>
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        State-of-the-art vehicle transit infrastructure designed to keep your car safe from highway debris, weather, and wear:
-                    </p>
-
-                    <div class="service-features-grid">
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-truck-front"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Enclosed Covered Trailers</h3>
-                                <p class="service-feature-desc">
-                                    Double-decker covered car carriers safeguard paintwork against flying highway gravel, dirt, torrential rains, and sunlight exposure.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-camera"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Digital Scratch Inspection Report</h3>
-                                <p class="service-feature-desc">
-                                    Before loading, a detailed condition report logs existing minor scratches, fuel levels, and odometer reading with customer sign-off.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-lock-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Hydraulic Wheel Stopper Clamps</h3>
-                                <p class="service-feature-desc">
-                                    Vehicles are locked in position using specialized tire locks, steel stopper chocks, and high-tensile safety safety straps.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-geo-alt-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Satellite GPS Live Tracking</h3>
-                                <p class="service-feature-desc">
-                                    Monitor your vehicle's live interstate transit progress with real-time checkpoint updates until safe arrival at your destination.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-shield-check"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Comprehensive Marine Transit Cover</h3>
-                                <p class="service-feature-desc">
-                                    Every automobile relocation is backed by complete insurance against transit accidents, physical damages, and highway hazards.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-house-door"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Doorstep Pickup &amp; Safe Delivery</h3>
-                                <p class="service-feature-desc">
-                                    Our licensed driver picks up your car from your doorstep in Indore and delivers it directly to your designated porch in any Indian city.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Workflow -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-diagram-3-fill text-danger"></i>
-                        Our 5-Step Car Transportation Process
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Systematic chain of custody from doorstep handover to delivery:
-                    </p>
-
-                    <div class="service-process-list">
-                        <div class="service-process-step">
-                            <div class="service-step-badge">1</div>
-                            <div>
-                                <h3 class="service-step-title">Doorstep Vehicle Inspection &amp; Document Verification</h3>
-                                <p class="service-step-desc">
-                                    We inspect your vehicle, record odometer and fuel levels, check RC copy and insurance documentation, and issue an official consignment note.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">2</div>
-                            <div>
-                                <h3 class="service-step-title">Protective Wrapping for Mirrors &amp; Bumpers</h3>
-                                <p class="service-step-desc">
-                                    Side-view mirrors, spoilers, and delicate chrome accents are wrapped with protective foam and film to prevent surface scuffs.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">3</div>
-                            <div>
-                                <h3 class="service-step-title">Hydraulic Ramp Loading &amp; Wheel Chocking</h3>
-                                <p class="service-step-desc">
-                                    Your vehicle is driven cautiously onto the specialized car trailer ramp and anchored with 4-point wheel security lashing belts.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">4</div>
-                            <div>
-                                <h3 class="service-step-title">Safe Highway Express Transit with GPS Updates</h3>
-                                <p class="service-step-desc">
-                                    Our double-driver logistics crew transports your vehicle along primary expressways with round-the-clock location tracking.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">5</div>
-                            <div>
-                                <h3 class="service-step-title">Destination Inspection &amp; Doorstep Handover</h3>
-                                <p class="service-step-desc">
-                                    The vehicle is unloaded on flat ground, re-inspected against the initial report, and handed over to you in spotless condition.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Rate Table -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-tag-fill text-danger"></i>
-                        Car Transportation Estimated Rate Chart
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Estimated pricing for dedicated car carrier transit from Indore across major corridors:
-                    </p>
-
-                    <div class="service-table-card">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Car Category</th>
-                                        <th>Medium Route (Up to 700 km)</th>
-                                        <th>Long Distance (1000 to 2000+ km)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Hatchback (Swift, i10, WagonR)</strong></td>
-                                        <td class="text-danger fw-bold">₹7,500 – ₹11,000</td>
-                                        <td class="text-dark fw-bold">₹13,500 – ₹18,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Sedan (Dzire, City, Verna, Ciaz)</strong></td>
-                                        <td class="text-danger fw-bold">₹9,000 – ₹13,000</td>
-                                        <td class="text-dark fw-bold">₹15,000 – ₹21,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Compact SUV (Brezza, Creta, Nexon)</strong></td>
-                                        <td class="text-danger fw-bold">₹10,500 – ₹15,000</td>
-                                        <td class="text-dark fw-bold">₹17,000 – ₹24,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Full-Size / Luxury SUV (Fortuner, XUV700)</strong></td>
-                                        <td class="text-danger fw-bold">₹13,000 – ₹18,500</td>
-                                        <td class="text-dark fw-bold">₹21,000 – ₹29,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <p class="small text-muted mb-0">
-                        <em>*Note: Includes doorstep pickup, loading onto enclosed car carriers, highway tolls, and transit insurance.</em>
+                        This varies according to the car type and size, and the collection and delivery points. Ease of access to both of these as well as transport choice will also affect transport. We analyse these factors so that we can then offer a quotation.
                     </p>
                 </div>
 
-                <!-- 5. FAQs -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-question-circle-fill text-danger"></i>
-                        Frequently Asked Questions: Car Shifting
-                    </h2>
+                <!-- 2. Why Choose Car Transportation Instead of Driving? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-shield-check text-danger"></i> Safe &amp; Convenient
+                    </span>
+                    <h3 class="mb-3">
+                        Why Choose Car Transportation Instead of Driving?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Sometimes clients are unable to drive long distances. Clients may also be transporting possessions, as well as travelling by train or plane. In addition, people often have commitments relating to both work and their family.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        A car transport service can be utilised so that clients do not have to drive their car to its new location. This is also beneficial if the car is to be delivered to somewhere or someone else.
+                    </p>
+                </div>
 
-                    <div class="accordion" id="carFaqAccordion">
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="cFaq1">
-                                <button class="accordion-button service-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#cFaqCol1" aria-expanded="true" aria-controls="cFaqCol1">
-                                    Is my car transported inside an open truck or a closed carrier?
-                                </button>
+                <!-- 3. When Should You Arrange Car Shifting? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-calendar-check text-danger"></i> Timing &amp; Planning
+                    </span>
+                    <h3 class="mb-3">
+                        When Should You Arrange Car Shifting?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Transport of a car may be required if an individual is changing jobs, moving house, or buying a car in a different city.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Clients are encouraged to get in touch with us once they have decided on collection and delivery points. Early booking allows us to analyse, along with the client, transport and car specifics and to establish a timeframe.
+                    </p>
+                </div>
+
+                <!-- 4. How Do We Arrange Your Car Move? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-gear-fill text-danger"></i> Transport Process
+                    </span>
+                    <h3 class="mb-3">
+                        How Do We Arrange Your Car Move?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Our staff ascertain information regarding the car type, collection point and where it is to be delivered. Alongside a favoured date for transport, we analyse this and advise on a fitting transport solution.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Clients should clear their car of belongings and unattached items. Furthermore, it can be good practice to both photograph and document current car damage such as scratches and dents.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Prior to booking, the most appropriate transport type, delivery method and relevant insurance should be analysed. Upon arrival at the delivery point, clients should examine the car prior to accepting it.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Various transport insurance alternatives can be analysed with our staff. Clients should analyse the specifics and scope of cover offered within an insurance policy before deciding upon one.
+                    </p>
+                </div>
+
+                <!-- 5. Closing Call-To-Action Banner -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="position-relative z-1">
+                        <div class="mb-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block">
+                                Plan Your Vehicle Move
+                            </span>
+                            <h3 class="fw-bolder mb-3 text-dark">
+                                For further information on <?= esc($company3) ?>’ car transport service please get in touch with us.
                             </h3>
-                            <div id="cFaqCol1" class="accordion-collapse collapse show" aria-labelledby="cFaq1" data-bs-parent="#carFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    At <?= esc($company3) ?>, we strictly operate enclosed, customized car carrier trailers equipped with hydraulic ramps and wheel stoppers, protecting your vehicle completely from weather and road gravel.
-                                </div>
-                            </div>
+                            <p class="text-muted mb-0">
+                                Or you can contact us at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a>.
+                            </p>
                         </div>
 
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="cFaq2">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cFaqCol2" aria-expanded="false" aria-controls="cFaqCol2">
-                                    What documents are required to book car transportation?
-                                </button>
-                            </h3>
-                            <div id="cFaqCol2" class="accordion-collapse collapse" aria-labelledby="cFaq2" data-bs-parent="#carFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    You will need to provide a copy of your Vehicle Registration Certificate (RC), valid vehicle insurance policy, PUC certificate, and owner ID proof (Aadhar or Driving License).
-                                </div>
-                            </div>
-                        </div>
+                        <!-- Action Buttons Placed Below Content (Side-by-Side) -->
+                        <div class="d-flex flex-wrap gap-3 align-items-center pt-2">
+                            <!-- Button 1: Get a Moving Quote (Styled Red Gradient Pill Button) -->
+                            <a href="<?= site_url('contact') ?>" class="btn btn-about-primary rounded-pill d-inline-flex align-items-center justify-content-between gap-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#quoteModal" aria-label="Get a Free Moving Quote">
+                                <span class="fw-bold d-inline-flex align-items-center gap-2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>
+                                    </svg>
+                                    <span>Get a Moving Quote</span>
+                                </span>
+                                <span class="btn-arrow-circle d-flex align-items-center justify-content-center" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
 
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="cFaq3">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cFaqCol3" aria-expanded="false" aria-controls="cFaqCol3">
-                                    Can I place personal bags or household luggage inside the car trunk?
-                                </button>
-                            </h3>
-                            <div id="cFaqCol3" class="accordion-collapse collapse" aria-labelledby="cFaq3" data-bs-parent="#carFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    You may keep light luggage (up to 30-40 kg) in the trunk space. However, we advise against keeping valuables, electronics, or flammable substances inside the car during long-distance transit.
-                                </div>
-                            </div>
+                            <!-- Button 2: Quick Call (Styled White Card-Pill Button) -->
+                            <a <?= $phonehtml ?> class="btn btn-about-call rounded-pill d-inline-flex align-items-center gap-2 gap-sm-3 shadow-sm" aria-label="Call <?= esc($phone) ?>">
+                                <span class="btn-call-icon-wrap d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-start d-flex flex-column lh-sm pe-2">
+                                    <span class="btn-call-label text-muted text-uppercase fw-semibold">Quick Call</span>
+                                    <span class="btn-call-number fw-bold text-dark"><?= esc($phone) ?></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Right Column: Sidebar -->
+            <!-- Right Column: Interactive Sidebar -->
             <div class="col-lg-4">
                 <?= view('Modules\Services\Views\service_sidebar', array_merge(get_defined_vars(), [
                     'activeService' => 'car-transportation',
                     'activeTitle'   => 'Car Shifting'
                 ])) ?>
             </div>
+
         </div>
     </div>
 </section>

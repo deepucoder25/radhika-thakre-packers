@@ -32,12 +32,6 @@ $serviceNavItems = [
         'icon'  => 'bi-bicycle'
     ],
     [
-        'slug'  => 'corporate-relocation',
-        'route' => site_url('corporate-relocation'),
-        'name'  => 'Corporate Relocation',
-        'icon'  => 'bi-briefcase-fill'
-    ],
-    [
         'slug'  => 'packing-moving',
         'route' => site_url('packing-moving'),
         'name'  => 'Packing & Unpacking',

@@ -1,12 +1,12 @@
 <?php
 /**
  * Packing and Unpacking Services Page - Radhika Thakre Packers and Movers
- * Content: 100% matched to https://radhikathakrepackersmovers.com/indore-packing-unpacking
- * Layout: Modern, fully responsive, zero inline styles, unified .service-* CSS
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Clean SEO architecture matching home_shifting.php | Natural semantic headings
  */
 
 $title       = "Packing and Unpacking";
-$description = "Professional packing and unpacking services by " . $company3 . ". 5-layer heavy-duty corrugated cartons, bubble wrap, custom wooden crating, room-by-room labeling, and neat unpacking assistance.";
+$description = "Best packing and unpacking services by " . $company3 . ". Certified 5-layer bubble packing, safe furniture covering, delicate glassware cushioning, and doorstep unpacking.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'Packing & Unpacking'],
@@ -27,297 +27,147 @@ $path        = [
   },
   "areaServed": {
     "@type": "City",
-    "name": "Indore"
+    "name": "<?= esc($addressRegion) ?>"
   },
   "description": "<?= esc($description) ?>"
 }
 </script>
 
-<section class="service-page-section">
-    <div class="container">
+<!-- =========================================================================
+     MAIN SERVICE CONTENT SECTION
+     ========================================================================= -->
+<section class="service-page-section py-5 bg-light position-relative">
+    <div class="container py-2 py-lg-4">
         <div class="row g-4 g-lg-5">
+
+            <!-- Left Column: Main Service Narrative & Content -->
             <div class="col-lg-8">
-                <!-- 1. Overview -->
-                <div class="service-overview-card">
-                    <span class="service-badge-pill">
-                        <i class="bi bi-box-seam text-danger"></i> 5-Layer Military-Grade Packaging
+
+                <!-- 1. Best Packing and Unpacking Services -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-box-seam text-danger"></i> Packing &amp; Unpacking
                     </span>
-                    <h1 class="service-main-heading">
-                        Best Packing &amp; Unpacking Services in Indore &amp; Across India
-                    </h1>
-                    <p class="service-lead-text">
-                        Professional packing and unpacking services by <strong><?= esc($company3) ?></strong> ensure maximum safety for your household and commercial goods during moves of any distance. We utilize high-grade packaging materials including 5-layer corrugated sheets, air-bubble wrap, edge guards, stretch film, and heavy-duty tape.
-                    </p>
-                    <p class="service-body-text">
-                        In India, verified packers and movers deal with all forms of packing and moving services. Our professional team assists in end-to-end removals, be it from the best removalists or frictionless relocations with <strong>IBA approval</strong>.
-                    </p>
-                    <p class="service-body-text">
-                        Here, we present you the professional and economical Packers and Movers services for your goods transport with complete security. Our experienced packing technicians categorize, itemize, and box each item systematically. Fragile items like crockery, crystal glassware, artwork, and TVs receive specialized wooden crating.
+                    <h2 class="mb-3">
+                        Best Packing and Unpacking Services with <?= esc($company3) ?>
+                    </h2>
+                    <p class="service-body-text mb-3">
+                        <?= esc($company3) ?> provides packing and unpacking services for the household and office shifting. Our packing service may include the packing of furniture, kitchen ware, clothes, books, appliances, office material and fragile items.
                     </p>
                     <p class="service-body-text mb-0">
-                        At the destination, our crew assists with systematic unpacking, placement, and debris removal, ensuring you settle into your new premises effortlessly. Looking for tension-free Packers and Movers services? Choose Radhika Thakre Packers and Movers for guaranteed protection.
+                        The customers can ask for packing either for the entire household or selected items of the household. Unpacking services can be provided as per the booking done.
                     </p>
-
-                    <!-- Quick Metrics Grid -->
-                    <div class="service-stats-grid">
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">5-Layer</div>
-                            <div class="service-stat-label">Corrugated Shield</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Virgin</div>
-                            <div class="service-stat-label">Air Bubble Wrap</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Custom</div>
-                            <div class="service-stat-label">Wooden Crates</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Neat</div>
-                            <div class="service-stat-label">Debris Cleanup</div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- 2. Capabilities -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-stars text-danger"></i>
-                        Advanced Packaging Materials &amp; Techniques
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        We invest in certified materials engineered to absorb impact and prevent surface friction:
+                <!-- 2. Why Proper Packing Is Important? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-shield-check text-danger"></i> Safety &amp; Protection
+                    </span>
+                    <h3 class="mb-3">
+                        Why Proper Packing Is Important?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Goods are handled multiple times during the moving process. These are packed, moved, loaded, transported and finally unloaded at their final destination.
                     </p>
-
-                    <div class="service-features-grid">
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-layers"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">5-Layer Heavy Duty Cartons</h3>
-                                <p class="service-feature-desc">
-                                    High burst-strength corrugated boxes customized for kitchenware, heavy books, garments, and fragile collectibles.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-circle-square"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Virgin Air Bubble Cushioning</h3>
-                                <p class="service-feature-desc">
-                                    Premium double-layer bubble wrap shields porcelain, ceramics, bone china, picture frames, and fragile electronics.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-hammer"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Custom Wooden Crating</h3>
-                                <p class="service-feature-desc">
-                                    Heavy-gauge timber crates fabricated on-site for OLED/LED TVs, marble tops, antique sculptures, and delicate chandeliers.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-tags-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Room-by-Room Labeling</h3>
-                                <p class="service-feature-desc">
-                                    Every box is clearly tagged with room destination (Kitchen, Master Bed, Living) and content summary for fast unpacking.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-shield-shaded"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Corrugated Edge Corner Guards</h3>
-                                <p class="service-feature-desc">
-                                    Reinforced angle boards protect vulnerable corners of sofas, wardrobes, dressers, and conference tables from impacts.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-trash3-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Unpacking &amp; Waste Removal</h3>
-                                <p class="service-feature-desc">
-                                    Our packers unpack cartons at your new address, place belongings where you prefer, and collect all scrap paper and plastic.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="service-body-text mb-0">
+                        Proper packing would prevent scratching, dust and any unnecessary handling of items during this process. The packing of fragile things such as glassware and crockery requires cushioning, whereas the furniture will require covering.
+                    </p>
                 </div>
 
-                <!-- 3. Workflow -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-diagram-3-fill text-danger"></i>
-                        Our 5-Step Packaging Protocol
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Rigorous step-by-step packing technique that guarantees zero in-transit damage:
+                <!-- 3. When Should You Book Packing Service? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-clock-history text-danger"></i> Timely Booking
+                    </span>
+                    <h3 class="mb-3">
+                        When Should You Book Packing Service?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Packing service is ideal when the customers have a big household, less time before the shifting day, heavy furniture and lots of fragile goods.
                     </p>
-
-                    <div class="service-process-list">
-                        <div class="service-process-step">
-                            <div class="service-step-badge">1</div>
-                            <div>
-                                <h3 class="service-step-title">Categorization &amp; Fragile Item Sorting</h3>
-                                <p class="service-step-desc">
-                                    Goods are categorized into fragile (glass, electronics), semi-fragile (appliances, wood), and standard bulk goods (linen, books).
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">2</div>
-                            <div>
-                                <h3 class="service-step-title">Primary Foam &amp; Bubble Cushion Wrapping</h3>
-                                <p class="service-step-desc">
-                                    Individual items receive direct protection with air bubble wrap and polyethylene foam to absorb sudden transit shocks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">3</div>
-                            <div>
-                                <h3 class="service-step-title">Box Packing with Thermocol Void Fillers</h3>
-                                <p class="service-step-desc">
-                                    Cartons are filled with cushioning pellets or foam peanuts so items cannot shift or rub against each other during transit.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">4</div>
-                            <div>
-                                <h3 class="service-step-title">Heavy-Duty Taping &amp; Stretch Film Sealing</h3>
-                                <p class="service-step-desc">
-                                    Cartons are sealed across all seams with high-tensile waterproof tape and wrapped in waterproof stretch film.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">5</div>
-                            <div>
-                                <h3 class="service-step-title">Destination Unpacking, Inspection &amp; Clearing</h3>
-                                <p class="service-step-desc">
-                                    Our team unboxes items room by room, inspects each piece with you, and disposes of all packing waste neatly.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+                    <p class="service-body-text mb-0">
+                        It is recommended to book the packing service well in advance before the moving day in order to discuss the quantity of goods and packing requirements. It is important to find out about the delicate or costly goods before the arrival of the packing crew.
+                    </p>
                 </div>
 
-                <!-- 4. Rate Table -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-tag-fill text-danger"></i>
-                        Packing Materials &amp; Labor Pricing Guide
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Estimated standalone packing and unpacking rates:
+                <!-- 4. How Does Our Packing Team Pack Your Goods? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-gear-fill text-danger"></i> Packing Methodology
+                    </span>
+                    <h3 class="mb-3">
+                        How Does Our Packing Team Pack Your Goods?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        The discussion regarding the amount and nature of goods to be packed first takes place by the packing crew. This helps in finding the materials and labor needed.
                     </p>
-
-                    <div class="service-table-card">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Scope</th>
-                                        <th>Material Cost + Labor</th>
-                                        <th>Unpacking &amp; Setup Service</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>1 BHK Household</strong></td>
-                                        <td class="text-danger fw-bold">₹2,800 – ₹4,500</td>
-                                        <td class="text-dark fw-bold">Included / Nominal</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>2 BHK Household</strong></td>
-                                        <td class="text-danger fw-bold">₹4,500 – ₹7,500</td>
-                                        <td class="text-dark fw-bold">Included / Nominal</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>3 BHK Household</strong></td>
-                                        <td class="text-danger fw-bold">₹7,000 – ₹11,000</td>
-                                        <td class="text-dark fw-bold">Included / Nominal</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Custom Wooden Crating (per TV/Mirror)</strong></td>
-                                        <td class="text-danger fw-bold">₹1,200 – ₹2,500</td>
-                                        <td class="text-dark fw-bold">Full Destination Uncrating</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+                    <p class="service-body-text mb-3">
+                        We do the wrapping of fragile goods, packing of cartons and covering of furniture for handling. We use 5-layer bubble packing material for certified goods requiring extra cushioning. The other packing materials used depend upon the nature and handling requirements of the goods.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        After transportation, the unpacking service can also be provided as per the booking made. Our laborers open the cartons, remove the packing materials and place the items in the desired rooms.
+                    </p>
                 </div>
 
-                <!-- 5. FAQs -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-question-circle-fill text-danger"></i>
-                        Frequently Asked Questions: Packing &amp; Unpacking
-                    </h2>
-
-                    <div class="accordion" id="packFaqAccordion">
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="pFaq1">
-                                <button class="accordion-button service-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#pFaqCol1" aria-expanded="true" aria-controls="pFaqCol1">
-                                    Do I need to arrange any boxes or packing tape myself?
-                                </button>
+                <!-- 5. Closing Call-To-Action Banner -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="position-relative z-1">
+                        <div class="mb-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block">
+                                Plan Your Packing
+                            </span>
+                            <h3 class="fw-bolder mb-3 text-dark">
+                                Book our packing and unpacking service now.
                             </h3>
-                            <div id="pFaqCol1" class="accordion-collapse collapse show" aria-labelledby="pFaq1" data-bs-parent="#packFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    No, you do not need to arrange anything. Our crew arrives with all necessary 5-layer cartons, bubble rolls, thermocol, shrink film, wardrobe boxes, and heavy-duty tape rolls.
-                                </div>
-                            </div>
+                            <p class="text-muted mb-0">
+                                The quotation depends on the quantity of the goods, materials required for packing, labor and if unpacking service is provided or not. Or you can contact us at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a>.
+                            </p>
                         </div>
 
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="pFaq2">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pFaqCol2" aria-expanded="false" aria-controls="pFaqCol2">
-                                    Can I hire <?= esc($company3) ?> just for packing if I have my own vehicle?
-                                </button>
-                            </h3>
-                            <div id="pFaqCol2" class="accordion-collapse collapse" aria-labelledby="pFaq2" data-bs-parent="#packFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    Yes, we offer standalone professional packing services. Our certified packers will pack your entire home with top-tier materials even if you arrange separate logistics.
-                                </div>
-                            </div>
+                        <!-- Action Buttons Placed Below Content (Side-by-Side) -->
+                        <div class="d-flex flex-wrap gap-3 align-items-center pt-2">
+                            <!-- Button 1: Get a Moving Quote (Styled Red Gradient Pill Button) -->
+                            <a href="<?= site_url('contact') ?>" class="btn btn-about-primary rounded-pill d-inline-flex align-items-center justify-content-between gap-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#quoteModal" aria-label="Get a Free Moving Quote">
+                                <span class="fw-bold d-inline-flex align-items-center gap-2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>
+                                    </svg>
+                                    <span>Get a Moving Quote</span>
+                                </span>
+                                <span class="btn-arrow-circle d-flex align-items-center justify-content-center" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- Button 2: Quick Call (Styled White Card-Pill Button) -->
+                            <a <?= $phonehtml ?> class="btn btn-about-call rounded-pill d-inline-flex align-items-center gap-2 gap-sm-3 shadow-sm" aria-label="Call <?= esc($phone) ?>">
+                                <span class="btn-call-icon-wrap d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-start d-flex flex-column lh-sm pe-2">
+                                    <span class="btn-call-label text-muted text-uppercase fw-semibold">Quick Call</span>
+                                    <span class="btn-call-number fw-bold text-dark"><?= esc($phone) ?></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Right Column: Sidebar -->
+            <!-- Right Column: Interactive Sidebar -->
             <div class="col-lg-4">
                 <?= view('Modules\Services\Views\service_sidebar', array_merge(get_defined_vars(), [
-                    'activeService' => 'packing-moving',
+                    'activeService' => 'packing-unpacking',
                     'activeTitle'   => 'Packing & Unpacking'
                 ])) ?>
             </div>
+
         </div>
     </div>
 </section>

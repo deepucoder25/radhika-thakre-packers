@@ -1,12 +1,12 @@
 <?php
 /**
  * Loading and Unloading Services Page - Radhika Thakre Packers and Movers
- * Content: 100% matched to https://radhikathakrepackersmovers.com/indore-loading-unloading
- * Layout: Modern, fully responsive, zero inline styles, unified .service-* CSS
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Clean SEO architecture matching home_shifting.php | Natural semantic headings
  */
 
 $title       = "Loading and Unloading";
-$description = "Professional loading and unloading services by " . $company3 . ". Trained handling crew, modern hydraulic ramps, dollies, hand trucks, and scratch-free furniture maneuvering.";
+$description = "Top loading and unloading services by " . $company3 . ". Skilled moving labor, careful handling of heavy furniture, appliances, and safe vehicle loading.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'Loading & Unloading'],
@@ -27,258 +27,150 @@ $path        = [
   },
   "areaServed": {
     "@type": "City",
-    "name": "Indore"
+    "name": "<?= esc($addressRegion) ?>"
   },
   "description": "<?= esc($description) ?>"
 }
 </script>
 
-<section class="service-page-section">
-    <div class="container">
+<!-- =========================================================================
+     MAIN SERVICE CONTENT SECTION
+     ========================================================================= -->
+<section class="service-page-section py-5 bg-light position-relative">
+    <div class="container py-2 py-lg-4">
         <div class="row g-4 g-lg-5">
+
+            <!-- Left Column: Main Service Narrative & Content -->
             <div class="col-lg-8">
-                <!-- 1. Overview -->
-                <div class="service-overview-card">
-                    <span class="service-badge-pill">
-                        <i class="bi bi-truck text-danger"></i> Skilled Labor &amp; Heavy Cargo Handling
+
+                <!-- 1. Top Loading and Unloading Services -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-truck text-danger"></i> Skilled Labor &amp; Cargo Handling
                     </span>
-                    <h1 class="service-main-heading">
-                        Best Loading and Unloading Services in Indore &amp; Across India
-                    </h1>
-                    <p class="service-lead-text">
-                        At <strong><?= esc($company3) ?></strong>, we provide one of the best Loading and Unloading Services in India to make sure your things are transported carefully and safely. Our Loading and Unloading Services are completely safe and secure for all types of shifting including expert packers and movers for exhibition handling in my area.
+                    <h2 class="mb-3">
+                        Top Loading and Unloading Services with <?= esc($company3) ?>
+                    </h2>
+                    <p class="service-body-text mb-3">
+                        We provide loading and unloading assistance for packing up household and office items and moving to new place. Our packers help customers transfer packed items from the property to the truck.
                     </p>
-                    <p class="service-body-text">
-                        We are one of the most reputed Loading and Unloading Services in India which presents <strong>IBA-approved services</strong> to fulfill all shifting requirements. Contact us for the most efficient and economical Loading and Unloading Services for local movers and packers that guarantee your items' safe delivery.
-                    </p>
-                    <p class="service-body-text">
-                        The services that we offer are scam-free and IBA-endorsed Loading and Unloading Services that handle goods with precision ground equipment like hydraulic ramps, hand trollies, dollies, and lifting straps from the onset to the end.
+                    <p class="service-body-text mb-3">
+                        This service includes carrying cartons, beds, wardrobes, sofas, refrigerators, washing machines, office desks, chairs and other packed belongings.
                     </p>
                     <p class="service-body-text mb-0">
-                        Thus, our Loading and Unloading Services guarantee the proven categories of Loading and Unloading Services and the best removalists. If you require IBA-approved Loading and Unloading Services for a headache-free move or superior movers packers services, Radhika Thakre Packers and Movers are one of the top 5 Best Loading and Unloading Services in India, providing impeccable services every time.
+                        It is possible to order loading and unloading with transportation or talk to our team regarding labour assistance for your moving needs.
                     </p>
-
-                    <!-- Quick Metrics Grid -->
-                    <div class="service-stats-grid">
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Trained</div>
-                            <div class="service-stat-label">Ground Crew</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">IBA</div>
-                            <div class="service-stat-label">Approved Operator</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Hydraulic</div>
-                            <div class="service-stat-label">Lift Ramps</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">Zero</div>
-                            <div class="service-stat-label">Wall Scuffs</div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- 2. Capabilities -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-stars text-danger"></i>
-                        Safe Handling Machinery &amp; Techniques
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        We eliminate manual dropping risks through specialized mechanical handling equipment:
+                <!-- 2. Why Careful Goods Loading and Unloading Is Necessary? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-shield-check text-danger"></i> Damage Prevention
+                    </span>
+                    <h3 class="mb-3">
+                        Why Careful Goods Loading and Unloading Is Necessary?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Moving heavy furniture and appliances requires special skills. Incorrectly handled items might be scratched, broken or damaged.
                     </p>
-
-                    <div class="service-features-grid">
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-gear-wide-connected"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Hydraulic Tailgate Lifts</h3>
-                                <p class="service-feature-desc">
-                                    Heavy double-door refrigerators, safes, and washing machines are elevated smoothly without physical jerking or manual strain.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-cart4"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Rubberized Floor Dollies</h3>
-                                <p class="service-feature-desc">
-                                    Multi-wheel hand trucks and rubber-padded dollies move heavy wooden almirahs and couches across marble flooring without scratching tiles.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-shield-shaded"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Doorway &amp; Stair Protectors</h3>
-                                <p class="service-feature-desc">
-                                    Corner guards and protective blankets are hung over narrow staircases and doorway trims to prevent chipping paint or wood finish.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-pie-chart-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Weight-Balanced Container Stacking</h3>
-                                <p class="service-feature-desc">
-                                    Cargo inside trucks is distributed by weight density — heavy furniture on the floor anchored by ratchet belts; lighter cartons on top.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-people-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Vetted &amp; Fit Ground Crew</h3>
-                                <p class="service-feature-desc">
-                                    Our handlers are background-verified full-time professionals trained in ergonomics, lifting safety, and respectful customer manners.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-arrow-down-square-fill"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Precise Room-by-Room Unloading</h3>
-                                <p class="service-feature-desc">
-                                    Boxes and furniture are carried directly into their designated bedrooms, living halls, and kitchens rather than dumped at the front door.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 3. Workflow -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-diagram-3-fill text-danger"></i>
-                        Our 5-Step Loading &amp; Unloading Procedure
-                    </h2>
-
-                    <div class="service-process-list">
-                        <div class="service-process-step">
-                            <div class="service-step-badge">1</div>
-                            <div>
-                                <h3 class="service-step-title">Corridor Inspection &amp; Obstacle Clearing</h3>
-                                <p class="service-step-desc">
-                                    We survey hallways, doorways, elevators, and stairs, padding sharp edges to create a clear, accident-free moving pathway.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">2</div>
-                            <div>
-                                <h3 class="service-step-title">Heavy Appliance Dolly Transit</h3>
-                                <p class="service-step-desc">
-                                    Refrigerators, washing machines, and solid wood furniture are rolled on pneumatic tire dollies to the container tailgate.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">3</div>
-                            <div>
-                                <h3 class="service-step-title">Hydraulic Lift &amp; Container Lashing</h3>
-                                <p class="service-step-desc">
-                                    Items are placed inside the container, secured with locking ratchet straps, and locked behind security padlocks.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">4</div>
-                            <div>
-                                <h3 class="service-step-title">Destination Tailgate Offloading</h3>
-                                <p class="service-step-desc">
-                                    At the destination, seals are verified and items are offloaded gently via ramps without rough dropping or friction.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">5</div>
-                            <div>
-                                <h3 class="service-step-title">Room Placement &amp; Final Inspection</h3>
-                                <p class="service-step-desc">
-                                    Each piece is carried to your preferred spot, leveled on the floor, and verified with your move checklist.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Rate Table -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-tag-fill text-danger"></i>
-                        Loading &amp; Unloading Labor Rates
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Estimated standalone labor charges based on crew size and floor levels:
+                    <p class="service-body-text mb-0">
+                        Correct handling of goods helps to avoid this problem and to make the whole process organized. Correct placing of goods inside the vehicle prevents heavy furniture pressing fragile cartons.
                     </p>
+                </div>
 
-                    <div class="service-table-card">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Service Scale</th>
-                                        <th>Crew Size</th>
-                                        <th>Rates (With Lift Available)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>1 BHK Shift Labor</strong></td>
-                                        <td>2 – 3 Handlers</td>
-                                        <td class="text-danger fw-bold">₹1,800 – ₹2,800</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>2 BHK Shift Labor</strong></td>
-                                        <td>3 – 4 Handlers</td>
-                                        <td class="text-danger fw-bold">₹2,800 – ₹4,200</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>3 BHK Shift Labor</strong></td>
-                                        <td>4 – 6 Handlers</td>
-                                        <td class="text-danger fw-bold">₹4,200 – ₹6,500</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Heavy Safe / Piano / Industrial</strong></td>
-                                        <td>Specialized Team</td>
-                                        <td class="text-danger fw-bold">₹2,500 – ₹5,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                <!-- 3. When Do You Need to Book Loading and Unloading Labour? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-people-fill text-danger"></i> Labor Assistance
+                    </span>
+                    <h3 class="mb-3">
+                        When Do You Need to Book Loading and Unloading Labour?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        This service will be useful when customers already rented their transport but require handling of the goods. It is also necessary when shifting furniture, moving office equipment and relocating from premises with stairs and without lift.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        It is important to tell our team about heavy items, narrow paths, floor levels and any other restriction of the building you are moving out.
+                    </p>
+                </div>
+
+                <!-- 4. How Our Team Handles Your Goods? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-gear-fill text-danger"></i> Moving Process
+                    </span>
+                    <h3 class="mb-3">
+                        How Our Team Handles Your Goods?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        Before the loading process starts, our workers inspect the items and available space inside the vehicle. Workers load items taking into account their dimensions and weight.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Heavy goods should be placed correctly, and fragile cartons should be put in proper places. Workers arrange goods carefully in order to minimize their movement during the transportation.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Unloading of the goods and transfer to the required rooms is done at the destination point.
+                    </p>
+                </div>
+
+                <!-- 5. Closing Call-To-Action Banner -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="position-relative z-1">
+                        <div class="mb-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block">
+                                Plan Your Handling
+                            </span>
+                            <h3 class="fw-bolder mb-3 text-dark">
+                                Book Professional Loading and Unloading Assistance
+                            </h3>
+                            <p class="text-muted mb-0">
+                                Quotation will depend on the type and number of goods, number of workers, time and conditions of access. Please contact us at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a> for loading and unloading service.
+                            </p>
+                        </div>
+
+                        <!-- Action Buttons Placed Below Content (Side-by-Side) -->
+                        <div class="d-flex flex-wrap gap-3 align-items-center pt-2">
+                            <!-- Button 1: Get a Moving Quote (Styled Red Gradient Pill Button) -->
+                            <a href="<?= site_url('contact') ?>" class="btn btn-about-primary rounded-pill d-inline-flex align-items-center justify-content-between gap-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#quoteModal" aria-label="Get a Free Moving Quote">
+                                <span class="fw-bold d-inline-flex align-items-center gap-2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>
+                                    </svg>
+                                    <span>Get a Moving Quote</span>
+                                </span>
+                                <span class="btn-arrow-circle d-flex align-items-center justify-content-center" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
+
+                            <!-- Button 2: Quick Call (Styled White Card-Pill Button) -->
+                            <a <?= $phonehtml ?> class="btn btn-about-call rounded-pill d-inline-flex align-items-center gap-2 gap-sm-3 shadow-sm" aria-label="Call <?= esc($phone) ?>">
+                                <span class="btn-call-icon-wrap d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-start d-flex flex-column lh-sm pe-2">
+                                    <span class="btn-call-label text-muted text-uppercase fw-semibold">Quick Call</span>
+                                    <span class="btn-call-number fw-bold text-dark"><?= esc($phone) ?></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
+
             </div>
 
-            <!-- Right Column: Sidebar -->
+            <!-- Right Column: Interactive Sidebar -->
             <div class="col-lg-4">
                 <?= view('Modules\Services\Views\service_sidebar', array_merge(get_defined_vars(), [
                     'activeService' => 'loading-unloading',
                     'activeTitle'   => 'Loading & Unloading'
                 ])) ?>
             </div>
+
         </div>
     </div>
 </section>

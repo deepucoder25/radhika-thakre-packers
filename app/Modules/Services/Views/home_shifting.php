@@ -1,12 +1,12 @@
 <?php
 /**
  * Home Shifting Services Page - Radhika Thakre Packers and Movers
- * Content: 100% matched to https://radhikathakrepackersmovers.com/home-shifting-in-indore
- * Layout: Modern, fully responsive, zero inline styles, unified .service-* CSS
+ * Zero inline styles | 100% Responsive | Dynamic variables from Site.php (Direct CI4 Template Scope)
+ * Exact user-specified headings (H2, H2, H3, H4) & clean SEO architecture
  */
 
 $title       = "Home Shifting";
-$description = "Top-rated home shifting services by " . $company3 . ". 100% IBA-approved household relocation with 5-layer bubble packing, trained crew, and zero-damage guarantee.";
+$description = "Dependable household shifting services by " . $company3 . " in " . $addressRegion . ", " . $companystate . " and across India. 5-layer bubble packing, GPS-enabled container trucks, and transparent pricing.";
 $path        = [
     ['label' => 'Home', 'url' => site_url('/')],
     ['label' => 'Home Shifting'],
@@ -19,7 +19,7 @@ $path        = [
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Home Shifting Services",
+  "serviceType": "Household Shifting Services",
   "provider": {
     "@type": "LocalBusiness",
     "name": "<?= esc($company3) ?>",
@@ -27,7 +27,7 @@ $path        = [
   },
   "areaServed": {
     "@type": "City",
-    "name": "Indore"
+    "name": "<?= esc($addressRegion) ?>"
   },
   "description": "<?= esc($description) ?>"
 }
@@ -36,321 +36,144 @@ $path        = [
 <!-- =========================================================================
      MAIN SERVICE CONTENT SECTION
      ========================================================================= -->
-<section class="service-page-section">
-    <div class="container">
+<section class="service-page-section py-5 bg-light position-relative">
+    <div class="container py-2 py-lg-4">
         <div class="row g-4 g-lg-5">
-            <!-- Left Column: Main Service Narrative, Features & Pricing -->
+
+            <!-- Left Column: Main Service Narrative & Content -->
             <div class="col-lg-8">
-                <!-- 1. Overview & Authentic Text -->
-                <div class="service-overview-card">
-                    <span class="service-badge-pill">
-                        <i class="bi bi-house-check-fill text-danger"></i> IBA Approved Home Relocation
+
+                <!-- 1. Main Overview Card -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-house-door-fill text-danger"></i> Household Relocation
                     </span>
-                    <h1 class="service-main-heading">
-                        Best Home Shifting Services in Indore &amp; Across India
-                    </h1>
-                    <p class="service-lead-text">
-                        <strong><?= esc($company3) ?></strong> are experts at providing high-quality Home Shifting Services in India for a smooth, stress-free shift. As a reputed packers and movers company, we deal with comprehensive household shifting services that cater to all different types of residential relocation needs with professional care.
-                    </p>
-                    <p class="service-body-text">
-                        All our services are approved by <strong>IBA</strong>, and therefore, we are the best company involved in Home Shifting Services in India without stress. Avail our home shifting services to get verified professional assistance, dedicated move coordinators, and premium packaging materials tailored for every piece of your home furniture.
-                    </p>
-                    <p class="service-body-text">
-                        Yes, our flawless Home Shifting Services are multifaceted, hence making us the most desirable packing and moving company in India. We boast of being the best packing and moving company near you that is free from any scams, providing economical packers and movers services to you at a faster pace with unmatched safety measures.
+                    <h2 class="mb-3">
+                        Dependable Household Shifting with <?= esc($company3) ?>
+                    </h2>
+                    <p class="service-body-text mb-3">
+                        <?= esc($company3) ?> provide home shifting services to families, working professionals and individuals who have to shift to a new home. We are located in <?= esc($addressRegion) ?>, <?= esc($companystate) ?>, and have <?= esc($experience) ?> years of experience in shifting and have relocated over 25,000 families and office spaces.
                     </p>
                     <p class="service-body-text mb-0">
-                        We offer genuine and cheaper Home Shifting Services, via which our clients avail the best removalist services at economical prices. Our IBA-approved home shifting services ensure that, whether is a move for personal or business purposes, is handled professionally with 100% transit insurance.
+                        Home shifting is necessary when people switch rented homes, buy a new property, get employed somewhere or have to relocate to another city. Moving a household involves a lot of preparation because items like furniture, appliances, kitchenware, clothes, and other personal possessions will need to be packed.
                     </p>
-
-                    <!-- Quick Metrics Grid -->
-                    <div class="service-stats-grid">
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">5-Layer</div>
-                            <div class="service-stat-label">Safety Packing</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">IBA</div>
-                            <div class="service-stat-label">Approved Movers</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">100%</div>
-                            <div class="service-stat-label">Transit Insured</div>
-                        </div>
-                        <div class="service-stat-item">
-                            <div class="service-stat-num">GPS</div>
-                            <div class="service-stat-label">Live Tracking</div>
-                        </div>
-                    </div>
                 </div>
 
-                <!-- 2. Key Capabilities / Features -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-stars text-danger"></i>
-                        Why Our Home Shifting Stands Apart
+                <!-- 2. What Type of Home Shifting Do We Provide? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-grid-fill text-danger"></i> Shifting Solutions
+                    </span>
+                    <h2 class="mb-3">
+                        What Type of Home Shifting Do We Provide?
                     </h2>
-                    <p class="text-muted small mb-4">
-                        Discover the specialized household relocation capabilities that ensure your valuable furniture, electronics, and memories arrive in pristine condition:
+                    <p class="service-body-text mb-3">
+                        Our team can help with shifting within the city, shifting to another city or state or long-distance home shifting anywhere in India. Customers may require complete household shifting or transportation of selective items.
                     </p>
+                    <p class="service-body-text mb-0">
+                        Packing, loading, transportation, unloading and unpacking can be included according to customer requirements.
+                    </p>
+                </div>
 
-                    <div class="service-features-grid">
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-box-seam"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">5-Layer Protective Packaging</h3>
-                                <p class="service-feature-desc">
-                                    High-density bubble wrap, corrugated sheets, edge protectors, stretch film, and heavy-duty tape protect every item against scratches and vibrations.
-                                </p>
-                            </div>
+                <!-- 3. How Do We Conduct the Process of Home Shifting? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-gear-fill text-danger"></i> Moving Process
+                    </span>
+                    <h3 class="mb-3">
+                        How Do We Conduct the Process of Home Shifting?
+                    </h3>
+                    <p class="service-body-text mb-3">
+                        As soon as the customer approaches us, we discuss the date of shifting, pickup and delivery address, volume of goods to be transported and services required by the customer. This will help us prepare an appropriate quotation and plan the work.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Our packing crew uses proper packing materials for each household item. Items that require cushioning are packed using certified 5-layer bubble packaging. Each item is prepared for transportation as per its volume and weight.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        Once packed, the items are loaded onto an appropriate vehicle. The crew carefully arranges the items so as to minimize the movement of the items during transportation. GPS-enabled container trucks can be provided for appropriate long-distance shifting.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        Upon reaching the destination, our team unloads the items from the truck and provides unpacking help as per the booking made.
+                    </p>
+                </div>
+
+                <!-- 4. Why Should You Choose Our Home Shifting Service? -->
+                <div class="service-overview-card mb-4">
+                    <span class="service-badge-pill mb-3">
+                        <i class="bi bi-shield-check text-danger"></i> Why Choose Us
+                    </span>
+                    <h4 class="mb-3">
+                        Why Should You Choose Our Home Shifting Service?
+                    </h4>
+                    <p class="service-body-text mb-3">
+                        We know that customers would like their items handled with care and clear understanding of the shifting costs. Our team discusses the work before preparing the quotation.
+                    </p>
+                    <p class="service-body-text mb-3">
+                        We provide customers with skilled laborers, suitable packing material, transportation and transit insurance facilities. Cost depends upon the volume of items, distance and services opted by the customer.
+                    </p>
+                    <p class="service-body-text mb-0">
+                        No matter whether you are shifting a small apartment or complete household, we help you organize the shifting process as per your requirements.
+                    </p>
+                </div>
+
+                <!-- 5. Closing Call-To-Action Banner -->
+                <div class="card plan-move-card p-4 p-md-5">
+                    <div class="position-relative z-1">
+                        <div class="mb-4">
+                            <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-3 d-inline-block">
+                                Plan Your Move
+                            </span>
+                            <h3 class="fw-bolder mb-3 text-dark">
+                                Get home shifting quotation from <?= esc($company3) ?>.
+                            </h3>
+                            <p class="text-muted mb-0">
+                                Or you can contact us at <a <?= $phonehtml ?> class="fw-bold text-danger text-decoration-none"><?= esc($phone) ?></a>.
+                            </p>
                         </div>
 
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-tools"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Furniture Disassembly &amp; Setup</h3>
-                                <p class="service-feature-desc">
-                                    Expert carpenters carefully dismantle double beds, modular wardrobes, and dining tables, then securely reassemble them at your new address.
-                                </p>
-                            </div>
-                        </div>
+                        <!-- Action Buttons Placed Below Content (Side-by-Side) -->
+                        <div class="d-flex flex-wrap gap-3 align-items-center pt-2">
+                            <!-- Button 1: Get a Moving Quote (Styled Red Gradient Pill Button) -->
+                            <a href="<?= site_url('contact') ?>" class="btn btn-about-primary rounded-pill d-inline-flex align-items-center justify-content-between gap-3 shadow-sm" data-bs-toggle="modal" data-bs-target="#quoteModal" aria-label="Get a Free Moving Quote">
+                                <span class="fw-bold d-inline-flex align-items-center gap-2">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="16" y1="14" x2="16" y2="18"/><path d="M16 10h.01"/><path d="M12 10h.01"/><path d="M8 10h.01"/><path d="M12 14h.01"/><path d="M8 14h.01"/><path d="M12 18h.01"/><path d="M8 18h.01"/>
+                                    </svg>
+                                    <span>Get a Moving Quote</span>
+                                </span>
+                                <span class="btn-arrow-circle d-flex align-items-center justify-content-center" aria-hidden="true">
+                                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                                        <path d="M3.333 8h9.334M8.667 4l4 4-4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </a>
 
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-cup-hot"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Fragile Glass &amp; TV Crating</h3>
-                                <p class="service-feature-desc">
-                                    Specialized wooden cages and multi-layer honeycomb cushioning for LED/OLED smart TVs, delicate chandeliers, crockery, and sacred temple items.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-truck"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Dedicated Closed Container Fleet</h3>
-                                <p class="service-feature-desc">
-                                    Weatherproof, locked container trucks prevent rainwater seepage, dust, and highway hazards during both local and interstate transits.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-shield-check"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">100% Transit Insurance Cover</h3>
-                                <p class="service-feature-desc">
-                                    Comprehensive all-risk household transit insurance policy underwritten by leading national insurance partners gives you total financial peace of mind.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-feature-card">
-                            <div class="service-feature-icon">
-                                <i class="bi bi-check2-circle"></i>
-                            </div>
-                            <div class="service-feature-body">
-                                <h3 class="service-feature-name">Doorstep Unpacking &amp; Placement</h3>
-                                <p class="service-feature-desc">
-                                    Our courteous ground team unboxes your cartons, places heavy items in designated rooms, and disposes of all leftover packing debris neatly.
-                                </p>
-                            </div>
+                            <!-- Button 2: Quick Call (Styled White Card-Pill Button) -->
+                            <a <?= $phonehtml ?> class="btn btn-about-call rounded-pill d-inline-flex align-items-center gap-2 gap-sm-3 shadow-sm" aria-label="Call <?= esc($phone) ?>">
+                                <span class="btn-call-icon-wrap d-flex align-items-center justify-content-center flex-shrink-0">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </span>
+                                <span class="text-start d-flex flex-column lh-sm pe-2">
+                                    <span class="btn-call-label text-muted text-uppercase fw-semibold">Quick Call</span>
+                                    <span class="btn-call-number fw-bold text-dark"><?= esc($phone) ?></span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                 </div>
 
-                <!-- 3. Step-by-Step Household Relocation Workflow -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-diagram-3-fill text-danger"></i>
-                        Our 5-Step Home Shifting Workflow
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        We execute every household relocation with military precision and systematic itemized tracking:
-                    </p>
-
-                    <div class="service-process-list">
-                        <div class="service-process-step">
-                            <div class="service-step-badge">1</div>
-                            <div>
-                                <h3 class="service-step-title">Free Doorstep Survey &amp; Transparent Quote</h3>
-                                <p class="service-step-desc">
-                                    Our relocation supervisor visits your home or conducts a video survey to assess volume, determine packing requirements, and provide a guaranteed fixed quotation with zero hidden fees.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">2</div>
-                            <div>
-                                <h3 class="service-step-title">Systematic Multi-Layer Packaging &amp; Labeling</h3>
-                                <p class="service-step-desc">
-                                    Trained packers wrap every item room-by-room, apply color-coded category labels, and compile a verified consignment inventory sheet before loading.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">3</div>
-                            <div>
-                                <h3 class="service-step-title">Mechanical Loading with Floor &amp; Door Protection</h3>
-                                <p class="service-step-desc">
-                                    Heavy furniture and appliances are loaded onto closed containers using hydraulic ramps, hand trolleys, and lashing belts to avoid in-transit friction.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">4</div>
-                            <div>
-                                <h3 class="service-step-title">Safe GPS-Monitored Highway Transit</h3>
-                                <p class="service-step-desc">
-                                    Our drivers follow designated express highway corridors while you receive live GPS location milestone alerts through our 24x7 tracking desk.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="service-process-step">
-                            <div class="service-step-badge">5</div>
-                            <div>
-                                <h3 class="service-step-title">Unloading, Room Placement &amp; Debris Disposal</h3>
-                                <p class="service-step-desc">
-                                    Upon arrival, our crew unpacks cartons, reassembles beds and tables, places appliances in proper spots, and hauls away all packaging waste.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 4. Pricing / Rate Estimation Guide Table -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-tag-fill text-danger"></i>
-                        Home Shifting Estimated Rate Chart
-                    </h2>
-                    <p class="text-muted small mb-4">
-                        Indicative price slabs for household relocation based on home size and transit distance:
-                    </p>
-
-                    <div class="service-table-card">
-                        <div class="table-responsive">
-                            <table class="table table-hover align-middle">
-                                <thead>
-                                    <tr>
-                                        <th>Home Size</th>
-                                        <th>Local Shifting (Up to 50 km)</th>
-                                        <th>Interstate / Domestic (500+ km)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>1 BHK Home</strong></td>
-                                        <td class="text-danger fw-bold">₹4,500 – ₹8,500</td>
-                                        <td class="text-dark fw-bold">₹12,000 – ₹18,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>2 BHK Home</strong></td>
-                                        <td class="text-danger fw-bold">₹7,000 – ₹12,500</td>
-                                        <td class="text-dark fw-bold">₹16,500 – ₹24,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>3 BHK Home</strong></td>
-                                        <td class="text-danger fw-bold">₹10,500 – ₹16,500</td>
-                                        <td class="text-dark fw-bold">₹22,000 – ₹32,000</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>4 BHK / Large Villa</strong></td>
-                                        <td class="text-danger fw-bold">₹14,000 – ₹22,000</td>
-                                        <td class="text-dark fw-bold">₹28,000 – ₹42,000</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                    <p class="small text-muted mb-0">
-                        <em>*Note: Actual costs depend on floor levels, lift availability, distance, and fragile packaging customization. Call our manager for a guaranteed fixed survey quote.</em>
-                    </p>
-                </div>
-
-                <!-- 5. Frequently Asked Questions (Accordion) -->
-                <div class="service-overview-card">
-                    <h2 class="service-section-title">
-                        <i class="bi bi-question-circle-fill text-danger"></i>
-                        Frequently Asked Questions: Home Shifting
-                    </h2>
-
-                    <div class="accordion" id="homeFaqAccordion">
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="faqHead1">
-                                <button class="accordion-button service-faq-btn" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse1" aria-expanded="true" aria-controls="faqCollapse1">
-                                    How early should I book home shifting services with <?= esc($company3) ?>?
-                                </button>
-                            </h3>
-                            <div id="faqCollapse1" class="accordion-collapse collapse show" aria-labelledby="faqHead1" data-bs-parent="#homeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    We recommend scheduling your move 2 to 4 days in advance for local shifting, and 5 to 7 days ahead for long-distance domestic moves. However, we also cater to urgent same-day emergency moves across Indore based on truck availability.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="faqHead2">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse2" aria-expanded="false" aria-controls="faqCollapse2">
-                                    What packaging materials are used for household furniture and electronics?
-                                </button>
-                            </h3>
-                            <div id="faqCollapse2" class="accordion-collapse collapse" aria-labelledby="faqHead2" data-bs-parent="#homeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    We utilize premium 5-layer heavy-duty corrugated cartons, Virgin grade air bubble rolls, PE foam sheets, stretch shrink wrap, and reinforced corrugated edge protectors. For fragile mirrors, crystals, and LED TVs, customized wooden crating is built on-site.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="faqHead3">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse3" aria-expanded="false" aria-controls="faqCollapse3">
-                                    Are my household goods protected by transit insurance during the move?
-                                </button>
-                            </h3>
-                            <div id="faqCollapse3" class="accordion-collapse collapse" aria-labelledby="faqHead3" data-bs-parent="#homeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    Yes. As an IBA-approved logistics provider, <?= esc($company3) ?> offers 100% comprehensive all-risk transit insurance. In the rare event of transit mishandling or highway accidents, claims are processed promptly with verified documentation.
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="accordion-item service-faq-item">
-                            <h3 class="accordion-header" id="faqHead4">
-                                <button class="accordion-button service-faq-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapse4" aria-expanded="false" aria-controls="faqCollapse4">
-                                    Does your team assist with unpacking and furniture assembly at the destination?
-                                </button>
-                            </h3>
-                            <div id="faqCollapse4" class="accordion-collapse collapse" aria-labelledby="faqHead4" data-bs-parent="#homeFaqAccordion">
-                                <div class="accordion-body service-faq-body">
-                                    Absolutely. Our crew unboxes all large cartons, reassembles standard double beds and dining tables, assists with major appliance placement, and clears away all packing materials from your new residence.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <!-- Right Column: Shared Interactive Sidebar -->
+            <!-- Right Column: Interactive Sidebar -->
             <div class="col-lg-4">
                 <?= view('Modules\Services\Views\service_sidebar', array_merge(get_defined_vars(), [
                     'activeService' => 'household-moving',
                     'activeTitle'   => 'Home Shifting'
                 ])) ?>
             </div>
+
         </div>
     </div>
 </section>

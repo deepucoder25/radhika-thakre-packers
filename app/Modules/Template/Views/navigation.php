@@ -218,12 +218,6 @@ $isServicesActive = ($page ?? '') === 'services' || (isset($module) && $module =
                             </a>
                         </li>
                         <li>
-                            <a href="<?= site_url('corporate-relocation') ?>" class="menu-nav-item">
-                                <i class="bi bi-briefcase-fill text-danger me-2" aria-hidden="true"></i>
-                                <span>Corporate Relocation</span>
-                            </a>
-                        </li>
-                        <li>
                             <a href="<?= site_url('packing-moving') ?>" class="menu-nav-item">
                                 <i class="bi bi-boxes text-danger me-2" aria-hidden="true"></i>
                                 <span>Packing &amp; Unpacking</span>

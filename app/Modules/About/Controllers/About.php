@@ -21,7 +21,7 @@ class About extends BaseController
     public function choose(): string
     {
         $data['title']       = "Why Choose Us | " . $this->comp['company3'];
-        $data['description'] = "Discover why customers trust " . $this->comp['company3'] . " for safe, reliable, and transparently priced shifting, vehicle transport, and corporate relocation services.";
+        $data['description'] = "Discover why customers trust " . $this->comp['company3'] . " for safe, reliable, and transparently priced shifting, vehicle transport, and office moving services.";
         $data['page']        = 'why-choose-us';
         $data['module']      = 'about';
         $data['view_file']   = 'Modules\About\Views\choose';

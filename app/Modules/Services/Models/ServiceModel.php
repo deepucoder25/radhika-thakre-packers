@@ -44,15 +44,6 @@ class ServiceModel extends Model
             'features' => ['Customized wooden frame crating', 'Mirror & indicator safe packing', 'Fast transit between major cities', 'Door-to-door delivery']
         ],
         [
-            'slug'     => 'corporate-relocation',
-            'title'    => 'Corporate Relocation',
-            'icon'     => 'fa-building-columns',
-            'b_icon'   => 'bi-buildings',
-            'badge'    => 'Corporate',
-            'desc'     => 'Comprehensive enterprise relocation solutions for corporate offices, IT infrastructure, servers, and multi-floor commercial setups.',
-            'features' => ['Complete IT server movement', 'Zero business downtime', 'Dedicated project manager', 'Multi-department coordination']
-        ],
-        [
             'slug'     => 'packing-moving',
             'title'    => 'Packing & Unpacking',
             'icon'     => 'fa-boxes-packing',
