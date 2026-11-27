@@ -25,16 +25,28 @@ $serviceSvgs = [
     'transit-insurance' => '<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>',
 ];
 
+$serviceTitles = [
+    'household-moving'     => 'Home Shifting',
+    'office-relocation'    => 'Office Shifting',
+    'car-transportation'   => 'Car Transportation',
+    'bike-transportation'  => 'Bike Shifting',
+    'corporate-relocation' => 'Corporate Relocation',
+    'packing-moving'       => 'Packing and Unpacking',
+    'loading-unloading'    => 'Loading and Unloading',
+    'warehouse-storage'    => 'Warehousing',
+    'transit-insurance'    => 'Goods Insurance',
+];
+
 $serviceShortDesc = [
-    'household-moving'     => 'Safe and dependable home relocation with premium multi-layer bubble wrap and doorstep furniture placement.',
-    'office-relocation'    => 'Quick commercial office shifting, workstation dismantling, and safe IT equipment transport with zero downtime.',
-    'car-transportation'   => 'Dedicated enclosed car carriers ensuring scratch-free, door-to-door vehicle delivery across India.',
+    'household-moving'     => 'Moving of furniture, appliances, kitchen articles and other household belongings.',
+    'office-relocation'    => 'Packaging and transporting of office furniture, computers and other office documentation.',
+    'car-transportation'   => 'Moving cars, bikes and scooters from one place to another.',
     'bike-transportation'  => 'Specialized customized wooden frame crating and bubble-foam wrapped packing for total two-wheeler protection.',
     'corporate-relocation' => 'Zero-downtime enterprise relocation, IT server handling, multi-floor movement, and complete transition.',
-    'packing-moving'       => '5-layer protective packing using heavy-duty corrugated cartons, bubble sheets, and moisture-proof stretch film.',
-    'loading-unloading'    => 'Trained ground professionals equipped with modern hydraulic lifts, ramps, hand trucks, and safety gear.',
-    'warehouse-storage'    => '24x7 CCTV-monitored, 100% moisture and pest-controlled secure warehouse storage facilities.',
-    'transit-insurance'    => 'Comprehensive goods transit insurance coverage protecting your belongings against all unforeseen transit risks.',
+    'packing-moving'       => 'Packing of goods using appropriate packing materials and unpacking of the same at destination.',
+    'loading-unloading'    => 'Handling cartons, furniture and other heavy things during the shifting process.',
+    'warehouse-storage'    => 'Storage facility for goods where delivery cannot be done immediately.',
+    'transit-insurance'    => 'Various types of transit insurance facility.',
 ];
 ?>
 <!-- Professional Services Section -->
@@ -45,9 +57,9 @@ $serviceShortDesc = [
             <span class="badge bg-danger bg-opacity-10 text-danger border border-danger border-opacity-25 px-3 py-2 rounded-pill fw-bold text-uppercase mb-2">
                 What We Offer
             </span>
-            <h2 class="section-title fw-bolder mb-3">Our Professional Relocation Services</h2>
+            <h2 class="section-title fw-bolder mb-3">Our Moving Services</h2>
             <p class="section-subtitle text-muted">
-                Comprehensive, door-to-door relocation and storage solutions tailored to your schedule with zero-scratch assurance.
+                Here are some moving services provided by Radhika Thakre Packers and Movers for the shifting of household, office and vehicle:
             </p>
         </div>
 
@@ -57,6 +69,7 @@ $serviceShortDesc = [
                 <?php 
                     $slug = $srv['slug'] ?? '';
                     $svg = $serviceSvgs[$slug] ?? $serviceSvgs['household-moving'];
+                    $title = $serviceTitles[$slug] ?? $srv['title'];
                     $desc = $serviceShortDesc[$slug] ?? $srv['desc'];
                 ?>
                 <div class="col">
@@ -66,14 +79,14 @@ $serviceShortDesc = [
                             <div class="service-clean-icon d-flex align-items-center justify-content-center flex-shrink-0">
                                 <?= $svg ?>
                             </div>
-                            <h3 class="service-clean-title mb-0"><?= esc($srv['title']) ?></h3>
+                            <h3 class="service-clean-title mb-0"><?= esc($title) ?></h3>
                         </div>
 
                         <!-- 3. Exactly 2-Line Content Description -->
                         <p class="service-clean-desc text-muted mb-3 mb-sm-4 flex-grow-1"><?= esc($desc) ?></p>
 
                         <!-- 4. Single Clean Action Button -->
-                        <a href="<?= site_url('services/' . $slug) ?>" class="btn btn-service-clean w-100 rounded-pill fw-bold d-flex align-items-center justify-content-center gap-1 gap-sm-2 py-2 mt-auto" aria-label="Explore <?= esc($srv['title']) ?> Details">
+                        <a href="<?= site_url('services/' . $slug) ?>" class="btn btn-service-clean w-100 rounded-pill fw-bold d-flex align-items-center justify-content-center gap-1 gap-sm-2 py-2 mt-auto" aria-label="Explore <?= esc($title) ?> Details">
                             <span class="d-none d-sm-inline">Explore Details</span>
                             <span class="d-inline d-sm-none">Explore</span>
                             <svg class="btn-clean-arrow" width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true">

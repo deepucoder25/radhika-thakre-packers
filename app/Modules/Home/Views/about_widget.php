@@ -9,6 +9,28 @@
 <section class="section-about py-5 bg-light position-relative border-top border-bottom">
     <div class="container py-2 py-lg-4">
         <div class="row align-items-center g-4 g-lg-5">
+            <!-- Full Width Top Column (col-12) -->
+            <div class="col-12">
+                <h2 class="section-title fw-bolder mb-2">
+                    Radhika Thakre Packers and Movers
+                </h2>
+                <h3 class="h5 fw-bold text-danger mb-3">
+                    Our Valuables are Important. We Move Them with Great Care.
+                </h3>
+                
+                <p class="text-muted mb-3">
+                    Moving to a new place is always exciting but packing and moving everything is a challenging job and requires lots of time. Furniture, kitchen articles, appliances and personal belongings require special care. Radhika Thakre Packers and Movers makes this job easy for families and corporate clients in Indore.
+                </p>
+
+                <p class="text-muted mb-3">
+                    We are operating in the business of movers and packers for over 8 years and have catered to more than 25,000 families and corporate offices. From a local home shift to long distance shifting, we manage packing, loading, transportation and delivery of the goods.
+                </p>
+
+                <p class="text-muted mb-0">
+                    We have a 5-layer bubble packaging process for suitable items and container trucks equipped with a GPS facility. You can also get transit insurance for securing your financial investment in the process of transportation.
+                </p>
+            </div>
+
             <!-- Left Column: Authentic Content from Official Website (col-lg-8) -->
             <div class="col-lg-8 col-md-7">
                 <div class="about-content-wrap">
@@ -16,19 +38,19 @@
                         About Our Brand
                     </span>
                     <h2 class="section-title fw-bolder mb-3">
-                        <?= esc($company3) ?> in Indore
+                        About Radhika Packers and Movers
                     </h2>
                     
                     <p class="text-muted mb-3">
-                        <strong><?= esc($company3) ?></strong> started its operation in the year 2018 from Indore, Madhya Pradesh and since then the company has been providing efficient moving and packing solutions. We have registered our organization for GST no. <strong><?= esc($gst) ?></strong> being specific about the work we do and committing to the truth.
+                        <strong>Radhika Thakre Packers and Movers</strong> is a government-registered company with ISO 9001:2015 certification in the field of movers and packers services in Indore, Madhya Pradesh.
                     </p>
 
                     <p class="text-muted mb-3">
-                        Ever since we have been a premier packing and moving company from Indore, we have had a comprehensive service delivery that seeks to suit the client's needs.
+                        Over the past years, we have facilitated people for moving homes, offices and vehicles in various places of India. We understand that the requirement of every client varies as per the nature of his/her goods to move.
                     </p>
 
                     <p class="text-muted mb-4">
-                        Deciding on the right packers and movers is easier than ever before. We offer the best Packers and Movers services at reasonable prices at <?= esc($company3) ?>.
+                        We talk about the moving requirements before starting the process. We inspect the goods, packing requirements and distance to provide you a quotation. Our goal is to provide transparency in the entire process to avoid any hidden costs.
                     </p>
 
                     <!-- Key Highlights Grid -->
